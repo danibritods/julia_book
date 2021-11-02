@@ -1,0 +1,38 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2021
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+%
+
+
+\chapter{Alma da linguagem}
+A maior vantagem de Julia é a posssibilidade de se ter código simultaneamente abstrato e eficiente. Essa característica definidora da linguagem emerge de aspectos fundamentais porém mais avançados de seu funcionamento, dos quais abordaremos os dois principais a seguir, baseado principalte em \cite{Balbaert2016} \cite{Kwong2020}.
+
+
+%Neste capítulo abordaremos alguns dos aspectos avançados da %linguagem que são fundamentais à sua identidade, característica e %comportamento.
+%
+%[maybe] A maior vantagem de Julia é a possibilidade de se ter um %código simultaneamente abstrato e eficiente. Para compreender esse %DNA devemos observar três aspectos mais avançados da linguagem. 
+
+\section{Compilação}
+O segredo de sua velocidade reside na habilidade de gerar código especializado para diferentes tipos de inputs, aliada a capacidade ddo seu compilador inferir esses tipos. 
+
+Isso porque Julia não tem um passo estático de compilação. O código de máquina é gerado em tempo de execução (JIT) por uma Máquina Virtual de de Baixo Nível (LLVM). Juntos esse sistema e o design da linguagem permitem que ela atinja máxima performace na computacão cienifica, técnica e numérica. %(High Performace)
+
+A chave dessa performace é a informação de tipo, que é feita por uma engine de inferência de tipos inteligente e totalmente automática que deduz os tipos baseada nos dados contidos nas variáveis (modelo *DataFlow*). Tanto que a declaração de tipos é opcional, msa pode ser feito para documentar o código, e dar pistas ao compilador para encontrar o caminho ótimo. %(High Performace)
+
+Assim, na primeira vez executamos uma fução Julia, ela é parseada para inferência de tipos, a seguir o JIT gera código LLVM que em seguida é otimizado e compilado para código de máquina. A partir da segunda execução, ela é executada diretamente em código de máquina. Podemos inspicionar ambos com as respectivas funções:%(High Performace)
+
+\begin{lstlisting}
+  code_llvm(f,(Int64))
+
+  code_native(f,(Int64))
+\end{lstlisting}
+
+\section{Multimétodo}
+A partir de sua poderosa inferência de tipos, Julia tem como paradigma principal o chamado Dispacho Múltiplo (Multiple Dispatch) ou Multimétodo. Onde um sistema chamado *dynamic multiple dispatch* eficientemente seleciona o método ótimo para cada um dos argumentos de função dentre os vários métodos definidos. %(High Performace)
+
+Assim, de acordo com o tipo é selecionada ou gerada uma implementação específica e extramemente eficiente em código nativo. %(High Performace)
+
+Julia, portanto, leva a programação genérica e funções polimórficas ao limite, ao escrever o algorito uma vez e aplica-lo a uma amplo espectro de tipos, oferecendo funcionalidade comum a tipos drasticamente diferentes. Exemplo disso é a função genérica *size* que contem 50 implementações de métodos concretos. %(High Performace)
+
+%\section{Metaprogramação}

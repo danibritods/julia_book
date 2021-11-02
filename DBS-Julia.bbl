@@ -1,0 +1,39 @@
+\begin{thebibliography}{BEKS17}
+
+\bibitem[Bal16]{Balbaert2016}
+Ivo Balbaert.
+\newblock {\em Julia: high performance programming: learning path.}
+\newblock Packt Publishing, Birmingham, UK, 2016.
+
+\bibitem[BEKS17]{Bezanson2017}
+Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral~B Shah.
+\newblock Julia: A fresh approach to numerical computing.
+\newblock {\em SIAM review}, 59(1):65--98, 2017.
+
+\bibitem[Klo21]{Klok2021}
+Hayden Klok.
+\newblock {\em Statistics with Julia}.
+\newblock Springer International Publishing, Berlin Heidelberg New York, 1
+  edition, 2021.
+
+\bibitem[Kwo20]{Kwong2020}
+Tom Kwong.
+\newblock {\em Hands-on design patterns and best practices with Julia}.
+\newblock Packt Publishing, Birmingham, UK, 1 edition, 2020.
+
+\bibitem[Lau19]{Lauwens2019}
+Ben Lauwens.
+\newblock {\em Think Julia}.
+\newblock O'Reilly Media, Sebastopol, CA, 1 edition, 2019.
+
+\bibitem[Lob19]{Lobianco2019}
+Antonello Lobianco.
+\newblock {\em Julia quick syntax reference}.
+\newblock Apress, Berkeley, CA, 1 edition, 2019.
+
+\bibitem[Per19]{Perkel2019}
+Jeffrey~M. Perkel.
+\newblock Julia: come for the syntax, stay for the speed.
+\newblock {\em Nature}, 572(7767):141–142, Jul 2019.
+
+\end{thebibliography}

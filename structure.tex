@@ -516,7 +516,7 @@ addtohook={%
 \lstdefinelanguage{Julia}%
 {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
 end,export,false,for,function,immutable,import,importall,if,in,%
-macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+macro,module,otherwise,println,quote,return,switch,true,try,type,typealias,%
 using,while},%
 sensitive=true,%
 alsoother={$},%
@@ -529,7 +529,8 @@ morestring=[m]{'}{'},%
 \lstset{%
 language         = Julia,
     basicstyle       = \ttfamily,
-    keywordstyle     = \bfseries\color{blue},
+    keywordstyle     = \ttfamily\color{blue},
+    %keywordstyle     = \bfseries\color{blue},
     stringstyle      = \color{magenta},
     commentstyle     = \color{ForestGreen},
     showstringspaces = false,
@@ -537,7 +538,7 @@ language         = Julia,
     
     \lstset{ %
      language={Julia}, %Pascal % lenguaje de programaci\'{o}n
-     basicstyle=\bfseries\ttfamily,
+     basicstyle=\ttfamily,
      keywordstyle=\color{blue},
      commentstyle=\color{brown},	
      backgroundcolor=\color{green!10},

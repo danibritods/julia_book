@@ -18,12 +18,11 @@ Para executar código Júlia, basta baixar e descompactar os arquivos binários 
 A seguir listamos alguns pontos importantes da sintaxe. 
 %Adicionar exemplos em código? []
 \begin{itemize}
-    \item Podemos adicionar ao cógigo comentários de uma linha (\#) ou múltiplas linhas (\#= =\#) que podem ser aninhados e colocados em qualquer lugar.
+    \item Podemos adicionar ao código comentários de uma linha (\#) ou múltiplas linhas (\#= =\#) que podem ser aninhados e colocados em qualquer lugar.
     \item Blocos não precisam de parênteses, para indicar o fim de um bloco utilizamos a palavra chave "end". 
     \item O ponto e vírgula (;) é utilizado para suprimir o output de um comando ou acessar o shell (a partir do REPL).
     \item Espaços são sintaticamente significantes, identação, não. 
-    \item Nomes de variáveis tem aceitam um subconjunto dos simbolos Unicode como letras gregas e até emojis. 
-    \item Nomes de variáveis tem aceitam um subconjunto dos simbolos Unicode como letras gregas e até emojis. 
+    \item Nomes de variáveis aceitam um subconjunto dos simbolos Unicode como letras gregas e até emojis. 
     \item Vetores iniciam com o índice 1. 
 \end{itemize}
 
@@ -212,25 +211,25 @@ Também temos funções particularmente úteis para trabalharmos com Arrays mult
 \subsection{Tuplas}
 Tuplas (Tuple\{T1, T2,...\}) são listas imutáveis de elementos, que em contraste com Arrays não perdem performace ao conter elementos de tipos diversos porque suas assinaturas são mantidas. Podmos criar tuplas com parênteses ou sem conforme o exemplo:
 \begin{lstlisting}
->t = (1, 2.5, "a")
->t = 1, 2.5, "a"
+> t = (1, 2.5, "a")
+> t = 1, 2.5, "a"
 #Podemos converter uma tupla em um array:
->a = [t...] #utilizando o operador splat
->a = [i[1] for i in t] #utilizando list comprehension
->a = collect(t) #utilizando o operador collect. 
+> a = [t...] #utilizando o operador splat
+> a = [i[1] for i in t] #utilizando list comprehension
+> a = collect(t) #utilizando o operador collect. 
 #De modo analogo podemos converter um array em uma tupla:
->t = (a...,)
+> t = (a...,)
 \end{lstlisting}  
 
 \subsection{Tuplas nomeadas}
 Já as Tuplas Nomeadas (NamedTuple) são coleções de itens que além do índice seus elementos podem ser identificados pelo nome da seguinte forma: 
 \begin{lstlisting}
->nt = (a=1,b=2.5) #define uma tupla nomeada
->nt.a #acessa o elemento a da tupla nt.
->keys(nt) #returna uma tupla com os nomes: (a,b)
->values(nt) #retorna uma tupla com os valores: (1, 2.5).
->collect(nt) #retorna um array com os valores.
->pairs(nt) #retorna um iterador dos pares (nome,valor) 
+> nt = (a=1,b=2.5) #define uma tupla nomeada
+> nt.a #acessa o elemento a da tupla nt.
+> keys(nt) #returna uma tupla com os nomes: (a,b)
+> values(nt) #retorna uma tupla com os valores: (1, 2.5).
+> collect(nt) #retorna um array com os valores.
+> pairs(nt) #retorna um iterador dos pares (nome,valor) 
 \end{lstlisting}
 
 \subsection{Dicionários}
@@ -341,7 +340,9 @@ As funções for e while em Julia são muito flexíveis, soportando os contrutos
 for i=1:2, j=2:5
 	println("i:$i, j:$j")
 end
-#=temos condicoes multiplas que geram um loop aninhado onde j percorre o intervalo 2:5 para cada elemento i.=#
+#=temos condicoes multiplas que geram um 
+loop aninhado onde j percorre o intervalo 2:5 
+para cada elemento i.=#
 
 for i in "string exemplo"
 	println(i)
@@ -427,7 +428,7 @@ Assim, as funções em júlia trabalham nas novas variáveis locais, conhecidas 
 Na comunidade Julia se recomenda seguir duas regras em relação a funções:%%[] ler no livro pra melhorar a coesão 
 \begin{itemize}
     \item Que contenham todos os elementos necessários para sua lógica (sem acesso a nenhuma variável exceto seus parâmetros e constantes globais.)
-    \item Que não alterem nenhuma outra parte do programa, ou seja, que não produza nenhum efeito colaterial além da eventual modificação de algum de seus argumentos.Na comunidade da linguagem duas 
+    \item Que não alterem nenhuma outra parte do programa, ou seja, que não produza nenhum efeito colaterial além da eventual modificação de algum de seus argumentos. 
 \end{itemize}
 
 \subsubsection{Argumentos}
@@ -436,7 +437,7 @@ Na comunidade Julia se recomenda seguir duas regras em relação a funções:%%[
     \item Os últimos argumentos podem ser especificados junto com valores padrão.
     %\item Também podemos declarar uma função de múltiplos argumentos.
     \item Funções podem receber um número variável de argumentos. 
-    \item Também temos a opção de especificar os tipos dos argumentos. Como mencionado, a principal razão para limitar os tipos dos parâmetros é para evidenciar possíveis bugs logo no início caso uma função seja acidentalmente chamada com um tipo diferente do planejado, retornando um erro de ripo ao inves de silentemente continuar a execução.
+    \item Também temos a opção de especificar os tipos dos argumentos. Como mencionado, a principal razão para limitar os tipos dos parâmetros é para evidenciar possíveis bugs logo no início caso uma função seja acidentalmente chamada com um tipo diferente do planejado, retornando um erro de tipo ao invés de silentemente continuar a execução.
     \item Retornar um valor é opcional e normalmente as funções retornam o último valor computado, podendo ser inclusive uma tupla.
 \end{itemize}
 \begin{lstlisting}
@@ -458,6 +459,6 @@ Na comunidade Julia se recomenda seguir duas regras em relação a funções:%%[
     
 \end{lstlisting}
 
-\subsubsection{Multiple-Dispatch}
-Uma função pode ter múltiplos métodos para diferentes números e tipos de inputs. Ao ser executada o compulador selecionará a implementação correta de acordo com os parâmetros na chamada da função. Podemos listar todos os métodos de uma função com a função methods(f).
+%\subsubsection{Multiple-Dispatch}
+%Uma função pode ter múltiplos métodos para diferentes números e %tipos de inputs. Ao ser executada o compulador selecionará a %implementação correta de acordo com os parâmetros na chamada da %função. Podemos listar todos os métodos de uma função com a função %methods(f).
 %%Detalhar mais esse que é o coração da linguagem
