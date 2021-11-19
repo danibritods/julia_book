@@ -79,4 +79,13 @@
   url       = {https://doi.org/10.1137/141000671},
 }
 
+@Misc{Bezanson2012,
+  author        = {Jeff Bezanson and Stefan Karpinski and Viral B. Shah and Alan Edelman},
+  title         = {Julia: A Fast Dynamic Language for Technical Computing},
+  year          = {2012},
+  archiveprefix = {arXiv},
+  eprint        = {1209.5145},
+  primaryclass  = {cs.PL},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

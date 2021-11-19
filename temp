@@ -1,0 +1,25 @@
+
+\begin{lstlisting}
+  function quicksort!(A,i=1,j=length(A)) #Define Função
+    if j > i #Critério de parada: enquanto houver elementos no vetor
+        pivot = A[rand(i:j)] #sorteio do pivô no vetor
+        left, right = i, j #extremidades do vetor a ser ordenado 
+        while left <= right #Enquanto houver elementos a serem percorridos as extremidades se aproximam até o pivô
+            while A[left] < pivot 
+                left += 1
+            end
+            while A[right] > pivot
+                right -= 1
+            end
+            if left <= right #Uma vez englobando o pivô, o vetor é percorrido comparando-se as extremidades, caso o elemento a esquerda seja menor ou igual a direita:
+                A[left], A[right] = A[right], A[left] #ambos trocam de posição
+                left += 1
+                right -= 1
+            end
+        end
+        quicksort!(A,i,right) #Chamada recursiva para a primeira porção do vetor
+        quicksort!(A,left,j) #chamada recursiva para a segunda porção do vetor. 
+    end
+    return A
+  end
+\end{lstlisting}

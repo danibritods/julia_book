@@ -7,10 +7,10 @@
 
 \chapter{Aplicações da linguagem}
 
-Neste capítulo vamos apresentar cinco exemplos de aplicações da linguagem Julia. 
+Neste capítulo vamos apresentar cinco exemplos de aplicações escritas na linguagem Julia, bem como seus respectivos códigos-fonte, e imagens demonstrando seu funcionamento. 
 
 \section{Quicksort}
-Um mais importantes algoritmos de ordenação, é inclusive utilizado por padrão na função de ordenação da linguagem \href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}. 
+A ordenação de elementos em listas ou vetores é uma das operações computacionais mais importantes. Nesse sentido, apresentamos o Quicksort, dos principais algoritmos de ordenação, sendo, inclusive, utilizado por padrão na função de ordenação (\href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}) nativa da linguagem. 
 
 Esse algoritmo se inicia elencando um elemento no vetor para ser o pivô dessa execução, a partir de então todos os elementos menores ou iguais ao pivô são colocados antes do mesmo e consequentemente todos os elementos maiores são colocados nas posições seguintes ao pivô. Em seguida é feito uma chamada recursiva da mesma função para cada uma dessas duas porções -do primeiro elemento até o anterior ao pivô, e do elemento seguinte ao pivô até o último. 
 
@@ -51,16 +51,22 @@ end
        \includegraphics[width=12cm]{aplicacoes/quicksort.png} \\
        {\tiny \sf Fonte: Autor}
    \end{center}
-  \end{figure}
+\end{figure}
 
 \section{Calculadora}
-Um aspecto muito importante da computação envolve o uso de interfaces gráficas. Entretanto a construção de janelas, botões e afins é uma tarefa complexa, de modo que na maior parte dos casos os programadores utilizam uma biblioteca que implementa tais componentes de interface gráfica, sendo as duas mais famosas a Qt e a GTK chamadas de GUI Toolkit. 
+Outro aspecto muito importante da computação envolve o uso de interfaces gráficas para facilitar a interação do usuário com a máquina.
+%, tanto no quesito acessibilidade quanto na acessibilidade de . 
+Entretanto a construção de janelas, botões e afins é uma tarefa complexa, de modo que na maior parte dos casos os programadores utilizam uma biblioteca que implementa tais componentes de interface gráfica, sendo as duas mais famosas a Qt e a GTK chamadas de GUI Toolkit. %TODO refatorar esse parágrafo
 
 Nesse exemplo demonstramos uma calculadora simples utilizando a biblioteca Gtk.jl que traz a bilbioteca GTK de forma amigável para a linguagem Julia. 
 
 O código \ref{calculadora_code} apresenta de modo compacto a implementação criada por Nand Vincchi está está disponível como exemplo no repositório \href{https://github.com/JuliaGraphics/Gtk.jl/blob/master/example/calculator.jl}{Github} da biblioteca Gtk.jl. 
 
-Na figura TAL podemos ver o a janela gráfica e parte do código sendo executado na IDE.
+Adicionamos as linhas para instalar o pacote Gtk, caso o mesmo ainda não esteja presente. O código original segue importando o pacote, e criando uma janela com título "Calculator", cria-se todos os botões, seguido de 4 chamadas "caixas" horizontais que são preenchidas com os botões criados. Cria-se uma caixa vertical para receber as quatro horizontais, a "tela" da calculadora, e espaços. Por sua vez essa caixa vertical é adicionada a janela.
+
+Finalmente temos a função \_button\_clicked\_callback que adiciona responsividade dos botões de compor uma string que é apresentada na tela conforme são apertados, e ao clicar no igual a string contruída é enviada a função "calculate" que a processa e retorna o resultado que será apresentado na tela.
+
+Na figura \ref{calculadora} podemos ver a janela gráfica e parte do código sendo executado na IDE. 
 
 \begin{lstlisting}[label={calculadora_code},caption={Calculadora simples em GTK}]
 # Simple calculator application that utilises Gtk.jl
@@ -149,12 +155,105 @@ showall(win)
 
 \begin{figure}[H]
    \begin{center}
-       \caption{Quicksort na IDE VScode} \label{calculadora}
+       \caption{Janela GTK da calculadora e vscode} \label{calculadora}
        \includegraphics[width=12cm]{aplicacoes/calculadora.png} \\
        {\tiny \sf Fonte: Autor}
    \end{center}
   \end{figure}
 
+
+
+
+
+
+\section{Plotagem (Iris data set)}
+Igualmente importante no ecossistema Julia é a habilidade de analisar dados. Nesse exemplo demonstramos as funções básicas para ler um arquivo csv, utilizar um DataFrame, e plotar um gráfico que permita análisar esse dados. 
+Para tanto, utilizamos o famoso Iris-dataset \cite{Fisher1936}, onipresente na literatura estatística e muito utilizado justamente para demonstrar um ecossistema de análise de dados. 
+Esse dataset consiste na observação de 50 exemplares de três epecécies de flores do gênero Iris (Fig. \ref{iris_flowers}), para cada observação temos o comprimento e largura de suas sépalas e pétalas bem como a qual espécie tais medidas pertecem (Fig.\ref{iris_data}).
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Flores do gênero iris} \label{iris_flowers}
+       \includegraphics[width=12cm]{aplicacoes/iris-flowers.png} \\
+       {\tiny \sf Fonte: https://rpubs.com/mbatista/545937}
+   \end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Iris Dataset} \label{iris_data}
+       \includegraphics[width=5cm]{aplicacoes/iris_data.png} \\
+       {\tiny \sf Fonte: https://archive.ics.uci.edu/ml/datasets/Iris/https://archive-beta.ics.uci.edu/ml/datasets/iris}
+   \end{center}
+\end{figure}
+
+Assim, utilizamos o ambiente de desenvolvimento Jupyter Notebook, que consiste em cadernos compostos por células interativas. Na figura \ref{iris_pacotes} temos a instalação dos pacotes: CSV para a leitura do arquivo com os dados, DataFrame que é a estrutura de dados padrão em tabelas, e DataVoyager que apresenta uma interface simples e interativa para plotagem exploratória de gráficos. 
+Na figura \ref{iris_csv} importamos as bibliotecas CSV e DataFrames, criamos uma variável com o cabeçalho das colunas e finalmente lemos o arquivo csv e o armazenamos em memória na variável "iris". No retorno podemos ver parte do dataframe.
+Já na figura \ref{iris_plot} temos a interface do DataVoyager, bem como o gráfico pronto, e principalmente a simplicidade dos comandos para um resultado tão interessante. 
+Assim, temos que utilizando a largura e comprimento das pétalas nos eixos, e colorindo os pontos de acordo coma espécie fica evidente a possibilidade de se utilizar tais dados para classificar novas observações. 
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Instalação das bibliotecas} \label{iris_pacotes}
+       \includegraphics[width=12cm]{aplicacoes/iris_pacotes.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Leitura do CSV} \label{iris_csv}
+       \includegraphics[width=12cm]{aplicacoes/iris_CSV.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Plotagem com DataVoyager} \label{iris_plot}
+       \includegraphics[width=18cm]{aplicacoes/iris_plot.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
+%\subsection{texto removido da seção principal}
+%em dados esse é o equivalente ao "hello, world!", o conjunto de dados das dimensões espaciais de três especies de flores coletada por ninguém menos que R.A Fisher, um dos pais da estatística. A ideia é que a facilidade de se trabalhar com esse conjunto de dados nos permite conhecer o ecossistema de dados de uma linguagem. 
+
+%Desse modo, intalamos os pacotes necessários (Fig TAL), isto é, CSV para ler o arquivo, DataFrames para utilizarmos essa estrutura de dados, e o DataVoyager para explorar os dados e construir interativamente uma plotagem que nós permita compreender a relação entre as métricas e suas respectivas espécies. 
+
+%Para tanto, baixamos o \href{https://archive.ics.uci.edu/ml/datasets/Iris/https://archive-beta.ics.uci.edu/ml/datasets/iris}{dataset}, utilizamos a biblioteca CSV para ler o arquivo e salva-lo como DataFrame na memória, em seguida utilizamos a biblioteca Plots para graficar os dados das flores.
+% de modo a permitir futuras abordagens na busca matematicamente classificar uma dessas flores partindo apenas das dimensões de suas pétalas e sépalas. 
+%"hello, world!" da programação, 
+%Igualmente importante é a capacidade plotar gráficos, nesse exemplo nos usamos a função nativa de ler arquivos CSV 
+
+%É possível classificar uma dessas flores tão parecidas apenas a partir das dimensões de altura e largura de suas sepas e petálas. 
+
+\section{Banco de Dados SQL lite}
+
+Outro aspecto fundamental de uma linguagem é a sua integração com banco de dados, nesse exemplo demonstramos um uso simples do banco de dados SQLlite. 
+
+\begin{lstlisting}
+  using SQLlite
+
+  db = SQLite.DB("exampleData.db")
+
+  SQLite.execute(db, "CREATE TABLE IF NOT EXISTS contacts")
+  (id INTEGER PRIMARY KEY, Nname TEXT, age INTEGER, breed TEXT, email TEXT)
+\end{lstlisting}
+
+
+
+
+
+%\section{Pesquisa operacional}
+%Nesse exemplo utilizamos a biblioteca JuMP.jl que nos dá uma interface unificada para utilizar diversos motores de resolução de problemas lineares.
+
+
+
+%Dataframes em julia?
+%Matrizes em Julia? Linear solver? 
+%Operational research? 
+%Data Wrangling?
+%Pesquisar nos videos do Grant 3b1b e no 
 
 
 

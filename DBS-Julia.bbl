@@ -10,6 +10,11 @@ Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral~B Shah.
 \newblock Julia: A fresh approach to numerical computing.
 \newblock {\em SIAM review}, 59(1):65--98, 2017.
 
+\bibitem[Fis36]{Fisher1936}
+R.~A. Fisher.
+\newblock The use of multiple measurements in taxonomic problems.
+\newblock {\em Annals of Eugenics}, 7(2):179–188, 1936.
+
 \bibitem[Klo21]{Klok2021}
 Hayden Klok.
 \newblock {\em Statistics with Julia}.

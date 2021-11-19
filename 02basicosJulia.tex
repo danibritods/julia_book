@@ -18,8 +18,8 @@ Para executar código Júlia, basta baixar e descompactar os arquivos binários 
 A seguir listamos alguns pontos importantes da sintaxe. 
 %Adicionar exemplos em código? []
 \begin{itemize}
-    \item Podemos adicionar ao código comentários de uma linha (\#) ou múltiplas linhas (\#= =\#) que podem ser aninhados e colocados em qualquer lugar.
-    \item Blocos não precisam de parênteses, para indicar o fim de um bloco utilizamos a palavra chave "end". 
+    \item Podemos adicionar ao código comentários de uma linha (\#) ou de múltiplas linhas (\#= =\#) que podem ser aninhados e colocados em qualquer lugar.
+    \item Blocos não precisam de parênteses, utilizamos a palavra "end" para indicar o fim de um bloco.
     \item O ponto e vírgula (;) é utilizado para suprimir o output de um comando ou acessar o shell (a partir do REPL).
     \item Espaços são sintaticamente significantes, identação, não. 
     \item Nomes de variáveis aceitam um subconjunto dos simbolos Unicode como letras gregas e até emojis. 
@@ -30,12 +30,12 @@ A seguir listamos alguns pontos importantes da sintaxe.
 
 Os criadores da lingua escolheram construir um núcleo leve complementado por uma biblioteca padrão (Standard Library) distribuída junto dos binários, e um poderoso gerenciador de pacotes capaz de baixar (muitas vezes direto de repositórios GitHub), pré compilar, atualizar e resolver dependências de pacotes a partir de comandos simples. 
 
-Para acessar o gerenciador de pacotes podemos importar o módulo de pacotes (using pkg) e executar os comandos no seguinte formato: pkg.(ARGS), mas no REPL também podemos apenas digitar ] para entrar no modo especial de pacotes que tem algumas facilidades como autocomplete.
+Para acessar o gerenciador de pacotes podemos importar o módulo de pacotes (using pkg) e executar os comandos no seguinte formato: pkg.(ARGS), no REPL podemos apenas digitar ] para entrar no modo especial de pacotes, nele temos algumas facilidades como autocomplete.
 
-Listamos a seguir alguns dos principais comandos:
+Listamos a seguir alguns dos principais comandos do Pkg:
 \begin{itemize}
     \item \textbf{status:} retorna uma lista (nome e versão) dos pacotes instalados localmente.
-    \item \textbf{update:} atualiza o índice local de pacotes e os próŕios pacotes para a versão mais recente.
+    \item \textbf{update:} atualiza o índice local de pacotes e os próprios pacotes para a versão mais recente.
     \item \textbf{add nomePacote:} automaticamente baixa e instala um pacote.
     \item \textbf{rm nomePacote:} remove o pacote e todas as suas dependências.
 \end{itemize}
@@ -43,38 +43,41 @@ Listamos a seguir alguns dos principais comandos:
 Para utilizar um pacote devemos utilizar um dos comandos seguintes:
 \begin{itemize}
     \item \textbf{use:} permite acessar diretamente as funções de um pacote, basta adicionar o comando (using nomePacote) no inicio do script. 
-    \item \textbf{import:} tem a mesma funcionalidade do use com a diferença de precisarmos nos referir ao nome completo da função (nomePacote.nomeFunção), o que tem a vantagem de manter a organização dos nomes, via de regra se define apelidos para os pacotes como por exemplo chamar o pacote "Plots" de "pl" (const pl = Plots) %adicionar exemplo de código? []
+    \item \textbf{import:} tem a mesma funcionalidade do use com a diferença de precisarmos nos referir ao nome completo da função (nomePacote.nomeFunção), o que tem a vantagem de manter a organização dos nomes. Via de regra, nesse caso definimos apelidos para os pacotes como por exemplo chamar o "Plots" de "pl" (const pl = Plots) %adicionar exemplo de código? []
 \end{itemize}
 
-Da mesma forma podemos \textbf{incluir} ou \textbf{importar} qualquer arquivo Julia como módulo, que analogamente é executado ao ser invocado e qualquer símbolo definido estará disponível no escopo onde foi chamado. 
+Da mesma forma podemos usar (\textbf{use}) ou importar (\textbf{import}) qualquer arquivo Julia como módulo. Ele será analogamente executado ao ser invocado e qualquer símbolo definido estará disponível no escopo onde foi chamado. 
 
 \section{Sistema de ajuda}
-Além do sistema de pacotes, a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
+Além do sistema de pacotes, basta digitar "?" para acessar o modo especial de ajuda do REPL. Assim, acordo com a documentação do termo buscado o sistema de ajuda pode retornar sua lista de métodos, exemplos de uso, descrição, lista de argumentos ou termos ou ainda os termos relacionados.
 
-De acordo com a documentação do termo buscado o sistema de ajuda pode retornar uma lista de métodos, exemplo de uso, descrição, lista de argumentos ou termos relacionados.
+%a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
+
 \section{Tipos e estruturas de dados}
-Julia nativamente oferece um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre escalares (como inteiros, floats, e chars) e containers que acomodam outros objetos (como vetores multidimencionais, dicionários, conjuntos, etc)
+Julia oferece nativamente um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre escalares ( inteiros, floats, e chars) e containers que acomodam outros objetos (como vetores multidimencionais, dicionários, conjuntos, etc)
+%TODO Trocar os "como" por "por exemplo"?
 
-Podemos destacar as seguintes características: 
+Podemos destacar as seguintes características\cite{Lobianco2019}: 
 \begin{itemize}
-    \item Cada valor (mesmo os primitivos) têm seu tipo único, por convenção iniciando com letra maiúscula como Int64 e Bool. 
-    \item Para containers e alguns escalares, o nome de seu tipo é seguido de chaves indicando sua dimenção e os tipos dos elementos contidos, como por exemplo Array{Int,2}. Na terminologia da linguagem são chamados tipos paramétricos.  
-    \item Em Julia não existe divisão entre objetos e não-objetos pois todos os valores são objetos tipados, enquanto variáveis são apenas nomes relacionados a valores, portanto sem tipo. 
+    \item Cada valor (mesmo os primitivos) tem seu tipo único, por convenção iniciando com letra maiúscula como Int64 e Bool. 
+    \item No caso de containers e alguns escalares, o nome de seu tipo é seguido de chaves indicando sua dimenção e os tipos dos elementos contidos, como por exemplo Array\{Int,2\}. Na terminologia da linguagem são chamados tipos paramétricos.  
+    \item Em Julia não existe divisão entre objetos e não-objetos pois todos os valores são objetos tipados, enquanto variáveis são apenas nomes relacionados a valores, portanto não têm tipo. 
     \item Podemos converter objetos atraves da função convert(T,x).
-    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis. O que opcional, mas é utilizado em alguns casos para confirmar que um programa se comporta conforme o esperado e oferecer mais um pouco de informação ao compulador que pode em alguns casos melhorar a performace. 
+    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis. Essa anotação manual de tipos é totalmente opcional, pois apesar de haver situações nas quais ela se traduz em algum ganho de performace, na imensa maioria dos casos a inferência tipos é suficiente para atingir eficiência máxima na compilação. Ainda assim a anotação de tipos é frequentemente utilizada para confirmar que um programa se comporta conforme o esperado. \cite{Bezanson2017}
+    
 \end{itemize}
 
 \subsection{Tipos simples}
 \begin{itemize}
     \item Caracteres individuais são do tipo Char, e representado por aspas simples.
-    \item Booleanos são do tipo Bool, apenas com as intâncias True e False. Em um contexto de inteiros podem ser interpretados como 0 e 1, porém o oposto não ocorre (if 0 gera o erro de tipo "non-Boolean used in Boolean context"
+    \item Booleanos são do tipo Bool, apenas com as instâncias True e False. Em um contexto de inteiros podem ser interpretados como 0 e 1, porém o oposto não ocorre (if 0 gera o erro de tipo "non-Boolean used in Boolean context"
     \item O tipo padrão de inteiro é o Int64 (existem outros 9 tipos) capaz de armazenar valores entre $-2^{63}$ e $2^{63-1}$.
     \item De modo análogo o padrão de ponto flutuante é o Float64.
     \item Números complexos são suportados pela variável global im que representa a raiz quadrada de -1.
 \end{itemize}
 
 \subsection{Operações básicas}
-Além dos operadores padrões de soma, subtração, multiplicação e divisão (+, -, *, /) temos a potrenciação através do circunfléxo ("3\^{}2"), o resto pelo operador \%, e a divisão inteira pelo símbolo $\div$ ("\textbackslash div")
+Além dos operadores padrões de soma, subtração, multiplicação e divisão (+, -, *, /) temos a potenciação através do circunfléxo ("3\^{}2"), o resto pelo operador \%, e a divisão inteira pelo símbolo $\div$ ("\textbackslash div")
 
 \subsection{Strings}
 As strings em Julia são imutáveis, definidas com aspas duplas e podem ser vistas como um tipo especial de vetor pois suportam indexação e looping.
@@ -82,49 +85,49 @@ As strings em Julia são imutáveis, definidas com aspas duplas e podem ser vist
 
 Algumas das operações típicas com strings são:
 \begin{itemize}
-    \item split(s, " ") nesse exemplo utiliza o espaço como um separador e retorna um vetor com as sublistas.
-    \item join([s1,s2], " ") que une strings utilizando, nesse caso, o espaço entre cada junção.
-    \item replace(s, {termo buscado} => {substituto}) que substiui substrings compatíveis com a busca.
+    \item \textbf{split(s, " ")} nesse exemplo utiliza o espaço como um separador e retorna um vetor com as sublistas.
+    \item \textbf{join([s1,s2], " ")} que une strings utilizando, nesse caso, o espaço entre cada junção.
+    \item \textbf{replace(s, {termo buscado}} => {substituto}) que substiui substrings compatíveis com a busca.
     \item parse(Int, "64") retorna a string convertida para um tipo numérico, no caso inteiro.
-    \item string(123) retorna a string correspondente ao número.
+    \item \textbf{string(123)} retorna a string correspondente ao número.
     \item Existem três principais maneiras de concaternar strings:
         \subitem 
         \begin{lstlisting}    
-            > string("Hello, ","world")
-            > "Hello, World! The answer is $(43)"
-            > "Hello, " * "world"
+  string("Hello, ","world")
+  "Hello, World! The answer is $(43)"
+  "Hello, " * "world"
         \end{lstlisting}
         
 \end{itemize}
 
 
 \subsection{Arrays}
-Vetores (Array\{T, N\}) são contâiners mutáveis de N dimensões que podem conter elementos de apenas um tipo (T), ou heterogêneos, nesse caso tendo o tipo genérico (Any) que em geral é consideravelmente menos performático ou tipo união de outros tipos (exemplo: Union\{Int64,String\}) que consegue ter performace próxima do monotipo a partir dessa restrição nos tipos.
+Vetores (Array\{T, N\}) são contâiners mutáveis de N dimensões que podem conter elementos de apenas um tipo (T), heterogêneos -nesse caso tendo o tipo genérico (Any) que em geral é consideravelmente menos performático- ou ser do tipo união (Union\{$T_1,T_2$\}) de outros tipos (exemplo: Union\{Int64,String\}), que consegue ter performace próxima do monotipo a partir dessa restrição.
 
 Além das Strings que são vetores imutáveis de caractéres, também temos os tipos especiais Vector\{T\} e Matrix\{T\} que são respectivamente Arrays de uma e duas dimensões.
 
 \subsubsection{Criação de Array}
 Existem diversas formas de criarmos um Array do tipo T:
 \begin{lstlisting}
-> a  = [1;2;3] #cria um vetor coluna de uma dimensao.
-> a = [1 2 3] #cria um vetor linha de uma dimensao.
-> a = [] #cria um Array{Any,1}
-> a = Int64[] #constroi um vetor de Int64 com uma dimensao.
-> a = Array{Int64,1}() #mesmo do anterior, usando construtor.
-> a = zeros(n) #cria um Array{Float64,1}
-> a = zeros(Int64,n) #cria um array do tipo Int64 com 10 zeros.
-> a = fill(j,n) #vetor com n elementos j
-> a = rand(n)) #vetor preenchido com n numeros aleatorios
+     a  = [1;2;3] #cria um vetor coluna de uma dimensao.
+     a = [1 2 3] #cria um vetor linha de uma dimensao.
+     a = [] #cria um Array{Any,1}
+     a = Int64[] #constroi um vetor de Int64 com uma dimensao.
+     a = Array{Int64,1}() #mesmo do anterior, usando construtor.
+     a = zeros(n) #cria um Array{Float64,1}
+     a = zeros(Int64,n) #cria um array do tipo Int64 com n zeros.
+     a = fill(j,n) #vetor com n elementos j
+     a = rand(n)) #vetor preenchido com n numeros aleatorios
 \end{lstlisting}
 
 \subsubsection{Acessar elementos}
-Podemos acessar subvetores nos utilizando de chaves para selecionar um elemento (a[2]) ou uma fatia de intervalo fechado (a[de:passo:até]) da seguinte forma:
+Podemos acessar subvetores utilizando chaves para selecionar um elemento (a[2]) ou uma fatia de intervalo fechado (a[de:passo:até]) da seguinte forma:
 \begin{lstlisting}
-> a = [1 2 3 4 5 6 7] 
-> a[4] #retorna 4
-> a[1:3] #retorna os elementos 1,2,3
-> a[1:2:end] #retorna 1 3 5 7
-> a[end:-1:1] #retorna 7 6 5 4 3 2 1
+   a = [1 2 3 4 5 6 7] 
+   a[4] #retorna 4
+   a[1:3] #retorna os elementos 1,2,3
+   a[1:2:end] #retorna 1 3 5 7
+   a[end:-1:1] #retorna 7 6 5 4 3 2 1
 \end{lstlisting}
 
 \subsubsection{Principais funções}
