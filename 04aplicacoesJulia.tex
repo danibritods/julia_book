@@ -248,19 +248,20 @@ Assim, torna-se evidente o potencial da linguagem e suas ferramentas para a aná
 %É possível classificar uma dessas flores tão parecidas apenas a partir das dimensões de altura e largura de suas sepas e petálas. 
 
 \section{Banco de Dados SQL lite}
-
 Outro aspecto fundamental de uma linguagem é a sua integração com banco de dados. Aqui trazemos um exemplo simples da criação e uso de um banco de dados SQLite, por meio da sua biblioteca disponível em Julia. 
-Iniciamos instalando o pacote SQLite.jl (Fig \ref{sql_pacote})
-Criamos um objeto e arquivo de banco de dados. Em seguida construímos uma função que lê o input padrão do teclado, separa a frase do autor e armazena ambos no banco de dados criado, conforme a mostra a figura \ref{sql_corpo}.
 
-\begin{figure}[H]
-   \begin{center}
-       \caption{Instalação do pacote SQLite.jl} \label{sql_pacote}
-       \includegraphics[width=12cm]{aplicacoes/sql_pacote.png} \\
-       {\tiny \sf Fonte: Autor}
-   \end{center}
-\end{figure}
+Após intalarmos o pacote SQLite.jl, criamos um objeto e arquivo de banco de dados. Em seguida construímos uma função que lê o input padrão do teclado, separa a frase do autor e armazena ambos no banco de dados criado, conforme demostra e explica a figura \ref{sql_corpo}.
+Esse código foi inspirado no seguinte exemplo disponível no Github. \footnote{https://github.com/julia4ta/tutorials/blob/master/Series\%2004/Tutorial\%2004x05/sourcecode.jl}
 
+
+%\begin{figure}[H]
+%   \begin{center}
+%       \caption{Instalação do pacote SQLite.jl} %\label{sql_pacote}
+%       \includegraphics[width=12cm]{aplicacoes/%sql_pacote.png} \\
+%       {\tiny \sf Fonte: Autor}
+%   \end{center}
+%\end{figure}
+%
 \begin{figure}[H]
    \begin{center}
        \caption{Corpo do programa que armazena as frases} \label{sql_corpo}
@@ -268,21 +269,21 @@ Criamos um objeto e arquivo de banco de dados. Em seguida construímos uma funç
        {\tiny \sf Fonte: Autor}
    \end{center}
 \end{figure}
-
-Em seguida executamos a função "Frases()" escrevendo três entradas conforme a figura \ref{sql_frases}. E finalmente, na figura \ref{sql_query}, efetuamos uma busca nesse banco de dados que nos retornou todas as entradas. 
-
+Em seguida executamos a função "Frases()" escrevendo três entradas de frases com seus respectivos autores conforme a figura \ref{sql_frases}. 
 \begin{figure}[H]
-   \begin{center}
-       \caption{Função "Frases()" sendo executada} \label{sql_frases}
-       \includegraphics[width=12cm]{aplicacoes/sql_frases.png} \\
-       {\tiny \sf Fonte: Autor}
-   \end{center}
+    \begin{center}
+        \caption{Função "Frases()" sendo executada} \label{sql_frases}
+        \includegraphics[width=12cm]{aplicacoes/sql_frases.png} \\
+        {\tiny \sf Fonte: Autor}
+    \end{center}
 \end{figure}
+Finalmente, na figura \ref{sql_query}, efetuamos uma busca SQL nesse banco de dados. Selecionamos todos os campos da tabela frases, e como não utilizamos o WHERE para restringir determinadas entradas, essa query retorna todo o conteúdo da tabela frases. 
+Interessante notar que o comando SQLite.DBInterface.execute() retorna um objeto, que transformamos em DataFrame para o acessarmos. 
 
 \begin{figure}[H]
    \begin{center}
        \caption{Query do banco de frases criado} \label{sql_query}
-       \includegraphics[width=12cm]{aplicacoes/sql_pacote.png} \\
+       \includegraphics[width=12cm]{aplicacoes/sql_query.png} \\
        {\tiny \sf Fonte: Autor}
    \end{center}
 \end{figure}
