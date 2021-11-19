@@ -10,11 +10,23 @@
 Neste capítulo vamos apresentar cinco exemplos de aplicações escritas na linguagem Julia, bem como seus respectivos códigos-fonte, e imagens demonstrando seu funcionamento. 
 
 \section{Quicksort}
-A ordenação de elementos em listas ou vetores é uma das operações computacionais mais importantes. Nesse sentido, apresentamos o Quicksort, dos principais algoritmos de ordenação, sendo, inclusive, utilizado por padrão na função de ordenação (\href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}) nativa da linguagem. 
+A ordenação de elementos em listas ou vetores é uma das operações computacionais mais importantes. 
 
-Esse algoritmo se inicia elencando um elemento no vetor para ser o pivô dessa execução, a partir de então todos os elementos menores ou iguais ao pivô são colocados antes do mesmo e consequentemente todos os elementos maiores são colocados nas posições seguintes ao pivô. Em seguida é feito uma chamada recursiva da mesma função para cada uma dessas duas porções -do primeiro elemento até o anterior ao pivô, e do elemento seguinte ao pivô até o último. 
+Desse modo apresentamos o Quicksort, dos principais algoritmos de ordenação, sendo, inclusive, utilizado por padrão na função de ordenação (\href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}) nativa da linguagem. 
+\newline
 
-No Código \ref{quicksort_code}, apresentamos uma implementação do algoritmo disponível na wiki \href{https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Julia}{Rosetta Code}. Nela, o mecanismo principal de pivotagem se por meio de duas variáveis que guardam o último elemento da porção inferior ao pivo (left) e o primeiro elemento da porção superior ao pivô (right), ou seja, os limites internos, visto que os limites externos serão os próprios primeiro e último elementos do vetor. Desse modo, essas variáveis dos limites internos se iniciam iguais aos limites externos, se aproximando do pivô da seguinte forma: caso o atual índice left seja menor que o pivo, o índice se desloca mais um elemento a direita, caso o atual índice right seja maior que o pivô ele se desloca para a esquerda, ambas ocorrem até que cheguem em um elemento fora de lugar, e nesse caso o elemento fora de lugar em cada porção são permutados. 
+Esse algoritmo se inicia elencando um elemento no vetor para ser o pivô dessa execução. 
+A partir de então todos os elementos menores ou iguais ao pivô são colocados antes do mesmo e consequentemente todos os elementos maiores são colocados nas posições seguintes ao pivô. 
+
+Em seguida é feito uma chamada recursiva da mesma função para cada uma dessas duas porções -do primeiro elemento até o anterior ao pivô, e do elemento seguinte ao pivô até o último. 
+
+No Código \ref{quicksort_code}, apresentamos uma implementação do algoritmo disponível na wiki \href{https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Julia}{Rosetta Code}. 
+Nela, o mecanismo principal de pivotagem se por meio de duas variáveis que guardam o último elemento da porção inferior ao pivo (left) e o primeiro elemento da porção superior ao pivô (right). Ou seja, os limites internos, visto que os limites externos serão os próprios primeiro e último elementos do vetor. 
+
+Desse modo, essas variáveis dos limites internos se iniciam iguais aos limites externos, se aproximando do pivô da seguinte forma: 
+caso o atual índice left seja menor que o pivo, o índice se desloca mais um elemento a direita.
+Caso o atual índice right seja maior que o pivô ele se desloca para a esquerda.
+Ambas ocorrem até que cheguem em um elemento fora de lugar, nesse caso o elemento fora de lugar em cada porção são permutados. 
 Assim, temos duas porções para abrigarem os elementos maiores e menores que o pivô, que se iniciam vazias, mas vão avançando em direção ao pivô até que englobem todos os elementos. 
 
 Na Fig.\ref{quicksort} implementamos o código no ambiente integrado de desenvolvimento (IDE) \href{https://code.visualstudio.com/docs}{Visual Studio Code} e demonstramos seu funcionamento com um vetor exemplo. 
@@ -168,7 +180,9 @@ showall(win)
 
 \section{Plotagem (Iris data set)}
 Igualmente importante no ecossistema Julia é a habilidade de analisar dados. Nesse exemplo demonstramos as funções básicas para ler um arquivo csv, utilizar um DataFrame, e plotar um gráfico que permita análisar esse dados. 
+
 Para tanto, utilizamos o famoso Iris-dataset \cite{Fisher1936}, onipresente na literatura estatística e muito utilizado justamente para demonstrar um ecossistema de análise de dados. 
+
 Esse dataset consiste na observação de 50 exemplares de três epecécies de flores do gênero Iris (Fig. \ref{iris_flowers}), para cada observação temos o comprimento e largura de suas sépalas e pétalas bem como a qual espécie tais medidas pertecem (Fig.\ref{iris_data}).
 
 \begin{figure}[H]
@@ -187,10 +201,8 @@ Esse dataset consiste na observação de 50 exemplares de três epecécies de fl
    \end{center}
 \end{figure}
 
-Assim, utilizamos o ambiente de desenvolvimento Jupyter Notebook, que consiste em cadernos compostos por células interativas. Na figura \ref{iris_pacotes} temos a instalação dos pacotes: CSV para a leitura do arquivo com os dados, DataFrame que é a estrutura de dados padrão em tabelas, e DataVoyager que apresenta uma interface simples e interativa para plotagem exploratória de gráficos. 
-Na figura \ref{iris_csv} importamos as bibliotecas CSV e DataFrames, criamos uma variável com o cabeçalho das colunas e finalmente lemos o arquivo csv e o armazenamos em memória na variável "iris". No retorno podemos ver parte do dataframe.
-Já na figura \ref{iris_plot} temos a interface do DataVoyager, bem como o gráfico pronto, e principalmente a simplicidade dos comandos para um resultado tão interessante. 
-Assim, temos que utilizando a largura e comprimento das pétalas nos eixos, e colorindo os pontos de acordo coma espécie fica evidente a possibilidade de se utilizar tais dados para classificar novas observações. 
+Assim, utilizamos o ambiente de desenvolvimento \href{https://jupyter.org/}{Jupyter Notebook}, que consiste em cadernos compostos por células interativas. 
+Na figura \ref{iris_pacotes} temos a instalação dos pacotes: CSV para a leitura do arquivo com os dados, DataFrame que é a estrutura de dados padrão em tabelas, e DataVoyager que apresenta uma interface simples e interativa para plotagem exploratória de gráficos.
 
 \begin{figure}[H]
    \begin{center}
@@ -200,6 +212,8 @@ Assim, temos que utilizando a largura e comprimento das pétalas nos eixos, e co
    \end{center}
 \end{figure}
 
+Na figura \ref{iris_csv} importamos as bibliotecas CSV e DataFrames, criamos uma variável com o cabeçalho das colunas e finalmente lemos o arquivo csv e o armazenamos em memória na variável "iris". No retorno podemos ver parte do dataframe.
+
 \begin{figure}[H]
    \begin{center}
        \caption{Leitura do CSV} \label{iris_csv}
@@ -208,13 +222,19 @@ Assim, temos que utilizando a largura e comprimento das pétalas nos eixos, e co
    \end{center}
 \end{figure}
 
+Já na figura \ref{iris_plot} temos a interface do DataVoyager, onde selecionamos o comprimento e largura das pétalas para os eixos bem como que a cor de cada ponto se dá de acordo com a espécie relacionada aquele ponto. O programa automaticamente nos retorna um scatter plot, conforme nossas especificações, e ainda sugere outras abordagens. 
+
+
 \begin{figure}[H]
    \begin{center}
        \caption{Plotagem com DataVoyager} \label{iris_plot}
-       \includegraphics[width=18cm]{aplicacoes/iris_plot.png} \\
+       \includegraphics[width=15cm]{aplicacoes/iris_plot.png} \\
        {\tiny \sf Fonte: Autor}
    \end{center}
 \end{figure}
+
+Assim, torna-se evidente o potencial da linguagem e suas ferramentas para a análise exploratória de dados e construção de vizualizações. 
+
 %\subsection{texto removido da seção principal}
 %em dados esse é o equivalente ao "hello, world!", o conjunto de dados das dimensões espaciais de três especies de flores coletada por ninguém menos que R.A Fisher, um dos pais da estatística. A ideia é que a facilidade de se trabalhar com esse conjunto de dados nos permite conhecer o ecossistema de dados de uma linguagem. 
 
@@ -229,16 +249,48 @@ Assim, temos que utilizando a largura e comprimento das pétalas nos eixos, e co
 
 \section{Banco de Dados SQL lite}
 
-Outro aspecto fundamental de uma linguagem é a sua integração com banco de dados, nesse exemplo demonstramos um uso simples do banco de dados SQLlite. 
+Outro aspecto fundamental de uma linguagem é a sua integração com banco de dados. Aqui trazemos um exemplo simples da criação e uso de um banco de dados SQLite, por meio da sua biblioteca disponível em Julia. 
+Iniciamos instalando o pacote SQLite.jl (Fig \ref{sql_pacote})
+Criamos um objeto e arquivo de banco de dados. Em seguida construímos uma função que lê o input padrão do teclado, separa a frase do autor e armazena ambos no banco de dados criado, conforme a mostra a figura \ref{sql_corpo}.
 
-\begin{lstlisting}
-  using SQLlite
+\begin{figure}[H]
+   \begin{center}
+       \caption{Instalação do pacote SQLite.jl} \label{sql_pacote}
+       \includegraphics[width=12cm]{aplicacoes/sql_pacote.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
 
-  db = SQLite.DB("exampleData.db")
+\begin{figure}[H]
+   \begin{center}
+       \caption{Corpo do programa que armazena as frases} \label{sql_corpo}
+       \includegraphics[width=12cm]{aplicacoes/sql_corpo.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
 
-  SQLite.execute(db, "CREATE TABLE IF NOT EXISTS contacts")
-  (id INTEGER PRIMARY KEY, Nname TEXT, age INTEGER, breed TEXT, email TEXT)
-\end{lstlisting}
+Em seguida executamos a função "Frases()" escrevendo três entradas conforme a figura \ref{sql_frases}. E finalmente, na figura \ref{sql_query}, efetuamos uma busca nesse banco de dados que nos retornou todas as entradas. 
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Função "Frases()" sendo executada} \label{sql_frases}
+       \includegraphics[width=12cm]{aplicacoes/sql_frases.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+       \caption{Query do banco de frases criado} \label{sql_query}
+       \includegraphics[width=12cm]{aplicacoes/sql_pacote.png} \\
+       {\tiny \sf Fonte: Autor}
+   \end{center}
+\end{figure}
+%Aqui trazemos dois exemplos de utilização do banco de dados SQLite. No primeiro nós criamos um arquivo de banco de dados, preenchemos com algumas informações e as recuperamos. Já no segundo demonstramos uma query no famoso banco de dados \href{https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite}{Chinook}, que seria em SQL o equivalente ao Iris Dataset em Data Analysis. 
+%#A princípio vou deixar só o meu primeiro exemplo mesmo, pra não ter que explicar sobre o chinook e tal
+
+
+
 
 
 
