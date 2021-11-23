@@ -3,5 +3,10 @@
     "spellright.documentTypes": [
         "markdown",
         "plaintext"
+    ],
+    "cSpell.language": "en,pt-BR",
+    "cSpell.words": [
+        "metaprogramação",
+        "multimétodos"
     ]
 }
