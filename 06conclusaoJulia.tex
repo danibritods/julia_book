@@ -10,29 +10,19 @@
 %Neste trabalho apresentamos a linguagem Julia de forma resumida, 
 %?pensando em um público familiarizado com os conceitos básicos de programação. Caso seja seu primeiro contato com a programação, recomendamos:
 
-Nesse trabalho abordamos a linguagem Julia, sua história, principais aplicações, sintaxe e ecosistema de uso, entretanto devido as limitações de tempo foi necessário uma abordagem breve, e voltada a pessoas que já tenham certa familiaridade com programação, entretato podemos recomendar para os iniciantes o livro tal, no qual abordará pontos que não foram considerados aqui.
+Nesse trabalho nós apresentamos uma breve introdução à linguagem Julia. Abordamos um pouco de sua história, suas principais aplicacações, sua sintaxe e estrutura. Também apresentamos aplicações para exemplificar diferentes aspectos da linguagem e finalmente demonstramos as principais ferramentas utilizadas em seu ecosistema. 
 
-Aos interessados em aprender a linguagem recomendamos o livro Think Julia, para se aprofundar na linguagem o artigo de seus criadores é um excelente ponto de partida. 
+É importante ressaltar que apesar de suas notáveis qualidades, Julia, como qualquer outra linguagem, também tem pontos negativos importantes de se considerar. Jakob Nybo Nissen em seu artigo de 2021: "What's bad about Julia?"\cite{Nissen2021} mapeia as principais limitações da linguagem, dentre as quais podemos citar as duas que são relevantes em nosso escopo.
 
-Assim temos na linguagem Julia um lingugaem interessante, com ótimas propostas, limitações bem definidas e conhecidas, que pde acrescemtar miotp 
+A primeira limitação da linguagem é a latência da primeira execução.Isto é, assim que executamos qualquer código Julia pela primeira vez precisamos esperar de segundos a minutos para que seja compilado. Apenas as execuções subsequentes têm a velocidade que lhe é característica. Tal fato virtualmente inviabiliza o uso de Julia em pequenos scripts Unix por exemplo, bem como em aplicações que a responsividade seja sempre chave.
 
-Também recomendamos os conteúdos digitais, indexados informalmente no youtube, que são as conferências da linguagem e as iniciativas de demonstração, podemos destacar o curso do Grant Sanderson, os workshops para data Sciecne, o canal talented beguiners .
+Ademais, a segunda limitação está no fato de aplicações escritas em Julia, mesmo as mais simples, consumirem no mínimo 150MB memória RAM, o que restringe ainda mais as possíveis aplicações para mobile, sistemas embarcados, processos daemon dentre outros.  
 
-Também a plataforma exercism para prática e real aprendizado, que se dá na prática.
+Finalmente, devido a proposta desse trabalho nos atemos aos aspectos básicos, e apenas mencionamos por vezes o mecanismo da linguagem e construções mais complexas. 
+Dentre os aspectos não considerados temos principalmente questões da engenharia de software em Julia. Como por exemplo os testes de software, os padrões de design da linguagem, medição de performace, o uso de macros. 
 
+Aos interessados em aprender a linguagem recomendamos o livro Think Julia \cite{Lauwens2019}, o excelente canal do Youtube \href{https://www.youtube.com/c/juliafortalentedamateurs}{"Julia for talented Amateurs"} e principalmente o ótimo site e comunidade de aprendizado \href{https://exercism.org/tracks/julia}{Exercism.com} que trás trilhas de aprendizagem para as mais diversas linguagens (inclusive Julia) por meio de exercícios divertidos, com dicas e correções da comunidade. Além de um crescente ecossistema de conteúdo como o curso "Computational Thinking" do MIT (18.S191 MIT Fall 2020) \footnote{https://computationalthinking.mit.edu/Spring21/}\footnote{https://github.com/mitmath/18S191} disponibilizado no \href{https://www.youtube.com/playlist?list=PLP8iPy9hna6Q2Kr16aWPOKE0dz9OnsnIJ}{Youtube}.
 
+Já para se aprofundar na linguagem, o melhor ponto de partido é o seu artigo oficial, onde seus criadores detalham seu design e mecanismo. \cite{Bezanson2017}
 
-
-Os problemas enfrentados neste trabalho ...
-O trabalho que foi desenvolvido em forma resumida ...
-Aspectos n\~{a}o considerados que poderiam ser estudados ou \'{u}teis para ...
-
-
-
-   \begin{figure}[H]
-    \begin{center}
-        \caption{Aplica\c{c}\~{a}o da Linguagem R} \label{ling2}
-        \includegraphics[width=12cm]{R02.png} \\
-        {\tiny \sf Fonte: O autor }
-    \end{center}
-   \end{figure} 
+Assim temos em Julia um linguagem com ótimas propostas, limitações bem definidas, e uma comunidade ativamente trabalhando para expandi-la e aprimorá-la. O futuro dirá até onde sua ambição é capaz de chegar. 

@@ -36,6 +36,10 @@ Antonello Lobianco.
 \newblock {\em Julia quick syntax reference}.
 \newblock Apress, Berkeley, CA, 1 edition, 2019.
 
+\bibitem[Nis21]{Nissen2021}
+Jakob~Nybo Nissen.
+\newblock What's bad about julia?, 2021.
+
 \bibitem[Per19]{Perkel2019}
 Jeffrey~M. Perkel.
 \newblock Julia: come for the syntax, stay for the speed.
