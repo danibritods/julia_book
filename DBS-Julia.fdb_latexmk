@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex DBS-Julia"] 1637699586 "DBS-Julia.aux" "DBS-Julia.bbl" "DBS-Julia" 1637699594
+["bibtex DBS-Julia"] 1637701101 "DBS-Julia.aux" "DBS-Julia.bbl" "DBS-Julia" 1637706564
   "/home/daniel/latex/texlive/2021/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
-  "DBS-Julia.aux" 1637699594 19500 7ce98f05160c34e9e9d0f5eaf6d1ba16 "pdflatex"
+  "DBS-Julia.aux" 1637706563 19503 e624437a343424e1f390934efef942d9 "pdflatex"
   "Julia.bib" 1637622457 3218 7a0d016130dd89ce6a317a8e7ceb2239 ""
   (generated)
-  "DBS-Julia.bbl"
   "DBS-Julia.blg"
-["makeindex DBS-Julia.idx"] 1637368634 "DBS-Julia.idx" "DBS-Julia.ind" "DBS-Julia" 1637699594
-  "DBS-Julia.idx" 1637699587 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "DBS-Julia.bbl"
+["makeindex DBS-Julia.idx"] 1637368634 "DBS-Julia.idx" "DBS-Julia.ind" "DBS-Julia" 1637706564
+  "DBS-Julia.idx" 1637706553 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
-  "DBS-Julia.ilg"
   "DBS-Julia.ind"
-["pdflatex"] 1637699586 "/home/daniel/CC/paradigmas/trabalho_indivifual/DBS-Julia/DBS-Julia.tex" "DBS-Julia.pdf" "DBS-Julia" 1637699594
+  "DBS-Julia.ilg"
+["pdflatex"] 1637706552 "/home/daniel/CC/paradigmas/trabalho_indivifual/DBS-Julia/DBS-Julia.tex" "DBS-Julia.pdf" "DBS-Julia" 1637706564
   "/home/daniel/CC/paradigmas/trabalho_indivifual/DBS-Julia/DBS-Julia.tex" 1637374339 4180 b1fe3cd56706b8d0d7dac6b95651b303 ""
   "/home/daniel/latex/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/daniel/latex/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -248,18 +248,18 @@
   "/home/daniel/latex/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1628800554 5184985 ecf214becfc0d5cf4cc06b932efd748d ""
   "/home/daniel/latex/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1628800599 2801760 be924430ee7815913dc01dbacf6827f2 ""
   "/home/daniel/latex/texlive/2021/texmf.cnf" 1628800539 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "01introducJulia.tex" 1637282788 13262 d3f6d702e2285cfb6c9ad7c47182ea9c ""
-  "02basicosJulia.tex" 1636249627 24112 2031777d9573dcfa1bf4b9b904d6f5a3 ""
-  "03avancadosJulia.tex" 1635892118 3197 6330fb119df100505d0cf4308fc98568 ""
-  "04aplicacoesJulia.tex" 1637699577 15900 484b83637403dbea9799e0edb80219ea ""
-  "05ferramentasJulia.tex" 1637599279 7414 15573d814da45a800e04fc9faee25d62 ""
-  "06conclusaoJulia.tex" 1637697973 3440 0c64f682c2293f6a7e383864dc4ab883 ""
-  "DBS-Julia.aux" 1637699594 19500 7ce98f05160c34e9e9d0f5eaf6d1ba16 "pdflatex"
-  "DBS-Julia.bbl" 1637699586 1459 5d7c7a380be90f4f70a3572be55c5605 "bibtex DBS-Julia"
-  "DBS-Julia.brf" 1637699594 740 25a4cd76231cce7511a652d18d7e66a5 "pdflatex"
+  "01introducJulia.tex" 1637700303 13266 7616a8b6e5d6381d771f4ed7ac515908 ""
+  "02basicosJulia.tex" 1637702532 24110 2eed87411353a96de91dc385c792b14e ""
+  "03avancadosJulia.tex" 1637701090 3204 21f6aad6a97803324d2c50e08684288a ""
+  "04aplicacoesJulia.tex" 1637706551 16564 e0c101fc999ba425aea51c6e8f0a071f ""
+  "05ferramentasJulia.tex" 1637702112 7414 3307bf964ea12a07fd471c17460be04c ""
+  "06conclusaoJulia.tex" 1637702532 3440 9456475ef987da617c22a2cb9af2bbad ""
+  "DBS-Julia.aux" 1637706563 19503 e624437a343424e1f390934efef942d9 "pdflatex"
+  "DBS-Julia.bbl" 1637701101 1459 5d7c7a380be90f4f70a3572be55c5605 "bibtex DBS-Julia"
+  "DBS-Julia.brf" 1637706563 740 25a4cd76231cce7511a652d18d7e66a5 "pdflatex"
   "DBS-Julia.ind" 1637368634 0 d41d8cd98f00b204e9800998ecf8427e "makeindex DBS-Julia.idx"
   "DBS-Julia.tex" 1637374339 4180 b1fe3cd56706b8d0d7dac6b95651b303 ""
-  "DBS-Julia.toc" 1637699594 4060 a936c9f34ee04e9982745d143aded79a "pdflatex"
+  "DBS-Julia.toc" 1637706563 4061 ce82d845508afbe2dad31313894c2366 "pdflatex"
   "Pictures//Biblioteca.png" 1630281877 87975 e5abd87f41e67cf7a5ff72335a7780d5 ""
   "Pictures//aplicacoes/Editores e IDEs.png" 1636687227 40807 c179cedd47bb321ea7f1cdb5b129b023 ""
   "Pictures//aplicacoes/Editors_IDEs_site.png" 1637283865 39581 04d04a651e6e96fc9bc1b993c4e242e9 ""
@@ -285,9 +285,9 @@
   "ficha.tex" 1636597932 2597 bda585e09020aeda1466a957273362fa ""
   "structure.tex" 1633959637 22588 507fe0a59f305c8a9f5afb38bf88a3f9 ""
   (generated)
+  "DBS-Julia.brf"
   "DBS-Julia.aux"
-  "DBS-Julia.toc"
+  "DBS-Julia.pdf"
   "DBS-Julia.idx"
   "DBS-Julia.log"
-  "DBS-Julia.brf"
-  "DBS-Julia.pdf"
+  "DBS-Julia.toc"

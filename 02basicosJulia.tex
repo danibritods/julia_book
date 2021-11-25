@@ -54,16 +54,16 @@ Além do sistema de pacotes, basta digitar "?" para acessar o modo especial de a
 %a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
 
 \section{Tipos e estruturas de dados}
-Julia oferece nativamente um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre escalares ( inteiros, floats, e chars) e containers que acomodam outros objetos (como vetores multidimencionais, dicionários, conjuntos, etc)
+Julia oferece nativamente um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre escalares ( inteiros, floats, e chars) e containers que acomodam outros objetos (como vetores multidimensionais, dicionários, conjuntos, etc)
 %TODO Trocar os "como" por "por exemplo"?
 
 Podemos destacar as seguintes características\cite{Lobianco2019}: 
 \begin{itemize}
     \item Cada valor (mesmo os primitivos) tem seu tipo único, por convenção iniciando com letra maiúscula como Int64 e Bool. 
-    \item No caso de containers e alguns escalares, o nome de seu tipo é seguido de chaves indicando sua dimenção e os tipos dos elementos contidos, como por exemplo Array\{Int,2\}. Na terminologia da linguagem são chamados tipos paramétricos.  
+    \item No caso de containers e alguns escalares, o nome de seu tipo é seguido de chaves indicando sua dimensão e os tipos dos elementos contidos, como por exemplo Array\{Int,2\}. Na terminologia da linguagem são chamados tipos paramétricos.  
     \item Em Julia não existe divisão entre objetos e não-objetos pois todos os valores são objetos tipados, enquanto variáveis são apenas nomes relacionados a valores, portanto não têm tipo. 
     \item Podemos converter objetos atraves da função convert(T,x).
-    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis. Essa anotação manual de tipos é totalmente opcional, pois apesar de haver situações nas quais ela se traduz em algum ganho de performace, na imensa maioria dos casos a inferência tipos é suficiente para atingir eficiência máxima na compilação. Ainda assim a anotação de tipos é frequentemente utilizada para confirmar que um programa se comporta conforme o esperado. \cite{Bezanson2017}
+    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis. Essa anotação manual de tipos é totalmente opcional, pois apesar de haver situações nas quais ela se traduz em algum ganho de performance, na imensa maioria dos casos a inferência tipos é suficiente para atingir eficiência máxima na compilação. Ainda assim a anotação de tipos é frequentemente utilizada para confirmar que um programa se comporta conforme o esperado. \cite{Bezanson2017}
     
 \end{itemize}
 
@@ -77,7 +77,7 @@ Podemos destacar as seguintes características\cite{Lobianco2019}:
 \end{itemize}
 
 \subsection{Operações básicas}
-Além dos operadores padrões de soma, subtração, multiplicação e divisão (+, -, *, /) temos a potenciação através do circunfléxo ("3\^{}2"), o resto pelo operador \%, e a divisão inteira pelo símbolo $\div$ ("\textbackslash div")
+Além dos operadores padrões de soma, subtração, multiplicação e divisão (+, -, *, /) temos a potenciação através do circunflexo ("3\^{}2"), o resto pelo operador \%, e a divisão inteira pelo símbolo $\div$ ("\textbackslash div")
 
 \subsection{Strings}
 As strings em Julia são imutáveis, definidas com aspas duplas e podem ser vistas como um tipo especial de vetor pois suportam indexação e looping.
@@ -87,10 +87,10 @@ Algumas das operações típicas com strings são:
 \begin{itemize}
     \item \textbf{split(s, " ")} nesse exemplo utiliza o espaço como um separador e retorna um vetor com as sublistas.
     \item \textbf{join([s1,s2], " ")} que une strings utilizando, nesse caso, o espaço entre cada junção.
-    \item \textbf{replace(s, {termo buscado}} => {substituto}) que substiui substrings compatíveis com a busca.
+    \item \textbf{replace(s, {termo buscado}} =  {substituto}) que substitui substrings compatíveis com a busca.
     \item parse(Int, "64") retorna a string convertida para um tipo numérico, no caso inteiro.
     \item \textbf{string(123)} retorna a string correspondente ao número.
-    \item Existem três principais maneiras de concaternar strings:
+    \item Existem três principais maneiras de concatenar strings:
         \subitem 
         \begin{lstlisting}    
   string("Hello, ","world")
@@ -133,51 +133,51 @@ Podemos acessar subvetores utilizando chaves para selecionar um elemento (a[2]) 
 \subsubsection{Principais funções}
 A seguir apresentamos as principais função para trabalharmos com Arrays, é interessante notar que normalmente as funções que modificam o primeiro argumento contém uma exclamação.
 \begin{lstlisting}
-> push!(a,b) #adiciona o elemento b no fim de a.
-> append!(a,b) #adiciona os elementos de b em a,
+  push!(a,b) #adiciona o elemento b no fim de a.
+  append!(a,b) #adiciona os elementos de b em a,
   #identico ao push! caso b seja escalar
 
-> c = vcat(1,[2,3],[4,5]) #concatena arrays
+  c = vcat(1,[2,3],[4,5]) #concatena arrays
 
-> pop!(a) #remove o ultimo elemento do array,
-> popfirst!(a) #remove o primeiro elemento do array.
-> deletat!(a,pos) #remove o elemento da posicao pos
+  pop!(a) #remove o ultimo elemento do array,
+  popfirst!(a) #remove o primeiro elemento do array.
+  deletat!(a,pos) #remove o elemento da posicao pos
 
-> pushfirst!(a,b) #b no inicio de a.
+  pushfirst!(a,b) #b no inicio de a.
 
-> length(a) #=ou=# if a in b end #retorna o comprimento do vetor
+  length(a) #=ou=# if a in b end #retorna o comprimento do vetor
 
-> sort!(a) #ordena o vetor a.
-> sort(a) #retorna a ordenado sem modificar o vetor original
-> reverse(a) #retorna elementos de a invertidos
+  sort!(a) #ordena o vetor a.
+  sort(a) #retorna a ordenado sem modificar o vetor original
+  reverse(a) #retorna elementos de a invertidos
 
-> unique!(a) #remove duplicatas modificando a.
-> unique(a) #retorna a sem duplicadas. 
-> in(b,a) #checa a existencia de b em a.
+  unique!(a) #remove duplicatas modificando a.
+  unique(a) #retorna a sem duplicadas. 
+  in(b,a) #checa a existencia de b em a.
 
-> a... #=operador "splat" coverte os elementos em 
+  a... #=operador "splat" coverte os elementos em 
   parametros para uma funcao.=#
 
-> maximum(a) #=ou=# max(a...) #retorna o maior valor.
-> minimum(a) #=ou=# min(a...) #analogo ao anterior.
-> sum(a) #retorna a soma dos elmentos de a.
-> cumsum(a) #retorna um vetor com a soma cumulativa de a.
+  maximum(a) #=ou=# max(a...) #retorna o maior valor.
+  minimum(a) #=ou=# min(a...) #analogo ao anterior.
+  sum(a) #retorna a soma dos elmentos de a.
+  cumsum(a) #retorna um vetor com a soma cumulativa de a.
 
-> empty!(a) #esvazia um vetor coluna.
-> b = vec(a) #transforma vtores linha em vetores coluna.
-> shuffle(a) #=ou=# shufle!(a) #=embaralha aleatoriamente 
+  empty!(a) #esvazia um vetor coluna.
+  b = vec(a) #transforma vtores linha em vetores coluna.
+  shuffle(a) #=ou=# shufle!(a) #=embaralha aleatoriamente 
   os elementos de a.=# 
   (requer o modulo Random).=#
 
-> isempty(a) #checa se um array esta vazio.
+  isempty(a) #checa se um array esta vazio.
 
-> findall(x -> x == value, a) #=retorna o indice de todas
+  findall(x -  x == value, a) #=retorna o indice de todas
   as ocorrencias de x.=#
-> deleteat!(a, findall(x -> x == value, a)) #=deleta todas as 
+  deleteat!(a, findall(x -  x == value, a)) #=deleta todas as 
   ocorrencias de x de a.=#
 
-> enumerate(a) #retorna um iterador de pares (indice, elemento).
-> zip(a,b) #retorna um iterador de pares (a_element,b_element).
+  enumerate(a) #retorna um iterador de pares (indice, elemento).
+  zip(a,b) #retorna um iterador de pares (a_element,b_element).
 \end{lstlisting}
 
 \subsubsection{Arrays aninhados e multidimensionias}
@@ -190,78 +190,78 @@ Os elementos de Arrays aninhados podem ser acessados por chaves duplas (a[2][3])
 
 Podemos contruir Arrays multidimensionais de modo análogo aos vetores, alias estes são um caso específico daqueles:
 \begin{lstlisting}
-> a = [[1,2,3] [4,5,6]] #cria por colunas
-> a = [1 4; 2 5; 3 6] #cria por linhas
-> a = zeros(In64,n,m,g) #=cria uma matriz nxmxg 
+  a = [[1,2,3] [4,5,6]] #cria por colunas
+  a = [1 4; 2 5; 3 6] #cria por linhas
+  a = zeros(In64,n,m,g) #=cria uma matriz nxmxg 
   preenchida com zeros.=#
-> a = [3x + 2y + z for x in 1:2, y in 2:3, z in 1:2] 
+  a = [3x + 2y + z for x in 1:2, y in 2:3, z in 1:2] 
   #=tambem podemos usar list comprehension.=#
 \end{lstlisting}
 
 Também temos funções particularmente úteis para trabalharmos com Arrays multidimencionais:
 \begin{lstlisting}
-> size(a) #retorna uma tupla com os damanhos de cada dimencao
-> ndimns(a) #retorna o numero de dimensoes.
-> reshape(a,nElementDim1, nElementsDim2,...,nElementDimN) 
+  size(a) #retorna uma tupla com os damanhos de cada dimencao
+  ndimns(a) #retorna o numero de dimensoes.
+  reshape(a,nElementDim1, nElementsDim2,...,nElementDimN) 
   #redimensiona o array.
-> dropdimns(a, dimns=(dimRemov1, dimRemov2) 
+  dropdimns(a, dimns=(dimRemov1, dimRemov2) 
   #remove as dimensoes especificadas
-> transpose(a) #=ou=# a' #transpoe vetores ou matrizes.
-> hvat(col1,col2) #concatena horizontalmente
-> vcat(row1, row2) # concatena verticalmente. 
+  transpose(a) #=ou=# a' #transpoe vetores ou matrizes.
+  hvat(col1,col2) #concatena horizontalmente
+  vcat(row1, row2) # concatena verticalmente. 
 \end{lstlisting}
 
 \subsection{Tuplas}
 Tuplas (Tuple\{T1, T2,...\}) são listas imutáveis de elementos, que em contraste com Arrays não perdem performace ao conter elementos de tipos diversos porque suas assinaturas são mantidas. Podmos criar tuplas com parênteses ou sem conforme o exemplo:
 \begin{lstlisting}
-> t = (1, 2.5, "a")
-> t = 1, 2.5, "a"
+  t = (1, 2.5, "a")
+  t = 1, 2.5, "a"
 #Podemos converter uma tupla em um array:
-> a = [t...] #utilizando o operador splat
-> a = [i[1] for i in t] #utilizando list comprehension
-> a = collect(t) #utilizando o operador collect. 
+  a = [t...] #utilizando o operador splat
+  a = [i[1] for i in t] #utilizando list comprehension
+  a = collect(t) #utilizando o operador collect. 
 #De modo analogo podemos converter um array em uma tupla:
-> t = (a...,)
+  t = (a...,)
 \end{lstlisting}  
 
 \subsection{Tuplas nomeadas}
 Já as Tuplas Nomeadas (NamedTuple) são coleções de itens que além do índice seus elementos podem ser identificados pelo nome da seguinte forma: 
 \begin{lstlisting}
-> nt = (a=1,b=2.5) #define uma tupla nomeada
-> nt.a #acessa o elemento a da tupla nt.
-> keys(nt) #returna uma tupla com os nomes: (a,b)
-> values(nt) #retorna uma tupla com os valores: (1, 2.5).
-> collect(nt) #retorna um array com os valores.
-> pairs(nt) #retorna um iterador dos pares (nome,valor) 
+  nt = (a=1,b=2.5) #define uma tupla nomeada
+  nt.a #acessa o elemento a da tupla nt.
+  keys(nt) #returna uma tupla com os nomes: (a,b)
+  values(nt) #retorna uma tupla com os valores: (1, 2.5).
+  collect(nt) #retorna um array com os valores.
+  pairs(nt) #retorna um iterador dos pares (nome,valor) 
 \end{lstlisting}
 
 \subsection{Dicionários}
 Dicionários (Dict\{Tkey, Tvalue\}) guardam mapas de chaves para valores com ordem aparentemente aleatória e diferente das Tuplas nomeadas, são mutáveis, tipo-instáveis.
 Os principais métodos para trabalharmos com dicionários são:
 \begin{lstlisting}
-> d = Dict() 
+  d = Dict() 
   #cria um dicionario vazio.
-> d = Dict{String,Int64}() 
+  d = Dict{String,Int64}() 
   #cia um dicionario com tipagem definidapara chaves e valores.
-> d = Dict('a'=>1,'b'=>2, 'c'=>3) 
+  d = Dict('a'= 1,'b'= 2, 'c'= 3) 
   #inicializa o dicionario com valores
-> d[novaChave] = novoValor 
+  d[novaChave] = novoValor 
   #adiciona um novo par key-value ao dicionario.
-> delete!(d,"chave") 
+  delete!(d,"chave") 
   #deleta o par correspondente a chave.
-> map( (i,j) -> d[i]=j, ['a','b','c'],[1, 2 , 3]) 
+  map( (i,j) -  d[i]=j, ['a','b','c'],[1, 2 , 3]) 
   #adiciona pares de mapeamentos
-> d["chave"] 
+  d["chave"] 
   #=retorna o valor correspondente a chave, 
   ou um erro caso ela nao exista.=#
-> get(d, 'chave', "Chave inexistente") 
+  get(d, 'chave', "Chave inexistente") 
   #=retorna o valor da chave ou um valor padrao 
   caso ela nao exista.=# 
-> keys(d) #retorna um iterator com todas as chaves de d.
-> values(d) #retorna um iterador com todos os valores de d.
-> haskey(d,"chave") 
+  keys(d) #retorna um iterator com todas as chaves de d.
+  values(d) #retorna um iterador com todos os valores de d.
+  haskey(d,"chave") 
   #retorna um booleano de acordo com a existencia da chave.
-> in(('a'=>1), d) 
+  in(('a'= 1), d) 
   #=checa se o par existe e a chave corresponde 
   ao valor especificado.=#
 
@@ -270,46 +270,46 @@ Os principais métodos para trabalharmos com dicionários são:
 \subsection{Sets}
 Usamos sets (Set\{t\}) para representar conjuntos mutáveis e sem ordem de valores únicos.
     \begin{lstlisting}
-        > s = Set() #=ou=# Set{T}() 
+          s = Set() #=ou=# Set{T}() 
         #cria um set vazio
-        > s = Set([1,2,2,3,4]) 
+          s = Set([1,2,2,3,4]) 
         #inicializa com valores desconsiderando o 2 duplicado
-        > push!(s,5) 
+          push!(s,5) 
         #adiciona elementos
-        > delete!(s,1)
+          delete!(s,1)
         #deleta elementos
-        > intersect(s1,s2) 
+          intersect(s1,s2) 
         #intersessao de s1 e s2
-        > union(s1,s2) 
+          union(s1,s2) 
         #uniao de s1 e s2
-        > setdiff(s1,s2) 
+          setdiff(s1,s2) 
         #diferenca entre s1 e s2
     \end{lstlisting}
 
 \subsection{Números aleatórios}
 Julia também facilita a obtenção de números pseudo aleatórios:
     \begin{lstlisting}
-> rand()  
+  rand()  
 #retorna um float entre 0 e 1
-> rand(a:b) 
+  rand(a:b) 
 #retorna um inteiro no intervalo [a,b]
-> rand(a:0.01:b) 
+  rand(a:0.01:b) 
 #float aleatorio com precisao no segundo digito
 
 #=Tambem podemos obter numeros de alguma distribuicao particular, 
 desde que usemos o pacote Distributions=#
 
-> rand(nomeDistribuicao[parametros])
-> rand(Uniform(a,b))#por exemplo
+  rand(nomeDistribuicao[parametros])
+  rand(Uniform(a,b))#por exemplo
 
 #=Igualmente importante e a definicao da semente pseudo aleatoria
 que permite termos um script reprodutivel:=#
-> Random.seed!(1234) 
+  Random.seed!(1234) 
 #define a semente pseudo-aleatoria para 1234
-> Random.seed!() 
+  Random.seed!() 
 #reseta a definicao da semente
 
-> rand(Uniform(a,b),2,3) 
+  rand(Uniform(a,b),2,3) 
 #uma matriz 2x3 de numeros uniformemente aleatorios no 
 intervalo [a,b].
 
@@ -326,7 +326,7 @@ Em Julia nos temos as principais estruturas condicionais e repetitivas que encon
 \subsection{Estrutura em bloco}
 A sintaxe do controle de fluxo tipicamente se dá atráves de blocos que se iniciam com uma palavra chave seguida de uma condição (com parêntesis opcionais), e finalizam com a palavra "end" da seguinte forma: 
     \begin{lstlisting}
-    <palavra chave> <condicao>
+    <palavra chave>  <condicao> 
         #... conteudo do bloco....
     end 
     #-----------------------------#
@@ -366,15 +366,15 @@ a = [f(i) for i in [1 2 3]]
 \subsubsection{Map}
 Já a função Map aplica uma função a uma lista de argumentos.
 \begin{lstlisting}
-map((nome,idade) -> estudantes[nome] = idade, nomes, idades)
+map((nome,idade) -  estudantes[nome] = idade, nomes, idades)
 
 a = map(f, [1,2,3]) 
 
-a = map(x->f(x), [1,2,3])
+a = map(x- f(x), [1,2,3])
 \end{lstlisting}
 
 \subsection{Condicionais}
-Condicionais também são estruturados seguindo o design de simplicidade e similaridade com as linguagens dinámicas:
+Condicionais também são estruturados seguindo o design de simplicidade e similaridade com as linguagens dinâmicas:
 \begin{lstlisting}
 i = 5
 if i == 1 
@@ -386,44 +386,44 @@ else
 end
 \end{lstlisting}
 
-As expressãos são avaliadas até que seja possível inferir seu resultado (short circuited).%[] Pesquisar quão comun isso é
+As expressões são avaliadas até que seja possível inferir seu resultado (short circuited).%[] Pesquisar quão comun isso é
 
-Assim como list comprehension é uma forma concisa de escrever um loop temos no operador ternário uma forma consisa de escrever um condicional:
+Assim como list comprehension é uma forma concisa de escrever um loop temos no operador ternário uma forma concisa de escrever um condicional:
 \begin{lstlisting}
 a? b: c
 #se a eh verdadeiro execute b, do contrario execute c
 \end{lstlisting}
 
 \subsection{Funções}
-Funções em Julia são muito flexíveis, podem ser definadas tanto em linha como em bloco quanto como funções lambda. Além disso, funções também são objetos, e portantanto podem ser atribuídas a novas variáveis, retornadas como valores ou aninhadas:
+Funções em Julia são muito flexíveis, podem ser delfinadas tanto em linha como em bloco quanto como funções lambda. Além disso, funções também são objetos, e portanto podem ser atribuídas a novas variáveis, retornadas como valores ou aninhadas:
 \begin{lstlisting}
-> f(x,y) = 2x+y
+  f(x,y) = 2x+y
 #definicao em uma linha
 #-------------
-> function f(x) 
-> 	2x + y 
-> end
+  function f(x) 
+  	2x + y 
+  end
 #definicao em bloco
 #--------------
-> x,y -> 2x + y
+  x,y -  2x + y
 #funcao anonima
 #--------------
-> a = f
-> a(5)
+  a = f
+  a(5)
 #funcao como objeto
 \end{lstlisting}
 
 A chamada de funções em Julia seguem uma convenção conhecida como chamada por compartilhamento, que seria entre chamada por referência (onde um ponteiro a memória da variável é passado) e chamada por valor (onde uma cópia da variável é passada e a função trabalha nessa cópia).
 
-Assim, as funções em júlia trabalham nas novas variáveis locais, conhecidas apenas dentro da função, de modo que atribuir a variável a outro objeto não vai influenciar o valor original, mas se o objeto ligado a variável é mutável a mutação do objeto também será aplicada a variável original:
+Assim, as funções em Julia trabalham nas novas variáveis locais, conhecidas apenas dentro da função, de modo que atribuir a variável a outro objeto não vai influenciar o valor original, mas se o objeto ligado a variável é mutável a mutação do objeto também será aplicada a variável original:
 \begin{lstlisting}
-> function f(x,y) 
-> 	x = 10
-> 	y[1] = 10
-> end
-> x = 1
-> y = [1,1]
-> f(x,y)
+  function f(x,y) 
+  	x = 10
+  	y[1] = 10
+  end
+  x = 1
+  y = [1,1]
+  f(x,y)
 #Resultado: x = 1, y = [10, 1]
 
 \end{lstlisting}
@@ -444,24 +444,24 @@ Na comunidade Julia se recomenda seguir duas regras em relação a funções:%%[
     \item Retornar um valor é opcional e normalmente as funções retornam o último valor computado, podendo ser inclusive uma tupla.
 \end{itemize}
 \begin{lstlisting}
-> f(a,b=1;c=2) = (a+b+c) 
-> f(1,c=3) 
+  f(a,b=1;c=2) = (a+b+c) 
+  f(1,c=3) 
 #(1+1+3)
 
-> function f(args...)
-> 	for arg in args
-> 		println(arg)
-> 	end
-> end
+  function f(args...)
+  	for arg in args
+  		println(arg)
+  	end
+  end
 
-> f(a::In64, b::Int64, c::Int64) = (a+b+c)
+  f(a::In64, b::Int64, c::Int64) = (a+b+c)
 
-> f(a,b) = a*2,b+2
-> x,y = f(1,2) 
+  f(a,b) = a*2,b+2
+  x,y = f(1,2) 
 # x = 2, y = 4
     
 \end{lstlisting}
 
 %\subsubsection{Multiple-Dispatch}
-%Uma função pode ter múltiplos métodos para diferentes números e %tipos de inputs. Ao ser executada o compulador selecionará a %implementação correta de acordo com os parâmetros na chamada da %função. Podemos listar todos os métodos de uma função com a função %methods(f).
+%Uma função pode ter múltiplos métodos para diferentes números e %tipos de inputs. Ao ser executada o computador selecionará a %implementação correta de acordo com os parâmetros na chamada da %função. Podemos listar todos os métodos de uma função com a função %methods(f).
 %%Detalhar mais esse que é o coração da linguagem

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  23 NOV 2021 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  23 NOV 2021 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1185,12 +1185,12 @@ File: Pictures//capitulo01.jpg Graphic file (type jpg)
 <use Pictures//capitulo01.jpg>
 Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 7.
 (pdftex.def)             Requested size: 597.50787pt x 233.04076pt.
-<Pictures//aplicacoes/Editores e IDEs.png, id=772, 1008.76875pt x 456.70625pt>
+<Pictures//aplicacoes/Editores e IDEs.png, id=774, 1008.76875pt x 456.70625pt>
 File: Pictures//aplicacoes/Editores e IDEs.png Graphic file (type png)
 <use Pictures//aplicacoes/Editores e IDEs.png>
 Package pdftex.def Info: Pictures//aplicacoes/Editores e IDEs.png  used on input line 14.
 (pdftex.def)             Requested size: 426.79134pt x 193.22299pt.
-<Pictures//aplicacoes/Editors_IDEs_site.png, id=773, 747.79375pt x 528.97626pt>
+<Pictures//aplicacoes/Editors_IDEs_site.png, id=775, 747.79375pt x 528.97626pt>
 File: Pictures//aplicacoes/Editors_IDEs_site.png Graphic file (type png)
 <use Pictures//aplicacoes/Editors_IDEs_site.png>
 Package pdftex.def Info: Pictures//aplicacoes/Editors_IDEs_site.png  used on input line 22.
@@ -1201,7 +1201,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [33
 
  <./Pictures//aplicacoes/Editores e IDEs.png>]
-<Pictures//aplicacoes/VScode_welcome.png, id=781, 1035.87pt x 805.0075pt>
+<Pictures//aplicacoes/VScode_welcome.png, id=783, 1035.87pt x 805.0075pt>
 File: Pictures//aplicacoes/VScode_welcome.png Graphic file (type png)
 <use Pictures//aplicacoes/VScode_welcome.png>
 Package pdftex.def Info: Pictures//aplicacoes/VScode_welcome.png  used on input line 33.
@@ -1224,18 +1224,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 [][][]\T1/ptm/m/n/9 (+20) https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-
  []
 
-<Pictures//aplicacoes/jupyter.png, id=807, 784.9325pt x 347.2975pt>
+<Pictures//aplicacoes/jupyter.png, id=809, 784.9325pt x 347.2975pt>
 File: Pictures//aplicacoes/jupyter.png Graphic file (type png)
 <use Pictures//aplicacoes/jupyter.png>
 Package pdftex.def Info: Pictures//aplicacoes/jupyter.png  used on input line 56.
 (pdftex.def)             Requested size: 341.43306pt x 151.07318pt.
-<Pictures//aplicacoes/Pluto.png, id=813, 1330.9725pt x 676.5275pt>
+<Pictures//aplicacoes/Pluto.png, id=815, 1330.9725pt x 676.5275pt>
 File: Pictures//aplicacoes/Pluto.png Graphic file (type png)
 <use Pictures//aplicacoes/Pluto.png>
 Package pdftex.def Info: Pictures//aplicacoes/Pluto.png  used on input line 77.
 (pdftex.def)             Requested size: 341.43306pt x 173.53935pt.
 [36 <./Pictures//aplicacoes/jupyter.png>]
-<Pictures//aplicacoes/Pluto_plotting.png, id=825, 781.92125pt x 578.16pt>
+<Pictures//aplicacoes/Pluto_plotting.png, id=827, 781.92125pt x 578.16pt>
 File: Pictures//aplicacoes/Pluto_plotting.png Graphic file (type png)
 <use Pictures//aplicacoes/Pluto_plotting.png>
 Package pdftex.def Info: Pictures//aplicacoes/Pluto_plotting.png  used on input line 85.
@@ -1256,7 +1256,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout6 = `DBS-Julia.brf'.
 
  [40]
-<Pictures//Biblioteca.png, id=855, 597.55244pt x 231.14355pt>
+<Pictures//Biblioteca.png, id=857, 597.55244pt x 231.14355pt>
 File: Pictures//Biblioteca.png Graphic file (type png)
 <use Pictures//Biblioteca.png>
 Package pdftex.def Info: Pictures//Biblioteca.png  used on input line 1.
@@ -1268,18 +1268,18 @@ Package rerunfilecheck Info: File `DBS-Julia.brf' has not changed.
 (rerunfilecheck)             Checksum: 25A4CD76231CCE7511A652D18D7E66A5;740.
  ) 
 Here is how much of TeX's memory you used:
- 32906 strings out of 478542
- 621900 string characters out of 5846393
- 1133084 words of memory out of 5000000
- 49329 multiletter control sequences out of 15000+600000
+ 32908 strings out of 478542
+ 621928 string characters out of 5846393
+ 1131041 words of memory out of 5000000
+ 49330 multiletter control sequences out of 15000+600000
  509711 words of font info for 368 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,92p,1278b,1862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/daniel/latex/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on DBS-Julia.pdf (42 pages, 2768129 bytes).
+Output written on DBS-Julia.pdf (42 pages, 2768463 bytes).
 PDF statistics:
- 1158 PDF objects out of 1200 (max. 8388607)
- 1020 compressed objects within 11 object streams
- 508 named destinations out of 1000 (max. 500000)
+ 1160 PDF objects out of 1200 (max. 8388607)
+ 1022 compressed objects within 11 object streams
+ 509 named destinations out of 1000 (max. 500000)
  126419 words of extra memory for PDF output out of 128383 (max. 10000000)
 

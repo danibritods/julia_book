@@ -70,13 +70,13 @@ Outro aspecto muito importante da computação envolve o uso de interfaces gráf
 %, tanto no quesito acessibilidade quanto na acessibilidade de . 
 Entretanto a construção de janelas, botões e afins é uma tarefa complexa, de modo que na maior parte dos casos os programadores utilizam uma biblioteca que implementa tais componentes de interface gráfica, sendo as duas mais famosas a Qt e a GTK chamadas de GUI Toolkit. %TODO refatorar esse parágrafo
 
-Nesse exemplo demonstramos uma calculadora simples utilizando a biblioteca Gtk.jl que traz a bilbioteca GTK de forma amigável para a linguagem Julia. 
+Nesse exemplo demonstramos uma calculadora simples utilizando a biblioteca Gtk.jl que traz a biblioteca GTK de forma amigável para a linguagem Julia. 
 
 O código \ref{calculadora_code} apresenta de modo compacto a implementação criada por Nand Vincchi está está disponível como exemplo no repositório \href{https://github.com/JuliaGraphics/Gtk.jl/blob/master/example/calculator.jl}{Github} da biblioteca Gtk.jl. 
 
 Adicionamos as linhas para instalar o pacote Gtk, caso o mesmo ainda não esteja presente. O código original segue importando o pacote, e criando uma janela com título "Calculator", cria-se todos os botões, seguido de 4 chamadas "caixas" horizontais que são preenchidas com os botões criados. Cria-se uma caixa vertical para receber as quatro horizontais, a "tela" da calculadora, e espaços. Por sua vez essa caixa vertical é adicionada a janela.
 
-Finalmente temos a função \_button\_clicked\_callback que adiciona responsividade dos botões de compor uma string que é apresentada na tela conforme são apertados, e ao clicar no igual a string contruída é enviada a função "calculate" que a processa e retorna o resultado que será apresentado na tela.
+Finalmente temos a função \_button\_clicked\_callback que adiciona responsividade dos botões de compor uma string que é apresentada na tela conforme são apertados, e ao clicar no igual a string construída é enviada a função "calculate" que a processa e retorna o resultado que será apresentado na tela.
 
 Na figura \ref{calculadora} podemos ver a janela gráfica e parte do código sendo executado na IDE. 
 
@@ -179,11 +179,11 @@ showall(win)
 
 
 \section{Plotagem (Iris data set)}
-Igualmente importante no ecossistema Julia é a habilidade de analisar dados. Nesse exemplo demonstramos as funções básicas para ler um arquivo csv, utilizar um DataFrame, e plotar um gráfico que permita análisar esse dados. 
+Igualmente importante no ecossistema Julia é a habilidade de analisar dados. Nesse exemplo demonstramos as funções básicas para ler um arquivo csv, utilizar um DataFrame, e plotar um gráfico que permita analisar esse dados. 
 
 Para tanto, utilizamos o famoso Iris-dataset \cite{Fisher1936}, onipresente na literatura estatística e muito utilizado justamente para demonstrar um ecossistema de análise de dados. 
 
-Esse dataset consiste na observação de 50 exemplares de três epecécies de flores do gênero Iris (Fig. \ref{iris_flowers}), para cada observação temos o comprimento e largura de suas sépalas e pétalas bem como a qual espécie tais medidas pertecem (Fig.\ref{iris_data}).
+Esse dataset consiste na observação de 50 exemplares de três espécies de flores do gênero Iris (Fig. \ref{iris_flowers}), para cada observação temos o comprimento e largura de suas sépalas e pétalas bem como a qual espécie tais medidas pertencem (Fig.\ref{iris_data}).
 
 \begin{figure}[H]
    \begin{center}
@@ -233,7 +233,7 @@ Já na figura \ref{iris_plot} temos a interface do DataVoyager, onde selecionamo
    \end{center}
 \end{figure}
 
-Assim, torna-se evidente o potencial da linguagem e suas ferramentas para a análise exploratória de dados e construção de vizualizações. 
+Assim, torna-se evidente o potencial da linguagem e suas ferramentas para a análise exploratória de dados e construção de visualizações. 
 
 %\subsection{texto removido da seção principal}
 %em dados esse é o equivalente ao "hello, world!", o conjunto de dados das dimensões espaciais de três especies de flores coletada por ninguém menos que R.A Fisher, um dos pais da estatística. A ideia é que a facilidade de se trabalhar com esse conjunto de dados nos permite conhecer o ecossistema de dados de uma linguagem. 
@@ -250,7 +250,7 @@ Assim, torna-se evidente o potencial da linguagem e suas ferramentas para a aná
 \section{Banco de Dados SQL lite}
 Outro aspecto fundamental de uma linguagem é a sua integração com banco de dados. Aqui trazemos um exemplo simples da criação e uso de um banco de dados SQLite, por meio da sua biblioteca disponível em Julia. 
 
-Após intalarmos o pacote SQLite.jl, criamos um objeto e arquivo de banco de dados. Em seguida construímos uma função que lê o input padrão do teclado, separa a frase do autor e armazena ambos no banco de dados criado, conforme demostra e explica a figura \ref{sql_corpo}.
+Após instalarmos o pacote SQLite.jl, criamos um objeto e arquivo de banco de dados. Em seguida construímos uma função que lê o input padrão do teclado, separa a frase do autor e armazena ambos no banco de dados criado, conforme demostra e explica a figura \ref{sql_corpo}.
 Esse código foi inspirado no seguinte exemplo disponível no Github. \footnote{https://github.com/julia4ta/tutorials/blob/master/Series\%2004/Tutorial\%2004x05/sourcecode.jl}
 
 
@@ -311,6 +311,11 @@ Interessante notar que o comando SQLite.DBInterface.execute() retorna um objeto,
 
 
 \section{Julia Sets}
-Nesse capítulo apresentamos uma representação gráfica de um conjunto matemático chamado Julia Sets. Escolhemos esse exemplo pela beleza e também pelo nome, pois devido a fama desse conceito, especialmente de seu conceito irmão que é o conjunto de Mandelbrot é muito provavel que os criadores da linguagem tenham considerado o conjunto Julia como um possível reiminencia. 
+Para esse último exemplo criamos uma aplicação que interativa que apresenta o conjunto matemático de números complexos chamado "Julia Set". Foi escolhido devido a sua beleza e ao nome muito propício. O conjunto de Julia é muito próximo do ainda mais famoso conjunto de Mandelbrot \footnote{http://paulbourke.net/fractals/juliaset/}. 
 
-Nesse capítulo apresentamos a biblioteca Makie.jl, que é também é uma biblioteca gráfica como o Plots.jl porém mais utilizada para criação de aplicações dinâmicas ou gráficos de alta qualidade para publicação. 
+Para tanto, utilizamos o ecossistema Makie.jl, um conjunto de diversas bibliotecas e pacotes de plotagem gráfica em Julia. Especialmente utilizada para criação de gráficos interativos ou de altíssima qualidade para publicação em revista. 
+
+%Nos baseamos no exemplo da biblioteca de interação com mouse. 
+%Nesse capítulo apresentamos uma representação gráfica de um conjunto matemático chamado Julia Sets. Escolhemos esse exemplo pela beleza e também pelo nome, pois devido a fama desse conceito, especialmente de seu conceito irmão que é o conjunto de Mandelbrot é muito provavel que os criadores da linguagem tenham considerado o conjunto Julia como um possível reiminencia. 
+
+%Nesse capítulo apresentamos a biblioteca Makie.jl, que é também é uma biblioteca gráfica como o Plots.jl porém mais utilizada para criação de aplicações dinâmicas ou gráficos de alta qualidade para publicação. 
