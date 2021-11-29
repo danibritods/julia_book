@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{BKSE12b}
+\begin{thebibliography}{KRKP{\etalchar{+}}16}
 
 \bibitem[Bal16]{Balbaert2016}
 Ivo Balbaert.
@@ -19,6 +19,18 @@ Jeff Bezanson, Stefan Karpinski, Viral~B. Shah, and Alan Edelman.
 Jeff Bezanson, Stefan Karpinski, Viral~B. Shah, and Alan Edelman.
 \newblock Why we created julia, Feb 2012.
 
+\bibitem[Coma]{JC_BlackRock}
+Julia Computing.
+\newblock Aladdin analytics platform.
+
+\bibitem[Comb]{JC_ML}
+Julia Computing.
+\newblock Machine learning.
+
+\bibitem[Comc]{JC_INPE}
+Julia Computing.
+\newblock Planning space missions.
+
 \bibitem[Fan04]{Fangohr2004}
 Hans Fangohr.
 \newblock A comparison of c, matlab, and python as teaching languages in
@@ -37,6 +49,14 @@ Hayden Klok.
 \newblock {\em Statistics with Julia}.
 \newblock Springer International Publishing, Berlin Heidelberg New York, 1
   edition, 2021.
+
+\bibitem[KRKP{\etalchar{+}}16]{Kluyver2016}
+Thomas Kluyver, Benjamin Ragan-Kelley, Fernando P{\'e}rez, Brian~E Granger,
+  Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, Jessica~B Hamrick, Jason
+  Grout, Sylvain Corlay, et~al.
+\newblock {\em Jupyter Notebooks-a publishing format for reproducible
+  computational workflows.}, volume 2016.
+\newblock 2016.
 
 \bibitem[KS00]{Kaw2000}
 Autar Kaw and Luke Snyder.
@@ -68,6 +88,16 @@ Sebastian Nanz and Carlo~A Furia.
 Jakob~Nybo Nissen.
 \newblock What's bad about julia?, 2021.
 
+\bibitem[Nor17]{Noronha2017}
+Felipe Noronha.
+\newblock Heavy-duty pricing of fixed income financial contracts with julia.
+\newblock JuliaCon, 2017.
+
+\bibitem[Nov15]{Novet2015}
+Jordan Novet.
+\newblock Why the creators of the julia programming language just launched a
+  startup, May 2015.
+
 \bibitem[Per19]{Perkel2019}
 Jeffrey~M. Perkel.
 \newblock Julia: come for the syntax, stay for the speed.
@@ -77,6 +107,26 @@ Jeffrey~M. Perkel.
 Fernando Perez and Brian~E. Granger.
 \newblock Ipython: A system for interactive scientific computing.
 \newblock {\em Computing in Science Engineering}, 9(3):21--29, 2007.
+
+\bibitem[Pra17]{Prabhat2017}
+Fischer Prabhat, Regier.
+\newblock Celeste.jl: Petascale computing in julia.
+\newblock JuliaCon, 2017.
+
+\bibitem[Sar16]{Sargent2016}
+Nobel Laureate~Tom Sargent.
+\newblock Quantitative macroeconomics in julia.
+\newblock JuliaCon, 2016.
+
+\bibitem[SWAL20]{Semenova2020}
+Elizaveta Semenova, Dominic~P. Williams, Avid~M. Afzal, and Stanley~E. Lazic.
+\newblock A bayesian neural network for toxicity prediction.
+\newblock {\em bioRxiv}, 2020.
+
+\bibitem[Tho18]{Thornham2018}
+Tim Thornham.
+\newblock Julia in a multi user production capital modelling.
+\newblock JuliaCon, 2018.
 
 \bibitem[UMZ{\etalchar{+}}14]{Udell2014}
 Madeleine Udell, Karanveer Mohan, David Zeng, Jenny Hong, Steven Diamond, and

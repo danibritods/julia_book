@@ -69,14 +69,15 @@
 
 @Article{Bezanson2017,
   author    = {Bezanson, Jeff and Edelman, Alan and Karpinski, Stefan and Shah, Viral B},
-  journal   = {SIAM review},
+  journal   = {SIAM {R}eview},
   title     = {Julia: A fresh approach to numerical computing},
   year      = {2017},
   number    = {1},
   pages     = {65--98},
   volume    = {59},
+  doi       = {10.1137/141000671},
   publisher = {SIAM},
-  url       = {https://doi.org/10.1137/141000671},
+  url       = {https://epubs.siam.org/doi/10.1137/141000671},
 }
 
 @Misc{Bezanson2012,
@@ -185,6 +186,96 @@
   year      = {2014},
   pages     = {18-28},
   doi       = {10.1109/HPTCDL.2014.5},
+}
+
+@Unpublished{Noronha2017,
+  author = {Felipe Noronha},
+  note   = {JuliaCon},
+  title  = {Heavy-duty Pricing of Fixed Income Financial Contracts with Julia},
+  year   = {2017},
+  url    = {https://juliacomputing.com/case-studies/bndb/},
+}
+
+@Misc{Novet2015,
+  author    = {Novet, Jordan},
+  month     = {May},
+  title     = {Why the creators of the Julia programming language just launched a startup},
+  year      = {2015},
+  journal   = {VentureBeat},
+  publisher = {VentureBeat},
+  url       = {https://venturebeat.com/2015/05/18/why-the-creators-of-the-julia-programming-language-just-launched-a-startup/},
+}
+
+@Misc{JC_ML,
+  author    = {Julia Computing},
+  title     = {Machine Learning},
+  journal   = {Julia Computing},
+  publisher = {Julia Computing, Inc.},
+  url       = {https://juliacomputing.com/case-studies/celeste/},
+}
+
+@Misc{gartner,
+  author       = {Pettey, Christy},
+  howpublished = {\url{https://web.archive.org/web/20170612085034/http://www.gartner.com/newsroom/id/1824919}},
+  note         = {Accessed: 2020-04-29},
+  title        = {Gartner Says Worldwide Enterprise IT Spending to Reach \$2.7 Trillion in 2012},
+  year         = {2011},
+}
+
+@Unpublished{Sargent2016,
+  author = {Nobel Laureate Tom Sargent},
+  note   = {JuliaCon},
+  title  = {Quantitative Macroeconomics in Julia},
+  year   = {2016},
+  url    = {https://juliacomputing.com/case-studies/thomas-sargent/},
+}
+
+@Article{Semenova2020,
+  author       = {Semenova, Elizaveta and Williams, Dominic P. and Afzal, Avid M. and Lazic, Stanley E.},
+  journal      = {bioRxiv},
+  title        = {A Bayesian neural network for toxicity prediction},
+  year         = {2020},
+  abstract     = {Predicting the toxicity of a compound preclinically enables better decision making, thereby reducing development costs and increasing patient safety. It is a complex issue, but in vitro assays and physicochemical properties of compounds can be used to predict clinical toxicity. Neural networks (NNs) are a popular predictive tool due to their flexibility and ability to model non-linearities, but they are prone to overfitting and therefore are not recommended for small data sets. Furthermore, they don{\textquoteright}t provide uncertainty in the predictions. Bayesian neural networks (BNNs) are able to avoid these pitfalls by using prior distributions on the parameters of a NN model and representing uncertainty about the predictions in the form of a distribution. We model the severity of drug-induced liver injury (DILI) to provide an example of a BNN performing better than a traditional but less flexible proportional odds logistic regression (POLR) model. We use appropriate metrics to evaluate predictions of the ordinal data type. To demonstrate the effect of a hierarchical prior for BNNs as an alternative to hyperparameter optimisation for NNs, we compare the performance of a BNN against NNs with dropout or penalty regularisation. We reduce the task to multiclass classification in order to be able to perform this comparison. A BNN trained for the multiclass classification produces poorer results than a BNN that captures the order. To our knowledge, this is the first BNN applied to toxicity prediction. The current work lays a foundation for more complex models built on larger datasets, but can already be adopted by safety pharmacologists for risk quantification.Competing Interest StatementThe authors have declared no competing interest.},
+  doi          = {10.1101/2020.04.28.065532},
+  elocation-id = {2020.04.28.065532},
+  eprint       = {https://www.biorxiv.org/content/early/2020/05/02/2020.04.28.065532.full.pdf},
+  publisher    = {Cold Spring Harbor Laboratory},
+  url          = {https://www.biorxiv.org/content/early/2020/05/02/2020.04.28.065532},
+}
+
+@Unpublished{Thornham2018,
+  author = {Tim Thornham},
+  note   = {JuliaCon},
+  title  = {Julia in a multi user production capital modelling},
+  year   = {2018},
+  url    = {https://juliacomputing.com/case-studies/bndb/},
+}
+
+@Misc{JC_BlackRock,
+  author    = {Julia Computing},
+  title     = {Aladdin Analytics Platform},
+  journal   = {Julia Computing},
+  publisher = {Julia Computing, Inc.},
+  url       = {https://juliacomputing.com/case-studies/blackrock/},
+}
+
+@Unpublished{Prabhat2017,
+  author = {Prabhat, Regier, Fischer},
+  note   = {JuliaCon},
+  title  = {Celeste.jl: Petascale Computing in Julia},
+  year   = {2017},
+  url    = {https://juliacomputing.com/case-studies/celeste/},
+}
+
+@Misc{JC_INPE,
+  author    = {Julia Computing},
+  title     = {Planning Space Missions},
+  journal   = {Julia Computing},
+  publisher = {Julia Computing, Inc.},
+  url       = {https://juliacomputing.com/case-studies/BrazilNationalinstituteforspaceResearch/},
+}
+
+@Article{,
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

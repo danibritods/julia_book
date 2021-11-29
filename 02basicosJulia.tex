@@ -9,7 +9,7 @@
 
 %Neste capítulo, buscamos apresentar de forma condensada e reestruturada o conteúdo de preparação de ambiente e tipos de dados presentes nos quatro principais livros da bibliogradia desse trabalho. 
 
-Neste capítulo apresentamos os conceitos basais de sintaxe, design e ferramental necessários para se programar em Julia. Nesse sentido, todo o conteúdo desse capítulo foi baseado nos  nos quatro principais livros-texto da bibliografia desse trabalho. Sendo eles, principalmente \cite{Lobianco2019} e \cite{Balbaert2016}, seguidos de \cite{Lauwens2019} e \cite{Kwong2020}.
+Neste capítulo apresentamos os conceitos basais de sintaxe, design e ferramental necessários para se programar em Julia. Nesse sentido, todo o conteúdo dete capítulo foi baseado nos quatro principais livros-texto da bibliografia desse trabalho. Sendo eles, principalmente \cite{Lobianco2019} e \cite{Balbaert2016}, seguidos de \cite{Lauwens2019} e \cite{Kwong2020}.
 
 \section{Preparação do ambiente}
 %Faltando algo para conectar esse parágrafo ao anterior []
@@ -99,8 +99,15 @@ Além do sistema de pacotes, basta digitar "?"  para acessar o modo especial de 
     \end{figure} 
 %a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
 
-\section{Considerações gerais sobre sintaxe}
-A seguir listamos alguns pontos importantes da sintaxe de Julia. 
+\subsection{Considerações gerais sobre sintaxe}
+Ainda na preparação do ambiente para se programar, a sintaxe da linguagem é um ponto fundamental. Nesse sentido, listamos alguns desses aspectos gerais que consideramos importantes para se começar a programar em Julia: 
+
+%é importante conhecer certos aspectos gerais da sintaxe da linguagem escolhida. A seguir, listamos as caracteristicas sintáticas gerais que julgamos serem mais relevantes para se começar a programar em Julia. 
+
+%em Julia, alguns aspectos de sua sintaxe são importantes de se considerar. A seguir listamos os que achamos mais relevantes ao escopo do trabalho e futuos capítulos 
+
+%Antes de abordamos as estruturas de dados e suas 
+%A seguir listamos alguns pontos importantes da sintaxe de Julia. 
 %Adicionar exemplos em código? []
 \begin{itemize}
     \item Podemos adicionar ao código comentários de uma linha (\#) ou de múltiplas linhas (\#= =\#) que podem ser aninhados e colocados em qualquer lugar como mostra a figura \ref{comentarios}.
@@ -178,7 +185,8 @@ A seguir listamos alguns pontos importantes da sintaxe de Julia.
     \end{figure} 
 \section{Tipos e estruturas de dados}
 Segundo \cite{Lobianco2019}, Julia oferece nativamente um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre \textbf{escalares} e \textbf{coleções}.
-Escalares são tipos atômicos, indivisíveis, como por exemplo inteiros, floats, e chars. Já as coleções são objetos que acomodam outros objetos como por exemplo vetores multidimensionais, dicionários e conjuntos.
+Escalares são tipos atômicos, indivisíveis, como por exemplo inteiros, floats, e chars. Já as coleções são objetos que acomodam outros objetos como por exemplo vetores multidimensionais, dicionários e conjuntos. 
+Nesta seção trazemos as ideias de \cite{Lobianco2019} e \cite{Balbaert2016} para organização e conteúdo dos diferentes tipos e estruturas de dados em Julia.
 
 Nesse sentido, podemos destacar as seguintes características: 
 \begin{itemize}
@@ -188,7 +196,7 @@ Nesse sentido, podemos destacar as seguintes características:
     \item Em Julia não existe divisão entre objetos e não-objetos pois todos os valores são objetos tipados, enquanto variáveis são apenas nomes relacionados a valores, portanto não têm tipo. 
    % \item Objetos do tipo coleção podem são denominados imutáveis quando não é possível alterar o seu valor (e valor de seus elementos), 
     \item Podemos converter objetos atraves da função "convert(T,x)", ou passar o objeto como argumento para uma função do tipo no formato "T(x)" como "Int64(x)" por exemplo, conforme a figura \ref{conversao} demonstra. 
-    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis conforme a figura \ref{anotacao_tipo}. \cite{Bezanson2017} afirma que essa anotação manual de tipos é totalmente opcional, pois apesar de haver situações nas quais ela se traduz em algum ganho de performance, na imensa maioria dos casos a inferência de tipos é suficiente para atingir eficiência máxima na compilação. Ainda assim a anotação de tipos é frequentemente utilizada para confirmar que um programa se comporta conforme o esperado. 
+    \item O operador :: pode ser utilizado para anexar anotações de tipo para expressões e variáveis conforme a figura \ref{anotacao_tipo}. \cite{Bezanson2017} afirma que essa anotação manual de tipos é totalmente opcional, pois apesar de haver situações nas quais ela se traduz em algum ganho de performance, na imensa maioria dos casos a inferência de tipos é suficiente para atingir eficiência máxima na compilação. Ainda assim a anotação de tipos é frequentemente utilizada para confirmar que um programa se comporta conforme o esperado. \label{anotacao_tipos}
     
 \end{itemize}
 
@@ -266,12 +274,11 @@ Além dos operadores padrões de soma, subtração, multiplicação e divisão (
 
 
 \subsection{Arrays}
-Arrays (Array\{T, N\}) são coleções indexadas de objetos de tipo T, com N dimensões. %Isto é, um array acomoda elementos em ordem 
- Eles podem conter elementos de apenas um tipo (T), sendo que T pode ser de algum dos tipos que já abordamos, ou dos tipos especiais Any ou Union{}.
+Arrays (Array\{T, n\}) são coleções indexadas de objetos de tipo T, com n dimensões. %Isto é, um array acomoda elementos em ordem 
+ Eles podem conter elementos de apenas um tipo (T), sendo que T pode ser de algum dos tipos que já abordamos (como inteiros e floats) ou dos tipos especiais \textbf{Any} ou \textbf{Union{}}.
  
- O tipo genérico Any tem a vantagem de permitir arrays heterogêneos, entretanto, de acordo \cite{Lobianco2019}, Array(Any,N) são consideravelmente menos performáticos que arrays homogêneos, pois no caso dos homogêneos, e até mesmo do tipo Union\{$T_1,...,T_n$\}, o compilador da linguagem é capaz de gerar código mais específico e otimizado para os tipos em questão, o que não é possível para o tipo Any.  
+ O tipo genérico Any tem a vantagem de permitir arrays genéricos Array\{Any,n\} com elementos de quaisquer tipos diferentes, entretanto, de acordo com \cite{Lobianco2019} são consideravelmente menos performáticos que arrays de tipos definidos. Isto porque para tipos definidos o compilador da linguagem é capaz de gerar código específico e otimizado para os tipos em questão, até mesmo para arrays do tipo Union\{$T_1,...,T_n$\}, que comportam elementos de cada um dos tipos $T_i$ definidos. O que não é possível para arrays do tipo Any.  
  %heterogêneos -nesse caso tendo o tipo genérico (Any) que em geral é consideravelmente menos performático- ou ser do tipo união (Union\{$T_1,T_2$\}) de outros tipos (exemplo: Union\{Int64,String\}), que consegue ter performace próxima do monotipo a partir dessa restrição.
-
  Alguns tipos de arrays recebem nomes especiais como por exemplo os vetores (Vector\{T\}) que são vetores unidimensionais, as matrizes (Matrix\{T\}) que são vetores bidimensionais e as Strings que são ainda um subtipo de vetor de caracteres. 
 
 %Além das Strings que são vetores imutáveis de caractéres, também temos os tipos especiais Vector\{T\} e Matrix\{T\} que são respectivamente Arrays de uma e duas dimensões.
@@ -411,7 +418,9 @@ Algumas das operações típicas com strings são:
 
 
 \subsection{Tuplas e Tuplas Nomeadas}
-Tuplas (Tuple\{T1, T2,...\}) são listas imutáveis de elementos, que em contraste com Arrays não perdem performace ao conter elementos de tipos diversos porque suas assinaturas são mantidas. Podmos criar tuplas com parênteses ou sem conforme o exemplo:
+Tuplas (Tuple\{T1, T2,...\}) são grupos de tamanho fixo que contém valores separados por vírgula. Diferentemente de arrays, os valores de uma tupla não precisam ser do mesmo tipo, e esse fato não diminui sua performace visto que o tipo de uma tupla é uma tupla dos tipos de seus valores, análoga ao tipo Union{} como podemos observar na figura TAL. 
+ Outra diferença em relação aos arrays é que tuplas são imutáveis, isto é, seus valores não podem ser modificados após a criação.   
+ Podemos criar tuplas com parênteses ou sem conforme o exemplo:
 \begin{lstlisting}
   t = (1, 2.5, "a")
   t = 1, 2.5, "a"
@@ -423,7 +432,7 @@ Tuplas (Tuple\{T1, T2,...\}) são listas imutáveis de elementos, que em contras
   t = (a...,)
 \end{lstlisting}  
 %\subsection{Tuplas nomeadas}
-Já as Tuplas Nomeadas (NamedTuple) são coleções de itens que além do índice seus elementos podem ser identificados pelo nome da seguinte forma: 
+Já as Tuplas Nomeadas (NamedTuple) são coleções de itens que além do índice seus elementos, cada um deles pode ser identificado com uma chave única da seguinte forma: 
 \begin{lstlisting}
   nt = (a=1,b=2.5) #define uma tupla nomeada
   nt.a #acessa o elemento a da tupla nt.
@@ -434,13 +443,14 @@ Já as Tuplas Nomeadas (NamedTuple) são coleções de itens que além do índic
 \end{lstlisting}
 
 \subsection{Dicionários}
-Dicionários (Dict\{Tkey, Tvalue\}) guardam mapas de chaves para valores com ordem aparentemente aleatória e diferente das Tuplas nomeadas, são mutáveis, tipo-instáveis.
+Dicionários (Dict\{Tkey, Tvalue\}) são coleções de valores relacionados a chaves únicas no formato (chave, valor). Apesar do mecanismo parecido com Tuplas Nomeadas, Dicionários são mutáveis e não retornam nem armazenam os pares chave-valor em ordem. 
+%guardam mapas de chaves para valores com ordem aparentemente aleatória e diferente das Tuplas nomeadas, são mutáveis, tipo-instáveis.
 Os principais métodos para trabalharmos com dicionários são:
 \begin{lstlisting}
   d = Dict() 
   #cria um dicionario vazio.
   d = Dict{String,Int64}() 
-  #cia um dicionario com tipagem definidapara chaves e valores.
+  #cia um dicionario com tipagem definida para chaves e valores.
   d = Dict('a'= 1,'b'= 2, 'c'= 3) 
   #inicializa o dicionario com valores
   d[novaChave] = novoValor 
@@ -520,23 +530,23 @@ Julia suporta, segundo \cite{Lobianco2019}, diversos conceitos de falta:
     \item \textbf{Nan} (tipo Float64) representa o resultado de uma operação que retorna é um "não-número". Similar ao missing no sentido de se propagar silentimente ao invés de gerar um erro. Analogamente Julia também oferece Inf (1/0) e -Inf (-1/0).
 \end{itemize}
 \section{Controle de fluxo e funções}
-Em Julia nos temos as principais estruturas condicionais e repetitivas que encontramos nas linguagens mais populares.
+Em Julia nós temos as principais estruturas condicionais e repetitivas que encontramos nas linguagens mais populares. %devo citar diretamente os quatro livros novamente??
 \subsection{Estrutura em bloco}
 A sintaxe do controle de fluxo tipicamente se dá atráves de blocos que se iniciam com uma palavra chave seguida de uma condição (com parêntesis opcionais), e finalizam com a palavra "end" da seguinte forma: 
     \begin{lstlisting}
     <palavra chave>  <condicao> 
         #... conteudo do bloco....
     end 
-    #-----------------------------#
+    \end{lstlisting}
+    \begin{lstlisting}
     #Por exemplo:
     for i in 1:5
         print(i)
     end     
     \end{lstlisting}
-
 \subsection{Iteração repetida}
 \subsubsection{For e while}
-As funções for e while em Julia são muito flexíveis, soportando os contrutos padrões como percorer vetores, break que imediatamente aborta uma sequência e continue que imediatamente pula para a próxima iteração. Além de suportar condições múltiplas como demonstrado no exemplo abaixo. 
+As funções for e while em Julia são muito flexíveis, suportando os contrutos padrões como percorer vetores, \textbf{break} que imediatamente aborta uma sequência e \textbf{continue} que imediatamente pula para a próxima iteração. Além de suportar condições múltiplas como demonstrado no exemplo abaixo. 
 \begin{lstlisting}
 for i=1:2, j=2:5
 	println("i:$i, j:$j")
@@ -548,6 +558,7 @@ para cada elemento i.=#
 for i in "string exemplo"
 	println(i)
 end 
+#=i percorrera cada caractere de "string exemplo" =#
 \end{lstlisting}
 \subsubsection{List comprehension}
 List comprehension é essencialmente uma forma compacta de escrever um loop:
@@ -556,7 +567,7 @@ a = [f(i) for i in [1 2 3]]
 #cria um array com f aplicada a cada elemento de [1 2 3]
 
 [x+2y for x in [10,20,30], y in [1,2,3]]
-
+#cria o array 
 [d[i]=value for (i,value) in enumerate(lista)
 
 [estudantes[nome] = idade for (nome,idade) in zip(nomes,idades)]
@@ -564,15 +575,16 @@ a = [f(i) for i in [1 2 3]]
 \subsubsection{Map}
 Já a função Map aplica uma função a uma lista de argumentos.
 \begin{lstlisting}
-map((nome,idade) -  estudantes[nome] = idade, nomes, idades)
+map((nome,idade) ->  estudantes[nome] = idade, nomes, idades)
 
 a = map(f, [1,2,3]) 
 
-a = map(x- f(x), [1,2,3])
+a = map(x-> f(x), [1,2,3])
 \end{lstlisting}
 
 \subsection{Condicionais}
-Condicionais também são estruturados seguindo o design de simplicidade e similaridade com as linguagens dinâmicas:
+Condicionais em Julia também segue o design de similaridade com as linguagens que a inspiraram. Conforme demonstramos a seguir:
+%Condicionais também são estruturados seguindo o design de simplicidade e similaridade com as linguagens dinâmicas:
 \begin{lstlisting}
 i = 5
 if i == 1 
@@ -585,8 +597,8 @@ end
 \end{lstlisting}
 
 As expressões são avaliadas até que seja possível inferir seu resultado (short circuited).%[] Pesquisar quão comun isso é
-
-Assim como list comprehension é uma forma concisa de escrever um loop temos no operador ternário uma forma concisa de escrever um condicional:
+\subsubsection{Operador ternário}
+Assim como list comprehension é uma forma concisa de escrever um loop, temos no operador ternário uma forma concisa de escrever um condicional:
 \begin{lstlisting}
 a? b: c
 #se a eh verdadeiro execute b, do contrario execute c
@@ -603,7 +615,7 @@ Funções em Julia são muito flexíveis, podem ser delfinadas tanto em linha co
   end
 #definicao em bloco
 #--------------
-  x,y -  2x + y
+  x,y ->  2x + y
 #funcao anonima
 #--------------
   a = f
@@ -611,7 +623,7 @@ Funções em Julia são muito flexíveis, podem ser delfinadas tanto em linha co
 #funcao como objeto
 \end{lstlisting}
 
-A chamada de funções em Julia seguem uma convenção conhecida como chamada por compartilhamento, que seria entre chamada por referência (onde um ponteiro a memória da variável é passado) e chamada por valor (onde uma cópia da variável é passada e a função trabalha nessa cópia).
+As chamadas de funções em Julia seguem uma convenção conhecida como chamada por compartilhamento, que seria entre chamada por referência (onde um ponteiro a memória da variável é passado) e chamada por valor (onde uma cópia da variável é passada e a função trabalha nessa cópia).
 
 Assim, as funções em Julia trabalham nas novas variáveis locais, conhecidas apenas dentro da função, de modo que atribuir a variável a outro objeto não vai influenciar o valor original, mas se o objeto ligado a variável é mutável a mutação do objeto também será aplicada a variável original:
 \begin{lstlisting}
@@ -638,8 +650,10 @@ Na comunidade Julia se recomenda seguir duas regras em relação a funções:%%[
     \item Os últimos argumentos podem ser especificados junto com valores padrão.
     %\item Também podemos declarar uma função de múltiplos argumentos.
     \item Funções podem receber um número variável de argumentos. 
-    \item Também temos a opção de especificar os tipos dos argumentos. Como mencionado, a principal razão para limitar os tipos dos parâmetros é para evidenciar possíveis bugs logo no início caso uma função seja acidentalmente chamada com um tipo diferente do planejado, retornando um erro de tipo ao invés de silentemente continuar a execução.
-    \item Retornar um valor é opcional e normalmente as funções retornam o último valor computado, podendo ser inclusive uma tupla.
+    \item Também temos a opção de especificar os tipos dos argumentos.
+    Como mencionado na sessão \ref{anotacao_tipos}, a principal razão para limitar os tipos dos parâmetros é para rapidamente evidenciar possíveis bugs. Pois assim, caso uma função seja acidentalmente chamada com um tipo diferente do planejado, ela retorna um erro de tipo ao invés de silentemente continuar a execução, que poderia ocasionar um erro de lógica mais difícil de detectar.
+    %\item O retorno de uma função é opcional, podendo retornar um valor que pode ser normalmente retornam o último valor computado, mas podem retornar 
+    \item Retornar um valor é opcional e normalmente as funções retornam o último valor computado, que pode inclusive ser de tipos coleção como uma tupla ou um array.
 \end{itemize}
 \begin{lstlisting}
   f(a,b=1;c=2) = (a+b+c) 

@@ -1513,6 +1513,11 @@ INPUT ./Pictures//aplicacoes/bool.png
 INPUT Pictures//aplicacoes/bool.png
 INPUT ./Pictures//aplicacoes/bool.png
 INPUT ./Pictures//aplicacoes/bool.png
+INPUT ./Pictures//aplicacoes/complex.png
+INPUT ./Pictures//aplicacoes/complex.png
+INPUT Pictures//aplicacoes/complex.png
+INPUT ./Pictures//aplicacoes/complex.png
+INPUT ./Pictures//aplicacoes/complex.png
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
@@ -1521,11 +1526,6 @@ INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/vf/adobe/times/zptmcm7t.v
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /home/daniel/latex/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT ./Pictures//aplicacoes/complex.png
-INPUT ./Pictures//aplicacoes/complex.png
-INPUT Pictures//aplicacoes/complex.png
-INPUT ./Pictures//aplicacoes/complex.png
-INPUT ./Pictures//aplicacoes/complex.png
 INPUT ./Pictures//aplicacoes/operacoes_basicas.png
 INPUT ./Pictures//aplicacoes/operacoes_basicas.png
 INPUT Pictures//aplicacoes/operacoes_basicas.png

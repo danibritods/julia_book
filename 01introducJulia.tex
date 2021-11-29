@@ -9,12 +9,13 @@
 \chapter{ Introdu\c{c}\~{a}o}
 
 
-A linguagem Julia surgiu com o objetivo de solucionar o que seus criadores chamaram de "problema das duas linguagens" na computação científica \cite{Bezanson2012}. Ele se refere ao fato, detalhado por \cite{Balbaert2016}, de muitos cientistas, engenheiros e matemáticos usarem uma linguagem flexível e amigável como Python, R, ou Matlab, que os permite focar no problema sendo investigado ao invés de detalhes de implementação computacional. Pois tais linguagens têm uma estrutura interna que permite uma sintaxe com maior nível de abstração, tornando a escrita de programas mais simples e expressiva \cite{Fangohr2004}. Porém, essa estrutura facilitadora tem um custo de performance muitas vezes proibitivo em relação aos programas escritos em linguagens como C e Fortran \cite{Nanz2015}. 
+A linguagem Julia surgiu com o objetivo de solucionar o que seus criadores chamaram de "problema das duas linguagens" na computação científica \cite{Bezanson2012}. Ele se refere ao fato, detalhado por \cite{Balbaert2016}, de muitos cientistas, engenheiros e matemáticos usarem uma linguagem flexível e amigável como Python, R, ou Matlab, que os permite focar no problema sendo investigado ao invés de detalhes de implementação computacional. Pois tais linguagens têm uma estrutura interna que permite uma sintaxe com maior nível de abstração, tornando a escrita de programas mais simples e expressiva \cite{Fangohr2004}. Porém, essa estrutura facilitadora tem um custo de performance muitas vezes proibitivo em relação aos programas escritos em linguagens como C e Fortran \cite{Nanz2015}. \cite{Klok2021} também aborda esse "problema das duas linguagens", em seu caso chamando de dilema da "velocidade de execução vs velocidade de desenvolvimento" de uma aplicação. 
 Dessa forma, segundo \cite{Balbaert2016}, muitas vezes um fluxo de trabalho é desenvolvido em uma linguagem dinâmica com uma amostra dos dados para em seguida ser implementado em uma linguagem mais performática e só então exercer sua finalidade com a totalidade dos dados ou acessível ao usuário final, chamado ambiente de produção. 
+%dilema entre "velocidade de execução" e "velocidade de desenvolvimento" que \cite{Klok2021} menciona. 
+Não obstante, no artigo de lançamento da linguagem os seus criadores afirmam que a linguagem que vislumbrada iria além de apenas solucionar esse dilema. Em suas próprias palavras: 
 
-\cite{Klok2021} também aborda esse "problema das duas linguagens", em seu caso chamando de 
-
-Não obstante, segundo seus criadores, a linguagem que vislumbraram iria além de resolver o "problema das fuas linguagens" dilema entre "velocidade de execução" e "velocidade de desenvolvimento" que \cite{Klok2021} menciona. Em seu artigo de lançamento eles afirmaram: 
+%Não obstante, segundo seus criadores, a linguagem que vislumbraram iria além de apenas sulucionar esse
+Em seu artigo de lançamento eles afirmaram: 
 
 \begin{quote}
    Criamos Julia, em resumo, porque somos gananciosos. 
@@ -26,8 +27,7 @@ Não obstante, segundo seus criadores, a linguagem que vislumbraram iria além d
    
 \end{quote}
 
-Assim, de acordo com \cite{Bezanson2017}, em 2012 foi lançada Julia, uma linguagem compilada para código nativo eficiente, tipagem dinâmica, que permite expressar paradigmas procedural, funcional, orientação a objetos e metaprogramação.  Além de suporte nativo e de alto nível ao paralelismo, alta integração com as extensas bibliotecas já disponíveis para as linguagens que a inspiraram, suporte a um subconjunto do unicode para nome de variáveis e funções, permitindo letras gregas e subscritos. 
-Com código aberto e livre para uso privado, comercial, modificação e distribuição.
+Assim, de acordo com \cite{Bezanson2017}, em 2012 foi lançada Julia, uma linguagem compilada para código nativo eficiente, com tipagem dinâmica, que permite expressar paradigmas procedural, funcional, orientação a objetos e metaprogramação.  Além de suporte nativo e de alto nível ao paralelismo, alta integração com as extensas bibliotecas já disponíveis para as linguagens que a inspiraram e suporte a caracteres como letras gregas e subscritos para nomear funções e variáveis. Com código aberto e livre para uso privado, comercial, modificação e distribuição.
 Especialmente pensada na computação científica mas ainda assim de propósito geral e sim, praticamente tão rápida quanto C. \cite{Lobianco2019,Bezanson2017}
 
  Nesse trabalho apresentamos uma breve introdução a linguagem Julia, sua história, principais aplicações, sintaxe e ecossistema. 
@@ -44,7 +44,7 @@ Especialmente pensada na computação científica mas ainda assim de propósito 
    \begin{center}
        \caption{Criadores da linguagem Julia} \label{criadores}
        \includegraphics[width=12cm]{creators.png} \\
-       {\tiny \sf Fonte: Julia Computing}
+       {\tiny \sf Fonte: \cite{Novet2015}}
    \end{center}
   \end{figure}
 
@@ -69,47 +69,48 @@ Assim como outras linguagens e construtos computacionais, muito de sua história
 
 
 \section{Áreas de aplicação da linguagem}
-Júlia é atualmente utilizada por mais de 10 000 empresas, e 1 500 universidades, com 29 milhões de downloads e 87\% de  crescimento anual. \href{https://juliacomputing.com/}{(Julia Computing)}
+Júlia é atualmente utilizada por mais de 10 000 empresas, e 1 500 universidades, com 29 milhões de downloads e 87\% de  crescimento anual. \href{https://web.archive.org/web/20211029112902/https://juliacomputing.com/}{(Julia Computing)}
 
-Seus criadores ganharam os prestigiados prémios \href{https://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}{MIT James H Wilkinson 2018} para Software Numérico e o \href{[https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman](https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman)}{IEEE Sidney Fernbach 2019} por "avanços extraordinários na computação de alta performance, algebra linear, computação científica e contribuições para a linguagem de programação Julia". 
+Seus criadores ganharam os prestigiados prêmios \href{https://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}{MIT James H Wilkinson 2018} para Software Numérico e o \href{[https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman](https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman)}{IEEE Sidney Fernbach 2019} por "avanços extraordinários na computação de alta performance, algebra linear, computação científica e contribuições para a linguagem de programação Julia". 
 
 Considerando ainda sua flexibilidade, simplicidade e performance, não é surpresa que tem crescido exponencialmente na computação científica, na computação de alta performance e também como linguagem de propósito geral \cite{Klok2021}. A figura \ref{clientes} mostra alguns dos principais clientes da linguagem.
 \begin{figure}[H]
    \begin{center}
        \caption{Clientes da linguagem Julia} \label{clientes}
        \includegraphics[width=12cm]{clientes.png} \\
-       {\tiny \sf Fonte: Julia Computing}
+       {\tiny \sf Fonte: \href{https://web.archive.org/web/20211029112902/https://juliacomputing.com/}{(Julia Computing)}}
    \end{center}
   \end{figure}
 
 
 \subsection{Computação científica}
 
-A computação científica consiste principalmente na análise e modelagem exploratória de determinado problema, o que necessita de um ferramental técnico específico e normalmente é feito por especialistas na área em questão. Nesse sentido, é fundamental que se tenha um ambiente adequado a prototipação, que suporte as demandas metodológicas e principalmente permita o máximo de expressividade do profissional de modo que ele não precise se especializar também em computação para desempenhar bem o seu trabalho. \cite{Kaw2000,Wilson2014,Perez2007}
+A computação científica atual, segundo \cite{Kaw2000,Wilson2014,Perez2007}, consiste principalmente na análise e modelagem exploratória de determinado problema. O que necessita de um ferramental técnico específico e normalmente é feito por especialistas na área em questão. Nesse sentido, é fundamental que se tenha um ambiente adequado a prototipação, que suporte as demandas metodológicas e principalmente permita o máximo de expressividade do profissional de modo que ele não precise se especializar também em computação para desempenhar bem o seu trabalho. 
 
 Júlia foi feita sob medida com esse propósito, suprindo todas essas necessidades e ainda oferecendo uma notação matemática clara e intuitiva, com suporte nativo a construtos como matrizes, vetores, funções anônimas e de primeira ordem além das bibliotecas especializadas que implementam os métodos necessários de estatística, algebra linear, e equações diferenciais pra citar alguns exemplos. \cite{Klok2021}
 
-Dessa forma temos visto um importante crescimento da linguagem nas áreas de Data Science, machine learning\footnote{https://juliacomputing.com/case-studies/princeton/}, 
-economia \footnote{https://juliacomputing.com/case-studies/thomas-sargent/}, pesquisa operacional, e todas as ciências naturais como biologia, e física. \cite{Perkel2019,Udell2014}
+Dessa forma temos visto um importante crescimento da linguagem nas áreas de Data Science, machine learning\footnote{https://juliacomputing.com/case-studies/princeton/index.html} \cite{JC_ML}, economia \cite{Sargent2016}\footnote{https://juliacomputing.com/case-studies/thomas-sargent/index.html}, pesquisa operacional, e todas as ciências naturais como biologia, e física. \cite{Perkel2019,Udell2014}
 %([]TODO citar cada biblioteca)
 
-\subsection{Computação de alta performace}
-Outra área na qual Julia se destaca é a computação de alta performace. Temos exemplos notáveis de uso nas mais diversas industrias como a financeira, farmacéutica\footnote{https://juliacomputing.com/case-studies/astra-zeneca/}, médica, aeroespacial \footnote{https://juliacomputing.com/case-studies/celeste/} dentre várias outras. 
+\subsection{Computação de alta performance}
+Outra área na qual Julia se destaca é a computação de alta performance. Temos exemplos notáveis de uso nas mais diversas industrias como a financeira, farmaceutica \cite{Semenova2020} \footnote{https://juliacomputing.com/case-studies/astra-zeneca/index.html}, médica e aeroespacial dentre várias outras. 
 
-Podemos destacar na industria financeira a análise de séries temporais no fundo de investimentos BlackRock\footnote{https://juliacomputing.com/case-studies/blackrock/}, o cálculo de risco junto ao banco britânico Aviva\footnote{https://juliacomputing.com/case-studies/aviva/}, modelos econômicos no Federal Reserve Bank of New York\footnote{https://juliacomputing.com/case-studies/ny-fed/}, e em nosso próprio BNDS no manejo de quase um trilhão de reais com modelos de otimização estocástica multi-estágios\footnote{https://juliacomputing.com/case-studies/bndb/}, em todas essas implementações ouve um aumento em pelo menos 10x na velocidade de processamento, em boa parte dos casos reduzindo quase a metade o número de linhas de código, o que aumenta exponencialmente a legibilidade, diminui os erros e aumenta a produtividade dos desenvolvedores. Na Aviva chegou a reduzir 93\% do código e aumentar em 1 000x a velocidade. 
+Podemos destacar na industria financeira a análise de séries temporais no fundo de investimentos BlackRock \cite{JC_BlackRock} \footnote{https://juliacomputing.com/case-studies/blackrock/index.html}, o cálculo de risco junto ao banco britânico Aviva \cite{Thornham2018} \footnote{https://juliacomputing.com/case-studies/aviva/index.html}, modelos econômicos no Federal Reserve Bank of New York\footnote{https://juliacomputing.com/case-studies/ny-fed/index.html}, e em nosso próprio BNDS no manejo de quase um trilhão de reais com modelos de otimização estocástica multi-estágios \cite{Noronha2017}\footnote{https://juliacomputing.com/case-studies/bndb/index.html}, em todas essas implementações ouve um aumento em pelo menos 10x na velocidade de processamento, em boa parte dos casos reduzindo quase a metade o número de linhas de código, o que aumenta exponencialmente a legibilidade, diminui os erros e aumenta a produtividade dos desenvolvedores. Na Aviva chegou a reduzir 93\% do código e aumentar em 1 000x a velocidade. 
 
-Ela também foi utilizada no projeto Celeste onde atingiu a performance de 1.54 petaFLOPS, e entrou para o seleto panteão das linguagens que alcançaram essa magnitude: Fortran, C, C++ e Julia.\footnote{https://juliacomputing.com/media/2017/09/julia-joins-petaflop-club/}
+Ela também foi utilizada no projeto Celeste onde atingiu a performance de 1.54 petaFLOPS, e entrou para o seleto panteão das linguagens que alcançaram essa magnitude: Fortran, C, C++ e Julia. \cite{Prabhat2017} \footnote{https://juliacomputing.com/media/2017/09/julia-joins-petaflop-club/index.html} \footnote{https://juliacomputing.com/case-studies/celeste/index.html}
 
-Não atoa foi selecionada pela Aliança de modelagem climática como a única linguagem na sua próxima geração de modelos climáticos. Além de ser utilizada pela NASA e pelo INPE brasileiro no planejamento de missão e simulação de satélites. \footnote{https://juliacomputing.com/case-studies/BrazilNationalinstituteforspaceResearch/}
+Não atoa foi selecionada pela Aliança de modelagem climática como a única linguagem na sua próxima geração de modelos climáticos. Além de ser utilizada pela NASA e pelo INPE brasileiro no planejamento de missão e simulação de satélites. \cite{JC_INPE} \footnote{https://juliacomputing.com/case-studies/BrazilNationalinstituteforspaceResearch/index.html}
 
 
 
 \subsection{Uso geral}
 
-Apesar de ser particularmente utilizada em computação técnica, a linguagem Julia é de propósito geral, e também é utilizada em uma variedade de outras aplicações, como por exemplo para gerar sites estáticos por meio da biblioteca \href{http://franklinjl.org/)}{Franklin.jl}, interfaces cliente/servidor HTTP com \href{https://github.com/JuliaWeb/HTTP.jl}{HTTP.jl}, desenvolver aplicações gráficas com \href{https://github.com/JuliaGraphics/Gtk.jl}{Gtk.jl} ou binários multiplataforma para diversas arquiteturas com a \href{http://binarybuilder.org/}{BinaryBuilder.jl}
+Apesar de ser particularmente utilizada em computação técnica, a linguagem Julia é de propósito geral, e também é utilizada em uma variedade de outras aplicações, como por exemplo para gerar sites estáticos por meio da biblioteca \href{http://franklinjl.org/index.html)}{Franklin.jl}, interfaces cliente/servidor HTTP com \href{https://github.com/JuliaWeb/HTTP.jl}{HTTP.jl}, desenvolver aplicações gráficas com \href{https://github.com/JuliaGraphics/Gtk.jl}{Gtk.jl} ou binários multiplataforma para diversas arquiteturas com a \href{http://binarybuilder.org/}{BinaryBuilder.jl}
 
 Também é interessante notar seu salto da 43ª para a 26ª posição no \href{https://www.tiobe.com/tiobe-index/}{TIOBE index}. 
-Desse modo ela tem mostrado um crescimento orgânico e saldável, mesmo com uma proposta tão ambiciosa e sendo ainda tão jovem. Assim, podemos esperar muitas novidades paro o futuro, pois seu time original, agora expandido tanto em pessoas quanto em capital, tem recebido cada vez mais atenção na comunidade open souece. Além dos incentivos das mais importantes entidades de programação numérica e da industria. \footnote{https://www.fortuneita.com/2021/07/19/julia-computing-raises-24m-in-series-a-former-snowflake-ceo-bob-muglia-joins-board/} \footnote{https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/}
+Além dos incentivos das mais importantes entidades de programação numérica e da industria. \footnote{https://www.fortuneita.com/2021/07/19/julia-computing-raises-24m-in-series-a-former-snowflake-ceo-bob-muglia-joins-board/index.html} \footnote{https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-simulation-by-1000x/index.html}
+Assim, o cenário parece apontar para um crescimento orgânico e possíveis novos avanços na linguagem e sua comunidade. 
+%Desse modo ela tem mostrado um crescimento orgânico e saudável, mesmo com uma proposta tão ambiciosa e sendo ainda tão jovem. Assim, podemos esperar muitas novidades paro o futuro, pois seu time original, agora expandido tanto em pessoas quanto em capital, tem recebido cada vez mais atenção na comunidade open souece. 
 
 
 
