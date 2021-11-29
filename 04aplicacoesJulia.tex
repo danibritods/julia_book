@@ -10,10 +10,11 @@
 Neste capítulo vamos apresentar cinco exemplos de aplicações escritas na linguagem Julia, bem como seus respectivos códigos-fonte, e imagens demonstrando seu funcionamento. 
 
 \section{Quicksort}
-A ordenação de elementos em listas ou vetores é uma das operações computacionais mais importantes. 
+A ordenação de elementos é uma das mais importantes operações computacionais. Assim, apresentamos uma implementação em Julia do Quicksort, um dos principais algoritmos de ordenação, que é inclusive o algoritmo utilizado na função nativa de ordenação da linguagem \href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{(sort())}.
 
-Desse modo apresentamos o Quicksort, dos principais algoritmos de ordenação, sendo, inclusive, utilizado por padrão na função de ordenação (\href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}) nativa da linguagem. 
-\newline
+
+%Desse modo apresentamos o Quicksort, dos principais algoritmos de ordenação, sendo, inclusive, utilizado por padrão na função de ordenação (\href{https://github.com/JuliaLang/julia/blob/2364748377f2a79c0485fdd5155ec2116c9f0d37/base/sort.jl#L259-L296}{sort!()}) nativa da linguagem. 
+%\newline
 
 Esse algoritmo se inicia elencando um elemento no vetor para ser o pivô dessa execução. 
 A partir de então todos os elementos menores ou iguais ao pivô são colocados antes do mesmo e consequentemente todos os elementos maiores são colocados nas posições seguintes ao pivô. 

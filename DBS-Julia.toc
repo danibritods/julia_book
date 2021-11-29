@@ -8,45 +8,42 @@
 \contentsline {subsection}{\numberline {1.2.3}Uso geral}{9}{subsection.1.2.3}%
 \contentsline {chapter}{\numberline {2} Conceitos básicos da Linguagem Julia}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Preparação do ambiente}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Considerações gerais sobre sintaxe}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Pacotes e módulos}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sistema de ajuda}{18}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Tipos e estruturas de dados}{18}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Tipos simples}{20}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Operações básicas}{22}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Arrays}{23}{subsection.2.5.3}%
-\contentsline {subsubsection}{Criação de Array}{23}{section*.2}%
-\contentsline {subsubsection}{Acessar elementos}{24}{section*.3}%
-\contentsline {subsubsection}{Principais funções}{24}{section*.4}%
-\contentsline {subsubsection}{Arrays aninhados e multidimensionias}{25}{section*.5}%
-\contentsline {subsection}{\numberline {2.5.4}Strings}{25}{subsection.2.5.4}%
-\contentsline {subsection}{\numberline {2.5.5}Tuplas e Tuplas Nomeadas}{26}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}Dicionários}{26}{subsection.2.5.6}%
-\contentsline {subsection}{\numberline {2.5.7}Sets}{27}{subsection.2.5.7}%
-\contentsline {subsection}{\numberline {2.5.8}Números aleatórios}{27}{subsection.2.5.8}%
-\contentsline {subsection}{\numberline {2.5.9}Valores Faltantes}{28}{subsection.2.5.9}%
-\contentsline {section}{\numberline {2.6}Controle de fluxo e funções}{28}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Estrutura em bloco}{28}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Iteração repetida}{28}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.1.1}Pacotes e módulos}{12}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Sistema de ajuda}{14}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Considerações gerais sobre sintaxe}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Tipos e estruturas de dados}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tipos simples}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Operações básicas}{22}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Arrays}{22}{subsection.2.3.3}%
+\contentsline {subsubsection}{Criação de Array}{22}{section*.2}%
+\contentsline {subsubsection}{Acessar elementos}{23}{section*.3}%
+\contentsline {subsubsection}{Principais funções}{23}{section*.4}%
+\contentsline {subsubsection}{Arrays aninhados e multidimensionias}{24}{section*.5}%
+\contentsline {subsection}{\numberline {2.3.4}Strings}{24}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Tuplas e Tuplas Nomeadas}{25}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Dicionários}{26}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Sets}{26}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Números aleatórios}{27}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Valores Faltantes}{27}{subsection.2.3.9}%
+\contentsline {section}{\numberline {2.4}Controle de fluxo e funções}{28}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Estrutura em bloco}{28}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Iteração repetida}{28}{subsection.2.4.2}%
 \contentsline {subsubsection}{For e while}{28}{section*.6}%
-\contentsline {subsubsection}{List comprehension}{29}{section*.7}%
-\contentsline {subsubsection}{Map}{29}{section*.8}%
-\contentsline {subsection}{\numberline {2.6.3}Condicionais}{29}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Funções}{29}{subsection.2.6.4}%
+\contentsline {subsubsection}{List comprehension}{28}{section*.7}%
+\contentsline {subsubsection}{Map}{28}{section*.8}%
+\contentsline {subsection}{\numberline {2.4.3}Condicionais}{29}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Funções}{29}{subsection.2.4.4}%
 \contentsline {subsubsection}{Argumentos}{30}{section*.9}%
-\contentsline {chapter}{\numberline {3}Alma da linguagem}{33}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Compilação}{33}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Multimétodos}{34}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Aplicações da linguagem}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Quicksort}{35}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Calculadora}{36}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Plotagem (Iris data set)}{39}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Banco de Dados SQL lite}{42}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Julia Sets}{43}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Ferramentas}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Visual Studio Code}{46}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Jupyter Notebook}{47}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Pluto}{48}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Considerações Finais}{51}{chapter.6}%
-\contentsline {chapter}{\leavevmode {\color {purple}Bibliografia}}{54}{chapter*.10}%
+\contentsline {chapter}{\numberline {3}Aplicações da linguagem}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Quicksort}{31}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Calculadora}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Plotagem (Iris data set)}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Banco de Dados SQL lite}{38}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Julia Sets}{39}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Ferramentas}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Visual Studio Code}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Jupyter Notebook}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pluto}{44}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Considerações Finais}{47}{chapter.5}%
+\contentsline {chapter}{\leavevmode {\color {purple}Bibliografia}}{50}{chapter*.10}%
 \contentsfinish 

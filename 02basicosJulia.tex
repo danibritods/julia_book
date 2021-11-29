@@ -7,7 +7,9 @@
 
 \chapter{ Conceitos básicos da Linguagem Julia}
 
-Neste capítulo apresentamos os conceitos basais de sintaxe, design e ferramental necessários para se programar em Julia. Para tanto, nos baseamos nos três principais livros-texto voltados ao estudo da linguagem, com destaque para \cite{Lobianco2019}, seguido de \cite{Lauwens2019} e \cite{Kwong2020}.
+%Neste capítulo, buscamos apresentar de forma condensada e reestruturada o conteúdo de preparação de ambiente e tipos de dados presentes nos quatro principais livros da bibliogradia desse trabalho. 
+
+Neste capítulo apresentamos os conceitos basais de sintaxe, design e ferramental necessários para se programar em Julia. Nesse sentido, todo o conteúdo desse capítulo foi baseado nos  nos quatro principais livros-texto da bibliografia desse trabalho. Sendo eles, principalmente \cite{Lobianco2019} e \cite{Balbaert2016}, seguidos de \cite{Lauwens2019} e \cite{Kwong2020}.
 
 \section{Preparação do ambiente}
 %Faltando algo para conectar esse parágrafo ao anterior []
@@ -20,6 +22,82 @@ Para executar código Júlia, basta baixar e descompactar os arquivos binários 
     {\tiny \sf Fonte: Autor}
 \end{center}
 \end{figure} 
+
+\subsection{Pacotes e módulos}
+
+Os criadores da lingua escolheram construir um núcleo leve complementado por uma biblioteca padrão (Standard Library) distribuída junto dos binários, e um poderoso gerenciador de pacotes capaz de baixar (muitas vezes direto de repositórios GitHub), pré compilar, atualizar e resolver dependências de pacotes a partir de comandos simples. 
+
+Para acessar o gerenciador de pacotes podemos importar o módulo de pacotes (import Pkg) e executar os comandos no formato Pkg.(ARGS). Demonstramos esse caso de uso na figura \ref{import_Pkg} onde executamos o comando para instalar o pacote Plots. Como o pacote já está instalado, o Pkg apenas o reconhece e não altera os pacotes.
+%A figura \ref{import_Pkg} demonstra esse caso de uso ao tentarmos instalar o pacote Plots que como já está instalado, podemos observar que o Pkg reconhece tal fato e não altera nossos pacotes. 
+Também podemos utilizar o modo especial de pacotes no REPL que traz algumas facilidades como autocompletar por exemplo. Nesse caso, basta digitar "]" para entrar nesse modo especial do REPL, como mostrado na figura \ref{pkg}. Na figura \ref{REPL_plots} repetimos o comando para instalar a biblioteca Plots, dessa vez no REPL. 
+%Já no REPL também podemos apenas digitar ] para entrar no modo especial de pacotes, conforme a figura \ref{pkg}. nele temos algumas facilidades como autocomplete.
+\begin{figure}[H]
+\begin{center}
+    \caption{Utilizando o Pkg em scripts} \label{import_Pkg}
+    \includegraphics[width=12cm]{aplicacoes/import_Pkg.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure} 
+
+\begin{figure}[H]
+\begin{center}
+    \caption{REPL - modo pacotes} \label{pkg}
+    \includegraphics[width=12cm]{aplicacoes/pkg.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure} 
+
+\begin{figure}[H]
+\begin{center}
+    \caption{Utilizando modo Pkg do REPL } \label{REPL_plots}
+    \includegraphics[width=12cm]{aplicacoes/REPL_plots.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure}
+
+Listamos a seguir alguns dos principais comandos do módulo Pkg. Em seguida demonstramos exemplos com o comando "status"  tanto no modo especial de pacotes do REPL (figura \ref{pacotes}) quanto em um exemplo de código Julia (figura \ref{Pkg_script}):
+\begin{itemize}
+  \item \textbf{status:} retorna uma lista (nome e versão) dos pacotes instalados localmente.
+  \item \textbf{update:} atualiza o índice local de pacotes e os próprios pacotes para a versão mais recente.
+  \item \textbf{add nomePacote:} automaticamente baixa e instala um pacote.
+  \item \textbf{rm nomePacote:} remove o pacote e todas as suas dependências.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+    \caption{Pkg.status no modo de pacotes do REPL} 
+    \label{pacotes}
+    \includegraphics[width=12cm]{aplicacoes/pacotes.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure} 
+\begin{figure}[H]
+\begin{center}
+    \caption{Pkg.status em código Julia} 
+    \label{Pkg_script}
+    \includegraphics[width=12cm]{aplicacoes/Pkg_script.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure} 
+
+Uma vez instalado, para utilizar um pacote devemos utilizar um dos comandos seguintes:
+\begin{itemize}
+  \item \textbf{use:} permite acessar diretamente as funções de um pacote, basta adicionar o comando (using nomePacote) no inicio do script. 
+  \item \textbf{import:} tem a mesma funcionalidade do use com a diferença de precisarmos nos referir ao nome completo da função (nomePacote.nomeFunção), o que tem a vantagem de manter a organização dos nomes. Via de regra, nesse caso definimos apelidos para os pacotes como por exemplo chamar o "Plots" de "pl" (const pl = Plots) %adicionar exemplo de código? []
+\end{itemize}
+
+%%Da mesma forma podemos usar (\textbf{use}) ou importar (\textbf{import}) qualquer arquivo Julia como módulo. Ele será analogamente executado ao ser invocado e qualquer símbolo definido estará disponível no escopo onde foi chamado. 
+
+\subsection{Sistema de ajuda}
+Além do sistema de pacotes, basta digitar "?"  para acessar o modo especial de ajuda do REPL. Assim, acordo com a documentação do termo buscado o sistema de ajuda pode retornar sua lista de métodos, exemplos de uso, descrição, lista de argumentos ou termos ou ainda os termos relacionados, conforme podemos ver na figura \ref{ajuda}. 
+    \begin{figure}[H]
+    \begin{center}
+        \caption{REPL - modo ajuda} \label{ajuda}
+        \includegraphics[width=12cm]{aplicacoes/help.png} \\
+        {\tiny \sf Fonte: Autor}
+    \end{center}
+    \end{figure} 
+%a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
 
 \section{Considerações gerais sobre sintaxe}
 A seguir listamos alguns pontos importantes da sintaxe de Julia. 
@@ -98,83 +176,6 @@ A seguir listamos alguns pontos importantes da sintaxe de Julia.
         {\tiny \sf Fonte: Autor}
     \end{center}
     \end{figure} 
-
-\section{Pacotes e módulos}
-
-Os criadores da lingua escolheram construir um núcleo leve complementado por uma biblioteca padrão (Standard Library) distribuída junto dos binários, e um poderoso gerenciador de pacotes capaz de baixar (muitas vezes direto de repositórios GitHub), pré compilar, atualizar e resolver dependências de pacotes a partir de comandos simples. 
-
-Para acessar o gerenciador de pacotes podemos importar o módulo de pacotes (import Pkg) e executar os comandos no formato Pkg.(ARGS). Demonstramos esse caso de uso na figura \ref{import_Pkg} onde executamos o comando para instalar o pacote Plots. Como o pacote já está instalado, o Pkg apenas o reconhece e não altera os pacotes.
-%A figura \ref{import_Pkg} demonstra esse caso de uso ao tentarmos instalar o pacote Plots que como já está instalado, podemos observar que o Pkg reconhece tal fato e não altera nossos pacotes. 
-Também podemos utilizar o modo especial de pacotes no REPL que traz algumas facilidades como autocompletar por exemplo. Nesse caso, basta digitar "]" para entrar nesse modo especial do REPL, como mostrado na figura \ref{pkg}. Na figura \ref{REPL_plots} repetimos o comando para instalar a biblioteca Plots, dessa vez no REPL. 
-%Já no REPL também podemos apenas digitar ] para entrar no modo especial de pacotes, conforme a figura \ref{pkg}. nele temos algumas facilidades como autocomplete.
-\begin{figure}[H]
-\begin{center}
-    \caption{Utilizando o Pkg em scripts} \label{import_Pkg}
-    \includegraphics[width=12cm]{aplicacoes/import_Pkg.png} \\
-    {\tiny \sf Fonte: Autor}
-\end{center}
-\end{figure} 
-
-\begin{figure}[H]
-\begin{center}
-    \caption{REPL - modo pacotes} \label{pkg}
-    \includegraphics[width=12cm]{aplicacoes/pkg.png} \\
-    {\tiny \sf Fonte: Autor}
-\end{center}
-\end{figure} 
-
-\begin{figure}[H]
-\begin{center}
-    \caption{Utilizando modo Pkg do REPL } \label{REPL_plots}
-    \includegraphics[width=12cm]{aplicacoes/REPL_plots.png} \\
-    {\tiny \sf Fonte: Autor}
-\end{center}
-\end{figure}
-
-Listamos a seguir alguns dos principais comandos do módulo Pkg. Em seguida demonstramos exemplos com o comando "status"  tanto no modo especial de pacotes do REPL (figura \ref{pacotes}) quanto em um exemplo de código Julia (figura \ref{Pkg_script}):
-\begin{itemize}
-  \item \textbf{status:} retorna uma lista (nome e versão) dos pacotes instalados localmente.
-  \item \textbf{update:} atualiza o índice local de pacotes e os próprios pacotes para a versão mais recente.
-  \item \textbf{add nomePacote:} automaticamente baixa e instala um pacote.
-  \item \textbf{rm nomePacote:} remove o pacote e todas as suas dependências.
-\end{itemize}
-
-\begin{figure}[H]
-\begin{center}
-    \caption{Pkg.status no modo de pacotes do REPL} 
-    \label{pacotes}
-    \includegraphics[width=12cm]{aplicacoes/pacotes.png} \\
-    {\tiny \sf Fonte: Autor}
-\end{center}
-\end{figure} 
-\begin{figure}[H]
-\begin{center}
-    \caption{Pkg.status em código Julia} 
-    \label{Pkg_script}
-    \includegraphics[width=12cm]{aplicacoes/Pkg_script.png} \\
-    {\tiny \sf Fonte: Autor}
-\end{center}
-\end{figure} 
-
-Uma vez instalado, para utilizar um pacote devemos utilizar um dos comandos seguintes:
-\begin{itemize}
-  \item \textbf{use:} permite acessar diretamente as funções de um pacote, basta adicionar o comando (using nomePacote) no inicio do script. 
-  \item \textbf{import:} tem a mesma funcionalidade do use com a diferença de precisarmos nos referir ao nome completo da função (nomePacote.nomeFunção), o que tem a vantagem de manter a organização dos nomes. Via de regra, nesse caso definimos apelidos para os pacotes como por exemplo chamar o "Plots" de "pl" (const pl = Plots) %adicionar exemplo de código? []
-\end{itemize}
-
-%%Da mesma forma podemos usar (\textbf{use}) ou importar (\textbf{import}) qualquer arquivo Julia como módulo. Ele será analogamente executado ao ser invocado e qualquer símbolo definido estará disponível no escopo onde foi chamado. 
-
-\section{Sistema de ajuda}
-Além do sistema de pacotes, basta digitar "?"  para acessar o modo especial de ajuda do REPL. Assim, acordo com a documentação do termo buscado o sistema de ajuda pode retornar sua lista de métodos, exemplos de uso, descrição, lista de argumentos ou termos ou ainda os termos relacionados, conforme podemos ver na figura \ref{ajuda}. 
-    \begin{figure}[H]
-    \begin{center}
-        \caption{REPL - modo ajuda} \label{ajuda}
-        \includegraphics[width=12cm]{aplicacoes/help.png} \\
-        {\tiny \sf Fonte: Autor}
-    \end{center}
-    \end{figure} 
-%a linguagem também oferece um sistema de ajuda que retorna informação sobre o uso da maior partes das funções que pode ser acessado no REPL digitando "?" ou através do comando "?{termo de busca}". 
-
 \section{Tipos e estruturas de dados}
 Segundo \cite{Lobianco2019}, Julia oferece nativamente um sistema hierárquico e bastante completo de tipos predefinidos que são divididos entre \textbf{escalares} e \textbf{coleções}.
 Escalares são tipos atômicos, indivisíveis, como por exemplo inteiros, floats, e chars. Já as coleções são objetos que acomodam outros objetos como por exemplo vetores multidimensionais, dicionários e conjuntos.
@@ -238,7 +239,7 @@ Nesse sentido, podemos destacar as seguintes características:
     \begin{figure}[H]
     \begin{center}
         \caption{Tipo Bool} \label{bool}
-        \includegraphics[width=12cm]{aplicacoes/bool.png} \\
+        \includegraphics[width=8cm]{aplicacoes/bool.png} \\
         {\tiny \sf Fonte: Autor}
     \end{center}
     \end{figure} 
@@ -265,8 +266,10 @@ Além dos operadores padrões de soma, subtração, multiplicação e divisão (
 
 
 \subsection{Arrays}
-Arrays (Array\{T, N\}) são coleções de N dimensões. %Isto é, um array acomoda elementos em ordem 
- Eles podem conter elementos de apenas um tipo (T), sendo que T pode ser de algum dos tipos que já abordamos, ou dos tipos especiais Any ou Union{}. O tipo genérico Any tem a vantagem de permitir arrays heterogêneos, entretanto, de acordo \cite{Lobianco2019}, Array(Any,N) são consideravelmente menos performáticos que arrays homogêneos, pois no caso dos homogêneos, e até mesmo do tipo Union\{$T_1,...,T_n$\}, o compilador da linguagem é capaz de gerar código mais específico e otimizado para os tipos em questão, o que não é possível para o tipo Any.  
+Arrays (Array\{T, N\}) são coleções indexadas de objetos de tipo T, com N dimensões. %Isto é, um array acomoda elementos em ordem 
+ Eles podem conter elementos de apenas um tipo (T), sendo que T pode ser de algum dos tipos que já abordamos, ou dos tipos especiais Any ou Union{}.
+ 
+ O tipo genérico Any tem a vantagem de permitir arrays heterogêneos, entretanto, de acordo \cite{Lobianco2019}, Array(Any,N) são consideravelmente menos performáticos que arrays homogêneos, pois no caso dos homogêneos, e até mesmo do tipo Union\{$T_1,...,T_n$\}, o compilador da linguagem é capaz de gerar código mais específico e otimizado para os tipos em questão, o que não é possível para o tipo Any.  
  %heterogêneos -nesse caso tendo o tipo genérico (Any) que em geral é consideravelmente menos performático- ou ser do tipo união (Union\{$T_1,T_2$\}) de outros tipos (exemplo: Union\{Int64,String\}), que consegue ter performace próxima do monotipo a partir dessa restrição.
 
  Alguns tipos de arrays recebem nomes especiais como por exemplo os vetores (Vector\{T\}) que são vetores unidimensionais, as matrizes (Matrix\{T\}) que são vetores bidimensionais e as Strings que são ainda um subtipo de vetor de caracteres. 
@@ -348,7 +351,7 @@ A seguir apresentamos as principais função para trabalharmos com Arrays, é in
 \end{lstlisting}
 
 \subsubsection{Arrays aninhados e multidimensionias}
-Arrays multidimencionais são os objetos do tipo Array\{T,N\} sendo o número de dimenções N maior que um, enquanto Arrays Aninhados apresentam uma dimensão sendo pelo menos um de seus elementos outro Array, como por exemplo um vetor de vetores Array\{Array\{T,1\},1\}.
+Arrays multidimensionais são os objetos do tipo Array\{T,N\} sendo o número de dimensões N maior que um, enquanto Arrays Aninhados apresentam uma dimensão sendo pelo menos um de seus elementos outro Array, como por exemplo um vetor de vetores Array\{Array\{T,1\},1\}.
 
 A principal diferença entre ambos é que em matrizes o número de elemento em cada coluna deve ser igual e as regras da Álgebra Linear são aplicáveis. 
 
@@ -378,17 +381,24 @@ Também temos funções particularmente úteis para trabalharmos com Arrays mult
   vcat(row1, row2) # concatena verticalmente. 
 \end{lstlisting}
 \subsection{Strings}
-As strings (String) em Julia são vetores imutáveis de caracteres, isto é: conforme apresentamos na figura TAL, não é possível alterar nenhum dos elementos de uma String. 
-Elas são definidas com aspas duplas e podem ser vistas como um tipo especial de vetor pois suportam indexação e looping.
+As strings (String) em Julia são vetores imutáveis de caracteres, isto é: conforme apresentamos na figura \ref{string_imutavel}, não é possível alterar nenhum dos elementos de uma String. 
+Elas são definidas com aspas duplas e, assim como vetores, suportam indexação e looping.
 
+\begin{figure}[H]
+\begin{center}
+    \caption{String imutável} \label{string_imutavel}
+    \includegraphics[width=12cm]{aplicacoes/string_imutavel.png} \\
+    {\tiny \sf Fonte: Autor}
+\end{center}
+\end{figure} 
 
 Algumas das operações típicas com strings são:
 \begin{itemize}
-    \item \textbf{split(s, " ")} nesse exemplo utiliza o espaço como um separador e retorna um vetor com as sublistas.
-    \item \textbf{join([s1,s2], " ")} que une strings utilizando, nesse caso, o espaço entre cada junção.
-    \item \textbf{replace(s, {termo buscado}} =  {substituto}) que substitui substrings compatíveis com a busca.
-    \item parse(Int, "64") retorna a string convertida para um tipo numérico, no caso inteiro.
-    \item \textbf{string(123)} retorna a string correspondente ao número.
+    \item \textbf{split}(s, "\ ") nesse exemplo utiliza o espaço como um separador e retorna um vetor com as sublistas.
+    \item \textbf{join}([s1,s2], "\ ") que une strings utilizando, nesse caso, o espaço entre cada junção.
+    \item \textbf{replace}(s, {termo buscado} =  {substituto}) que substitui substrings compatíveis com a busca.
+    \item \textbf{parse}(Int, "42") retorna a string convertida para um tipo numérico, no caso inteiro.
+    \item \textbf{string}(123) retorna a string correspondente ao número.
     \item Existem três principais maneiras de concatenar strings:
         \subitem 
         \begin{lstlisting}    
@@ -398,7 +408,6 @@ Algumas das operações típicas com strings são:
         \end{lstlisting}
         
 \end{itemize}
-
 
 
 \subsection{Tuplas e Tuplas Nomeadas}
@@ -504,7 +513,7 @@ intervalo [a,b].
 
     \end{lstlisting}
 \subsection{Valores Faltantes}
-Julia suporta diversos conceitos de falta:
+Julia suporta, segundo \cite{Lobianco2019}, diversos conceitos de falta:
 \begin{itemize}
     \item \textbf{nothing} (tipo Nothing) é o valor utilizado para blocos e funções que retornam nada. Conhecido como "null do engenheiro de software"
     \item \textbf{missing} (tipo Missing) representa um valor faltante no sentido estatístico, em que deveria haver um valor, apenas o desconhecemos. De modo que os containers e maioria das operações conseguem lidar eficientemente com esses casos. Também conhecido como "null do cientista de dados"
