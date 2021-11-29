@@ -1,53 +1,52 @@
 \babel@toc {brazil}{}\relax 
 {\pdfbookmark [0]{Sum\'ario}{toc}}
 \contentsline {chapter}{\numberline {1} Introdu\c {c}\~{a}o}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Aspectos históricos da linguagem Julia}{6}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Áreas de aplicação da linguagem}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Computação científica}{7}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Computação de alta performace}{8}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Uso geral}{8}{subsection.1.2.3}%
-\contentsline {chapter}{\numberline {2} Conceitos básicos da Linguagem Julia}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Preparação do ambiente}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Considerações gerais sobre sintaxe}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Pacotes e módulos}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sistema de ajuda}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Tipos e estruturas de dados}{10}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Tipos simples}{11}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Operações básicas}{11}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Strings}{11}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Arrays}{11}{subsection.2.5.4}%
-\contentsline {subsubsection}{Criação de Array}{11}{section*.2}%
-\contentsline {subsubsection}{Acessar elementos}{12}{section*.3}%
-\contentsline {subsubsection}{Principais funções}{12}{section*.4}%
-\contentsline {subsubsection}{Arrays aninhados e multidimensionias}{13}{section*.5}%
-\contentsline {subsection}{\numberline {2.5.5}Tuplas}{13}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}Tuplas nomeadas}{14}{subsection.2.5.6}%
-\contentsline {subsection}{\numberline {2.5.7}Dicionários}{14}{subsection.2.5.7}%
-\contentsline {subsection}{\numberline {2.5.8}Sets}{15}{subsection.2.5.8}%
-\contentsline {subsection}{\numberline {2.5.9}Números aleatórios}{15}{subsection.2.5.9}%
-\contentsline {subsection}{\numberline {2.5.10}Valores Faltantes}{15}{subsection.2.5.10}%
-\contentsline {section}{\numberline {2.6}Controle de fluxo e funções}{16}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Estrutura em bloco}{16}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Iteração repetida}{16}{subsection.2.6.2}%
-\contentsline {subsubsection}{For e while}{16}{section*.6}%
-\contentsline {subsubsection}{List comprehension}{16}{section*.7}%
-\contentsline {subsubsection}{Map}{17}{section*.8}%
-\contentsline {subsection}{\numberline {2.6.3}Condicionais}{17}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Funções}{17}{subsection.2.6.4}%
-\contentsline {subsubsection}{Argumentos}{18}{section*.9}%
-\contentsline {chapter}{\numberline {3}Alma da linguagem}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Compilação}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Multimétodos}{22}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Aplicações da linguagem}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Quicksort}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Calculadora}{24}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Plotagem (Iris data set)}{27}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Banco de Dados SQL lite}{30}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Julia Sets}{31}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Ferramentas}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Visual Studio Code}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Jupyter Notebook}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Pluto}{36}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclus\~{o}es}{39}{chapter.6}%
-\contentsline {chapter}{\leavevmode {\color {purple}Bibliografia}}{41}{chapter*.10}%
+\contentsline {section}{\numberline {1.1}Aspectos históricos da linguagem Julia}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Áreas de aplicação da linguagem}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Computação científica}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Computação de alta performace}{9}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Uso geral}{9}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2} Conceitos básicos da Linguagem Julia}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Preparação do ambiente}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Considerações gerais sobre sintaxe}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Pacotes e módulos}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sistema de ajuda}{18}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Tipos e estruturas de dados}{18}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Tipos simples}{20}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Operações básicas}{22}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Arrays}{23}{subsection.2.5.3}%
+\contentsline {subsubsection}{Criação de Array}{23}{section*.2}%
+\contentsline {subsubsection}{Acessar elementos}{24}{section*.3}%
+\contentsline {subsubsection}{Principais funções}{24}{section*.4}%
+\contentsline {subsubsection}{Arrays aninhados e multidimensionias}{25}{section*.5}%
+\contentsline {subsection}{\numberline {2.5.4}Strings}{25}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Tuplas e Tuplas Nomeadas}{26}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Dicionários}{26}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}Sets}{27}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}Números aleatórios}{27}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {2.5.9}Valores Faltantes}{28}{subsection.2.5.9}%
+\contentsline {section}{\numberline {2.6}Controle de fluxo e funções}{28}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Estrutura em bloco}{28}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Iteração repetida}{28}{subsection.2.6.2}%
+\contentsline {subsubsection}{For e while}{28}{section*.6}%
+\contentsline {subsubsection}{List comprehension}{29}{section*.7}%
+\contentsline {subsubsection}{Map}{29}{section*.8}%
+\contentsline {subsection}{\numberline {2.6.3}Condicionais}{29}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Funções}{29}{subsection.2.6.4}%
+\contentsline {subsubsection}{Argumentos}{30}{section*.9}%
+\contentsline {chapter}{\numberline {3}Alma da linguagem}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Compilação}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Multimétodos}{34}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Aplicações da linguagem}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Quicksort}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Calculadora}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Plotagem (Iris data set)}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Banco de Dados SQL lite}{42}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Julia Sets}{43}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Ferramentas}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Visual Studio Code}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Jupyter Notebook}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Pluto}{48}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Considerações Finais}{51}{chapter.6}%
+\contentsline {chapter}{\leavevmode {\color {purple}Bibliografia}}{54}{chapter*.10}%
 \contentsfinish 

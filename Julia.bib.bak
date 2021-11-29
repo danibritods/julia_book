@@ -99,4 +99,92 @@
   doi     = {10.1111/j.1469-1809.1936.tb02137.x},
 }
 
+@Misc{Nissen2021,
+  author  = {Jakob Nybo Nissen},
+  title   = {What's bad about Julia?},
+  year    = {2021},
+  journal = {viralinstruction.com},
+  url     = {https://viralinstruction.com/posts/badjulia/},
+}
+
+@Misc{Bezanson2012a,
+  author  = {Bezanson, Jeff and Karpinski, Stefan and Shah, Viral B. and Edelman, Alan},
+  month   = {Feb},
+  title   = {Why we created julia},
+  year    = {2012},
+  journal = {The Julia Programming Language},
+  url     = {https://julialang.org/blog/2012/02/why-we-created-julia/},
+}
+
+@InProceedings{Nanz2015,
+  author       = {Nanz, Sebastian and Furia, Carlo A},
+  booktitle    = {2015 IEEE/ACM 37th IEEE International Conference on Software Engineering},
+  title        = {A comparative study of programming languages in rosetta code},
+  year         = {2015},
+  organization = {IEEE},
+  pages        = {778--788},
+  volume       = {1},
+}
+
+@Article{Knepley2015,
+  author    = {Matthew G. Knepley},
+  journal   = {Encyclopedia of Applied and Computational Mathematics},
+  title     = {Programming Languages for Scientific Computing},
+  year      = {2015},
+  doi       = {10.1007/978-3-540-70529-1},
+  isbn      = {9783540705291},
+  publisher = {Springer Berlin Heidelberg},
+  url       = {http://dx.doi.org/10.1007/978-3-540-70529-1},
+}
+
+@InProceedings{Fangohr2004,
+  author    = {Fangohr, Hans},
+  booktitle = {Computational Science - ICCS 2004},
+  title     = {A Comparison of C, MATLAB, and Python as Teaching Languages in Engineering},
+  year      = {2004},
+  address   = {Berlin, Heidelberg},
+  editor    = {Bubak, Marian and van Albada, Geert Dick and Sloot, Peter M. A. and Dongarra, Jack},
+  pages     = {1210--1217},
+  publisher = {Springer Berlin Heidelberg},
+  abstract  = {We describe and compare the programming languages C, MATLAB and Python as teaching languages for engineering students. We distinguish between two distinct phases in the process of converting a given problem into a computer program that can provide a solution: (i) finding an algorithmic solution and (ii) implementing this in a particular programming language. It is argued that it is most important for the understanding of the students to perform the first step whereas the actual implementation in a programming language is of secondary importance for the learning of problem-solving techniques. We therefore suggest to chose a well-structured teaching language that provides a clear and intuitive syntax and allows students to quickly express their algorithms. In our experience in engineering computing we find that MATLAB is much better suited than C for this task but the best choice in terms of clarity and functionality of the language is provided by Python.},
+  isbn      = {978-3-540-25944-2},
+}
+
+@Article{Kaw2000,
+  author = {Kaw, Autar and Snyder, Luke},
+  title  = {Introduction to scientific computing},
+  year   = {2000},
+}
+
+@Article{Wilson2014,
+  author    = {Wilson, Greg and Aruliah, Dhavide A and Brown, C Titus and Hong, Neil P Chue and Davis, Matt and Guy, Richard T and Haddock, Steven HD and Huff, Kathryn D and Mitchell, Ian M and Plumbley, Mark D and others},
+  journal   = {PLoS biology},
+  title     = {Best practices for scientific computing},
+  year      = {2014},
+  number    = {1},
+  pages     = {e1001745},
+  volume    = {12},
+  publisher = {Public Library of Science},
+}
+
+@Article{Perez2007,
+  author  = {Perez, Fernando and Granger, Brian E.},
+  journal = {Computing in Science Engineering},
+  title   = {IPython: A System for Interactive Scientific Computing},
+  year    = {2007},
+  number  = {3},
+  pages   = {21-29},
+  volume  = {9},
+  doi     = {10.1109/MCSE.2007.53},
+}
+
+@InProceedings{Udell2014,
+  author    = {Udell, Madeleine and Mohan, Karanveer and Zeng, David and Hong, Jenny and Diamond, Steven and Boyd, Stephen},
+  booktitle = {2014 First Workshop for High Performance Technical Computing in Dynamic Languages},
+  title     = {Convex Optimization in Julia},
+  year      = {2014},
+  pages     = {18-28},
+  doi       = {10.1109/HPTCDL.2014.5},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

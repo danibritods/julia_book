@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  23 NOV 2021 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  28 NOV 2021 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1021,7 +1021,7 @@ Package pdftex.def Info: Pictures//sumario.png  used on input line 75.
 
  [4] (./01introducJulia.tex
 Cap\'{\i }tulo 1.
-<Pictures//capitulo01.jpg, id=161, 289.08pt x 112.7412pt>
+<Pictures//capitulo01.jpg, id=158, 289.08pt x 112.7412pt>
 File: Pictures//capitulo01.jpg Graphic file (type jpg)
 <use Pictures//capitulo01.jpg>
 Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 9.
@@ -1029,55 +1029,187 @@ Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 9.
 [5
 
 
- <./Pictures//capitulo01.jpg>]
-<Pictures//creators.png, id=173, 821.0675pt x 253.94875pt>
+ <./Pictures//capitulo01.jpg>] [6]
+<Pictures//creators.png, id=187, 821.0675pt x 253.94875pt>
 File: Pictures//creators.png Graphic file (type png)
 <use Pictures//creators.png>
-Package pdftex.def Info: Pictures//creators.png  used on input line 40.
+Package pdftex.def Info: Pictures//creators.png  used on input line 46.
 (pdftex.def)             Requested size: 341.43306pt x 105.59988pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
-[6 <./Pictures//creators.png>]
-<Pictures//clientes.png, id=196, 1469.49pt x 622.325pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+[7 <./Pictures//creators.png>]
+<Pictures//clientes.png, id=211, 1469.49pt x 622.325pt>
 File: Pictures//clientes.png Graphic file (type png)
 <use Pictures//clientes.png>
-Package pdftex.def Info: Pictures//clientes.png  used on input line 74.
+Package pdftex.def Info: Pictures//clientes.png  used on input line 80.
 (pdftex.def)             Requested size: 341.43306pt x 144.5941pt.
- [7 <./Pictures//clientes.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+ [8 <./Pictures//clientes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
 [][][]\T1/ptm/m/n/9 (+20) https://www.fortuneita.com/2021/07/19/julia-computing-raises-24m-in-series-a-former-snowflake-ceo-bob-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
 [][][]\T1/ptm/m/n/9 (+20) https://www.hpcwire.com/off-the-wire/julia-computing-receives-darpa-award-to-accelerate-electronics-
  []
 
-) (./02basicosJulia.tex [8]
+) (./02basicosJulia.tex [9] [10
+
+]
 Cap\'{\i }tulo 2.
 File: Pictures//capitulo01.jpg Graphic file (type jpg)
 <use Pictures//capitulo01.jpg>
 Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 8.
 (pdftex.def)             Requested size: 597.50787pt x 233.04076pt.
-[9
+<Pictures//aplicacoes/ambiente.png, id=271, 552.0625pt x 197.73875pt>
+File: Pictures//aplicacoes/ambiente.png Graphic file (type png)
+<use Pictures//aplicacoes/ambiente.png>
+Package pdftex.def Info: Pictures//aplicacoes/ambiente.png  used on input line 19.
+(pdftex.def)             Requested size: 341.43306pt x 122.30106pt.
+[11 <./Pictures//aplicacoes/ambiente.png>]
+<Pictures//aplicacoes/comentarios.png, id=286, 468.75125pt x 179.67125pt>
+File: Pictures//aplicacoes/comentarios.png Graphic file (type png)
+<use Pictures//aplicacoes/comentarios.png>
+Package pdftex.def Info: Pictures//aplicacoes/comentarios.png  used on input line 43.
+(pdftex.def)             Requested size: 341.43306pt x 130.8683pt.
+<Pictures//aplicacoes/bloco_identacao.png, id=287, 631.35875pt x 678.535pt>
+File: Pictures//aplicacoes/bloco_identacao.png Graphic file (type png)
+<use Pictures//aplicacoes/bloco_identacao.png>
+Package pdftex.def Info: Pictures//aplicacoes/bloco_identacao.png  used on input line 52.
+(pdftex.def)             Requested size: 341.43306pt x 366.95218pt.
 
-] [10]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 95.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./Pictures//aplicacoes/comentarios.png>]
+<Pictures//aplicacoes/supressao.png, id=297, 172.645pt x 169.63374pt>
+File: Pictures//aplicacoes/supressao.png Graphic file (type png)
+<use Pictures//aplicacoes/supressao.png>
+Package pdftex.def Info: Pictures//aplicacoes/supressao.png  used on input line 70.
+(pdftex.def)             Requested size: 170.71652pt x 167.7412pt.
+<Pictures//aplicacoes/emoji.png, id=298, 233.87375pt x 146.5475pt>
+File: Pictures//aplicacoes/emoji.png Graphic file (type png)
+<use Pictures//aplicacoes/emoji.png>
+Package pdftex.def Info: Pictures//aplicacoes/emoji.png  used on input line 79.
+(pdftex.def)             Requested size: 170.71652pt x 106.97876pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./Pictures//aplicacoes/bloco_identacao.png> <./Pictures//aplicacoes/supressao.png>]
+<Pictures//aplicacoes/indice.png, id=304, 410.53375pt x 128.48pt>
+File: Pictures//aplicacoes/indice.png Graphic file (type png)
+<use Pictures//aplicacoes/indice.png>
+Package pdftex.def Info: Pictures//aplicacoes/indice.png  used on input line 88.
+(pdftex.def)             Requested size: 341.43306pt x 106.854pt.
+<Pictures//aplicacoes/exclamacao.png, id=305, 433.62pt x 444.66125pt>
+File: Pictures//aplicacoes/exclamacao.png Graphic file (type png)
+<use Pictures//aplicacoes/exclamacao.png>
+Package pdftex.def Info: Pictures//aplicacoes/exclamacao.png  used on input line 97.
+(pdftex.def)             Requested size: 341.43306pt x 350.14545pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./Pictures//aplicacoes/emoji.png> <./Pictures//aplicacoes/indice.png>]
+<Pictures//aplicacoes/import_Pkg.png, id=313, 569.12625pt x 218.8175pt>
+File: Pictures//aplicacoes/import_Pkg.png Graphic file (type png)
+<use Pictures//aplicacoes/import_Pkg.png>
+Package pdftex.def Info: Pictures//aplicacoes/import_Pkg.png  used on input line 113.
+(pdftex.def)             Requested size: 341.43306pt x 131.27815pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./Pictures//aplicacoes/exclamacao.png>]
+<Pictures//aplicacoes/pkg.png, id=322, 550.055pt x 330.23375pt>
+File: Pictures//aplicacoes/pkg.png Graphic file (type png)
+<use Pictures//aplicacoes/pkg.png>
+Package pdftex.def Info: Pictures//aplicacoes/pkg.png  used on input line 121.
+(pdftex.def)             Requested size: 341.43306pt x 204.9897pt.
+<Pictures//aplicacoes/REPL_plots.png, id=323, 618.31pt x 148.555pt>
+File: Pictures//aplicacoes/REPL_plots.png Graphic file (type png)
+<use Pictures//aplicacoes/REPL_plots.png>
+Package pdftex.def Info: Pictures//aplicacoes/REPL_plots.png  used on input line 129.
+(pdftex.def)             Requested size: 341.43306pt x 82.03416pt.
+ [16 <./Pictures//aplicacoes/import_Pkg.png> <./Pictures//aplicacoes/pkg.png> <./Pictures//aplicacoes/REPL_plots.png>]
+<Pictures//aplicacoes/pacotes.png, id=333, 608.2725pt x 319.1925pt>
+File: Pictures//aplicacoes/pacotes.png Graphic file (type png)
+<use Pictures//aplicacoes/pacotes.png>
+Package pdftex.def Info: Pictures//aplicacoes/pacotes.png  used on input line 146.
+(pdftex.def)             Requested size: 341.43306pt x 179.1703pt.
+<Pictures//aplicacoes/Pkg_script.png, id=334, 545.03625pt x 500.87125pt>
+File: Pictures//aplicacoes/Pkg_script.png Graphic file (type png)
+<use Pictures//aplicacoes/Pkg_script.png>
+Package pdftex.def Info: Pictures//aplicacoes/Pkg_script.png  used on input line 154.
+(pdftex.def)             Requested size: 341.43306pt x 313.76216pt.
+ [17 <./Pictures//aplicacoes/pacotes.png> <./Pictures//aplicacoes/Pkg_script.png>]
+<Pictures//aplicacoes/help.png, id=340, 789.95125pt x 644.4075pt>
+File: Pictures//aplicacoes/help.png Graphic file (type png)
+<use Pictures//aplicacoes/help.png>
+Package pdftex.def Info: Pictures//aplicacoes/help.png  used on input line 172.
+(pdftex.def)             Requested size: 341.43306pt x 278.52542pt.
+ [18 <./Pictures//aplicacoes/help.png>]
+<Pictures//aplicacoes/tipos_simples.png, id=354, 394.47375pt x 412.54124pt>
+File: Pictures//aplicacoes/tipos_simples.png Graphic file (type png)
+<use Pictures//aplicacoes/tipos_simples.png>
+Package pdftex.def Info: Pictures//aplicacoes/tipos_simples.png  used on input line 198.
+(pdftex.def)             Requested size: 284.52756pt x 297.55824pt.
+<Pictures//aplicacoes/tipos_parametricos.png, id=355, 558.085pt x 227.85126pt>
+File: Pictures//aplicacoes/tipos_parametricos.png Graphic file (type png)
+<use Pictures//aplicacoes/tipos_parametricos.png>
+Package pdftex.def Info: Pictures//aplicacoes/tipos_parametricos.png  used on input line 206.
+(pdftex.def)             Requested size: 341.43306pt x 139.40279pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./Pictures//aplicacoes/tipos_simples.png>]
+<Pictures//aplicacoes/convert.png, id=364, 569.12625pt x 357.335pt>
+File: Pictures//aplicacoes/convert.png Graphic file (type png)
+<use Pictures//aplicacoes/convert.png>
+Package pdftex.def Info: Pictures//aplicacoes/convert.png  used on input line 214.
+(pdftex.def)             Requested size: 341.43306pt x 214.38083pt.
+<Pictures//aplicacoes/type_annotation.png, id=365, 853.1875pt x 214.8025pt>
+File: Pictures//aplicacoes/type_annotation.png Graphic file (type png)
+<use Pictures//aplicacoes/type_annotation.png>
+Package pdftex.def Info: Pictures//aplicacoes/type_annotation.png  used on input line 223.
+(pdftex.def)             Requested size: 341.43306pt x 85.96208pt.
+ [20 <./Pictures//aplicacoes/tipos_parametricos.png> <./Pictures//aplicacoes/convert.png> <./Pictures//aplicacoes/type_annotation.png>]
+<Pictures//aplicacoes/bool.png, id=372, 437.635pt x 462.72874pt>
+File: Pictures//aplicacoes/bool.png Graphic file (type png)
+<use Pictures//aplicacoes/bool.png>
+Package pdftex.def Info: Pictures//aplicacoes/bool.png  used on input line 241.
+(pdftex.def)             Requested size: 341.43306pt x 361.01169pt.
+<Pictures//aplicacoes/complex.png, id=373, 526.96875pt x 464.73625pt>
+File: Pictures//aplicacoes/complex.png Graphic file (type png)
+<use Pictures//aplicacoes/complex.png>
+Package pdftex.def Info: Pictures//aplicacoes/complex.png  used on input line 249.
+(pdftex.def)             Requested size: 341.43306pt x 301.12474pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./Pictures//aplicacoes/bool.png>]
+<Pictures//aplicacoes/operacoes_basicas.png, id=382, 429.605pt x 341.275pt>
+File: Pictures//aplicacoes/operacoes_basicas.png Graphic file (type png)
+<use Pictures//aplicacoes/operacoes_basicas.png>
+Package pdftex.def Info: Pictures//aplicacoes/operacoes_basicas.png  used on input line 260.
+(pdftex.def)             Requested size: 341.43306pt x 271.2342pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <./Pictures//aplicacoes/complex.png>]
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 278.
  (/home/daniel/latex/texlive/2021/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
@@ -1085,7 +1217,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11] [12] [13] [14] [15] [16] [17] [18]) (./03avancadosJulia.tex [19] [20
+ [23 <./Pictures//aplicacoes/operacoes_basicas.png>] [24] [25] [26] [27] [28] [29] [30]) (./03avancadosJulia.tex [31] [32
 
 ]
 Cap\'{\i }tulo 3.
@@ -1096,7 +1228,7 @@ Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 8.
 
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
- [21]) (./04aplicacoesJulia.tex [22]
+ [33]) (./04aplicacoesJulia.tex [34]
 Cap\'{\i }tulo 4.
 File: Pictures//capitulo01.jpg Graphic file (type jpg)
 <use Pictures//capitulo01.jpg>
@@ -1107,17 +1239,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--17
 
  []
 
-[23
+[35
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 35.
-<Pictures//aplicacoes/quicksort.png, id=591, 1135.24126pt x 640.3925pt>
+<Pictures//aplicacoes/quicksort.png, id=722, 1135.24126pt x 640.3925pt>
 File: Pictures//aplicacoes/quicksort.png Graphic file (type png)
 <use Pictures//aplicacoes/quicksort.png>
 Package pdftex.def Info: Pictures//aplicacoes/quicksort.png  used on input line 63.
 (pdftex.def)             Requested size: 341.43306pt x 192.59804pt.
- [24 <./Pictures//aplicacoes/quicksort.png>] [25]
-<Pictures//aplicacoes/calculadora.png, id=661, 742.775pt x 557.08125pt>
+ [36 <./Pictures//aplicacoes/quicksort.png>] [37]
+<Pictures//aplicacoes/calculadora.png, id=792, 742.775pt x 557.08125pt>
 File: Pictures//aplicacoes/calculadora.png Graphic file (type png)
 <use Pictures//aplicacoes/calculadora.png>
 Package pdftex.def Info: Pictures//aplicacoes/calculadora.png  used on input line 171.
@@ -1125,24 +1257,24 @@ Package pdftex.def Info: Pictures//aplicacoes/calculadora.png  used on input lin
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-<Pictures//aplicacoes/iris-flowers.png, id=717, 1003.75pt x 448.67625pt>
+ [38]
+<Pictures//aplicacoes/iris-flowers.png, id=848, 1003.75pt x 448.67625pt>
 File: Pictures//aplicacoes/iris-flowers.png Graphic file (type png)
 <use Pictures//aplicacoes/iris-flowers.png>
 Package pdftex.def Info: Pictures//aplicacoes/iris-flowers.png  used on input line 191.
 (pdftex.def)             Requested size: 341.43306pt x 152.62321pt.
-<Pictures//aplicacoes/iris_data.png, id=718, 320.19624pt x 496.85625pt>
+<Pictures//aplicacoes/iris_data.png, id=849, 320.19624pt x 496.85625pt>
 File: Pictures//aplicacoes/iris_data.png Graphic file (type png)
 <use Pictures//aplicacoes/iris_data.png>
 Package pdftex.def Info: Pictures//aplicacoes/iris_data.png  used on input line 199.
 (pdftex.def)             Requested size: 142.26378pt x 220.75537pt.
- [27 <./Pictures//aplicacoes/calculadora.png> <./Pictures//aplicacoes/iris-flowers.png (PNG copy)>]
-<Pictures//aplicacoes/iris_pacotes.png, id=729, 775.89874pt x 271.0125pt>
+ [39 <./Pictures//aplicacoes/calculadora.png> <./Pictures//aplicacoes/iris-flowers.png (PNG copy)>]
+<Pictures//aplicacoes/iris_pacotes.png, id=859, 775.89874pt x 271.0125pt>
 File: Pictures//aplicacoes/iris_pacotes.png Graphic file (type png)
 <use Pictures//aplicacoes/iris_pacotes.png>
 Package pdftex.def Info: Pictures//aplicacoes/iris_pacotes.png  used on input line 210.
 (pdftex.def)             Requested size: 341.43306pt x 119.25827pt.
-<Pictures//aplicacoes/iris_CSV.png, id=731, 760.8425pt x 598.235pt>
+<Pictures//aplicacoes/iris_CSV.png, id=861, 760.8425pt x 598.235pt>
 File: Pictures//aplicacoes/iris_CSV.png Graphic file (type png)
 <use Pictures//aplicacoes/iris_CSV.png>
 Package pdftex.def Info: Pictures//aplicacoes/iris_CSV.png  used on input line 220.
@@ -1150,8 +1282,8 @@ Package pdftex.def Info: Pictures//aplicacoes/iris_CSV.png  used on input line 2
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <./Pictures//aplicacoes/iris_data.png> <./Pictures//aplicacoes/iris_pacotes.png>]
-<Pictures//aplicacoes/iris_plot.png, id=739, 1569.865pt x 510.90875pt>
+ [40 <./Pictures//aplicacoes/iris_data.png> <./Pictures//aplicacoes/iris_pacotes.png>]
+<Pictures//aplicacoes/iris_plot.png, id=870, 1569.865pt x 510.90875pt>
 File: Pictures//aplicacoes/iris_plot.png Graphic file (type png)
 <use Pictures//aplicacoes/iris_plot.png>
 Package pdftex.def Info: Pictures//aplicacoes/iris_plot.png  used on input line 231.
@@ -1159,13 +1291,13 @@ Package pdftex.def Info: Pictures//aplicacoes/iris_plot.png  used on input line 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 <./Pictures//aplicacoes/iris_CSV.png> <./Pictures//aplicacoes/iris_plot.png>]
-<Pictures//aplicacoes/sql_corpo.png, id=747, 832.10875pt x 661.47125pt>
+ [41 <./Pictures//aplicacoes/iris_CSV.png> <./Pictures//aplicacoes/iris_plot.png>]
+<Pictures//aplicacoes/sql_corpo.png, id=878, 832.10875pt x 661.47125pt>
 File: Pictures//aplicacoes/sql_corpo.png Graphic file (type png)
 <use Pictures//aplicacoes/sql_corpo.png>
 Package pdftex.def Info: Pictures//aplicacoes/sql_corpo.png  used on input line 268.
 (pdftex.def)             Requested size: 341.43306pt x 271.41692pt.
-<Pictures//aplicacoes/sql_frases.png, id=749, 600.2425pt x 333.245pt>
+<Pictures//aplicacoes/sql_frases.png, id=880, 600.2425pt x 333.245pt>
 File: Pictures//aplicacoes/sql_frases.png Graphic file (type png)
 <use Pictures//aplicacoes/sql_frases.png>
 Package pdftex.def Info: Pictures//aplicacoes/sql_frases.png  used on input line 276.
@@ -1173,24 +1305,24 @@ Package pdftex.def Info: Pictures//aplicacoes/sql_frases.png  used on input line
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30 <./Pictures//aplicacoes/sql_corpo.png>]
-<Pictures//aplicacoes/sql_query.png, id=758, 481.8pt x 311.1625pt>
+ [42 <./Pictures//aplicacoes/sql_corpo.png>]
+<Pictures//aplicacoes/sql_query.png, id=889, 481.8pt x 311.1625pt>
 File: Pictures//aplicacoes/sql_query.png Graphic file (type png)
 <use Pictures//aplicacoes/sql_query.png>
 Package pdftex.def Info: Pictures//aplicacoes/sql_query.png  used on input line 286.
 (pdftex.def)             Requested size: 341.43306pt x 220.51384pt.
- [31 <./Pictures//aplicacoes/sql_frases.png> <./Pictures//aplicacoes/sql_query.png>]) (./05ferramentasJulia.tex [32]
+ [43 <./Pictures//aplicacoes/sql_frases.png> <./Pictures//aplicacoes/sql_query.png>]) (./05ferramentasJulia.tex [44]
 Cap\'{\i }tulo 5.
 File: Pictures//capitulo01.jpg Graphic file (type jpg)
 <use Pictures//capitulo01.jpg>
 Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 7.
 (pdftex.def)             Requested size: 597.50787pt x 233.04076pt.
-<Pictures//aplicacoes/Editores e IDEs.png, id=774, 1008.76875pt x 456.70625pt>
+<Pictures//aplicacoes/Editores e IDEs.png, id=905, 1008.76875pt x 456.70625pt>
 File: Pictures//aplicacoes/Editores e IDEs.png Graphic file (type png)
 <use Pictures//aplicacoes/Editores e IDEs.png>
 Package pdftex.def Info: Pictures//aplicacoes/Editores e IDEs.png  used on input line 14.
 (pdftex.def)             Requested size: 426.79134pt x 193.22299pt.
-<Pictures//aplicacoes/Editors_IDEs_site.png, id=775, 747.79375pt x 528.97626pt>
+<Pictures//aplicacoes/Editors_IDEs_site.png, id=906, 747.79375pt x 528.97626pt>
 File: Pictures//aplicacoes/Editors_IDEs_site.png Graphic file (type png)
 <use Pictures//aplicacoes/Editors_IDEs_site.png>
 Package pdftex.def Info: Pictures//aplicacoes/Editors_IDEs_site.png  used on input line 22.
@@ -1198,10 +1330,10 @@ Package pdftex.def Info: Pictures//aplicacoes/Editors_IDEs_site.png  used on inp
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33
+ [45
 
  <./Pictures//aplicacoes/Editores e IDEs.png>]
-<Pictures//aplicacoes/VScode_welcome.png, id=783, 1035.87pt x 805.0075pt>
+<Pictures//aplicacoes/VScode_welcome.png, id=914, 1035.87pt x 805.0075pt>
 File: Pictures//aplicacoes/VScode_welcome.png Graphic file (type png)
 <use Pictures//aplicacoes/VScode_welcome.png>
 Package pdftex.def Info: Pictures//aplicacoes/VScode_welcome.png  used on input line 33.
@@ -1209,7 +1341,7 @@ Package pdftex.def Info: Pictures//aplicacoes/VScode_welcome.png  used on input 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <./Pictures//aplicacoes/Editors_IDEs_site.png>]
+ [46 <./Pictures//aplicacoes/Editors_IDEs_site.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
 [][][]\T1/ptm/m/n/9 (+20) https://web.archive.org/web/20151009211114/http://blogs.msdn.com/b/vscode/archive/2015/04/29/announcing-
  []
@@ -1219,28 +1351,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
 [][][]\T1/ptm/m/n/9 (+20) https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-
  []
 
-[35 <./Pictures//aplicacoes/VScode_welcome.png>]
+[47 <./Pictures//aplicacoes/VScode_welcome.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 51--51
 [][][]\T1/ptm/m/n/9 (+20) https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-
  []
 
-<Pictures//aplicacoes/jupyter.png, id=809, 784.9325pt x 347.2975pt>
+<Pictures//aplicacoes/jupyter.png, id=940, 784.9325pt x 347.2975pt>
 File: Pictures//aplicacoes/jupyter.png Graphic file (type png)
 <use Pictures//aplicacoes/jupyter.png>
 Package pdftex.def Info: Pictures//aplicacoes/jupyter.png  used on input line 56.
 (pdftex.def)             Requested size: 341.43306pt x 151.07318pt.
-<Pictures//aplicacoes/Pluto.png, id=815, 1330.9725pt x 676.5275pt>
+<Pictures//aplicacoes/Pluto.png, id=946, 1330.9725pt x 676.5275pt>
 File: Pictures//aplicacoes/Pluto.png Graphic file (type png)
 <use Pictures//aplicacoes/Pluto.png>
 Package pdftex.def Info: Pictures//aplicacoes/Pluto.png  used on input line 77.
 (pdftex.def)             Requested size: 341.43306pt x 173.53935pt.
-[36 <./Pictures//aplicacoes/jupyter.png>]
-<Pictures//aplicacoes/Pluto_plotting.png, id=827, 781.92125pt x 578.16pt>
+[48 <./Pictures//aplicacoes/jupyter.png>]
+<Pictures//aplicacoes/Pluto_plotting.png, id=958, 781.92125pt x 578.16pt>
 File: Pictures//aplicacoes/Pluto_plotting.png Graphic file (type png)
 <use Pictures//aplicacoes/Pluto_plotting.png>
 Package pdftex.def Info: Pictures//aplicacoes/Pluto_plotting.png  used on input line 85.
 (pdftex.def)             Requested size: 341.43306pt x 252.45917pt.
-) (./06conclusaoJulia.tex [37 <./Pictures//aplicacoes/Pluto.png> <./Pictures//aplicacoes/Pluto_plotting.png>] [38
+) (./06conclusaoJulia.tex [49 <./Pictures//aplicacoes/Pluto.png> <./Pictures//aplicacoes/Pluto_plotting.png>] [50
 
 ]
 Cap\'{\i }tulo 6.
@@ -1251,35 +1383,35 @@ Package pdftex.def Info: Pictures//capitulo01.jpg  used on input line 9.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]) (./DBS-Julia.bbl (./DBS-Julia.brf)
+ [51]) (./DBS-Julia.bbl (./DBS-Julia.brf)
 \tf@brf=\write6
 \openout6 = `DBS-Julia.brf'.
 
- [40]
-<Pictures//Biblioteca.png, id=857, 597.55244pt x 231.14355pt>
+ [52]
+<Pictures//Biblioteca.png, id=988, 597.55244pt x 231.14355pt>
 File: Pictures//Biblioteca.png Graphic file (type png)
 <use Pictures//Biblioteca.png>
-Package pdftex.def Info: Pictures//Biblioteca.png  used on input line 1.
+Package pdftex.def Info: Pictures//Biblioteca.png  used on input line 2.
 (pdftex.def)             Requested size: 597.50787pt x 231.14297pt.
-) [41
+ [53
 
- <./Pictures//Biblioteca.png (PNG copy)>] (./ficha.tex) [42] (./DBS-Julia.aux)
+ <./Pictures//Biblioteca.png (PNG copy)>]) [54] (./ficha.tex) [55] (./DBS-Julia.aux)
 Package rerunfilecheck Info: File `DBS-Julia.brf' has not changed.
-(rerunfilecheck)             Checksum: 25A4CD76231CCE7511A652D18D7E66A5;740.
+(rerunfilecheck)             Checksum: BC23B93A903B423922011BF90468F4E7;1221.
  ) 
 Here is how much of TeX's memory you used:
- 32908 strings out of 478542
- 621928 string characters out of 5846393
- 1131041 words of memory out of 5000000
- 49330 multiletter control sequences out of 15000+600000
- 509711 words of font info for 368 fonts, out of 8000000 for 9000
+ 33190 strings out of 478542
+ 629123 string characters out of 5846393
+ 1129447 words of memory out of 5000000
+ 49543 multiletter control sequences out of 15000+600000
+ 512025 words of font info for 375 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,92p,1278b,1862s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/home/daniel/latex/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on DBS-Julia.pdf (42 pages, 2768463 bytes).
+ 89i,12n,92p,1278b,1853s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/home/daniel/latex/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/daniel/latex/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on DBS-Julia.pdf (55 pages, 3145840 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 1022 compressed objects within 11 object streams
- 509 named destinations out of 1000 (max. 500000)
- 126419 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1316 PDF objects out of 1440 (max. 8388607)
+ 1143 compressed objects within 12 object streams
+ 549 named destinations out of 1000 (max. 500000)
+ 126511 words of extra memory for PDF output out of 128383 (max. 10000000)
 

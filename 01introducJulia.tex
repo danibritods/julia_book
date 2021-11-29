@@ -8,23 +8,29 @@
 
 \chapter{ Introdu\c{c}\~{a}o}
 
-Julia é, acima de tudo, uma linguagem ambiciosa. 
-Surgiu com o objetivo de solucionar um problema central na computação numérica. O chamado "problema das duas linguagens" se refere ao fato de muitos cientistas, engenheiros e matemáticos usarem uma linguagem flexível e amigável como Python, R, ou Matlab, que os permitia focar no problema sendo investigado ao invés de detalhes de implementação computacional. Porém, logo em seguida ser necessário desenvolver uma nova implementação em linguagem performática como C para de fato computar os dados, pois do contrário enfrentariam um tempo de processamento ordens de grandeza maior e portanto muitas vezes impeditivo. \cite{Lauwens2019}
 
-Mas a ambição de seus criadores, em suas próprias palavras, foi além:
+A linguagem Julia surgiu com o objetivo de solucionar o que seus criadores chamaram de "problema das duas linguagens" na computação científica \cite{Bezanson2012}. Ele se refere ao fato, detalhado por \cite{Balbaert2016}, de muitos cientistas, engenheiros e matemáticos usarem uma linguagem flexível e amigável como Python, R, ou Matlab, que os permite focar no problema sendo investigado ao invés de detalhes de implementação computacional. Pois tais linguagens têm uma estrutura interna que permite uma sintaxe com maior nível de abstração, tornando a escrita de programas mais simples e expressiva \cite{Fangohr2004}. Porém, essa estrutura facilitadora tem um custo de performance muitas vezes proibitivo em relação aos programas escritos em linguagens como C e Fortran \cite{Nanz2015}. 
+Dessa forma, segundo \cite{Balbaert2016}, muitas vezes um fluxo de trabalho é desenvolvido em uma linguagem dinâmica com uma amostra dos dados para em seguida ser implementado em uma linguagem mais performática e só então exercer sua finalidade com a totalidade dos dados ou acessível ao usuário final, chamado ambiente de produção. 
+
+\cite{Klok2021} também aborda esse "problema das duas linguagens", em seu caso chamando de 
+
+Não obstante, segundo seus criadores, a linguagem que vislumbraram iria além de resolver o "problema das fuas linguagens" dilema entre "velocidade de execução" e "velocidade de desenvolvimento" que \cite{Klok2021} menciona. Em seu artigo de lançamento eles afirmaram: 
 
 \begin{quote}
+   Criamos Julia, em resumo, porque somos gananciosos. 
    Queremos uma linguagem open source com uma licença liberal. Queremos a velocidade de C com o dinamismo de Ruby. Uma linguagem homoiconica com macros verdadeiras como Lisp, mas com notação matemática obvia e familiar como Matlab. Queremos algo tão geral quanto Python, tão fácil para estatística quanto R, tão natural para processamento de strings quanto Perl, tão poderoso para algebra linear quanto Matlab e tão bom como cola de programas quanto shell. Algo estupidamente simples de aprender, e ainda assim deixe o mais sério dos hackers satisfeito. Queremos algo interativo e que seja compilado. 
    
    Mencionamos que deve ser tão rápida quanto C? 
-   \href{https://julialang.org/blog/2012/02/why-we-created-julia/}{[Why We Created Julia, 2012]}
+   \href{https://julialang.org/blog/2012/02/why-we-created-julia/}{[Why We Created Julia, 2012]}  \cite{Bezanson2012a}
    
    
 \end{quote}
 
-Assim foi lançada em 2012 uma linguagem gratuita, de código aberto, alta performance, tipagem dinâmica e paradigma multimétodos que permite expressar procedural, funcional, metaprogramação e orientação a objetos. Com suporte nativo e de alto nível ao paralelismo, alta integração com as extensas bibliotecas já disponíveis para as linguagens que a inspiraram, variáveis unicode com sintaxe de LaTex permitindo letras gregas, subscritos e decoradores, especialmente pensada na computação numérica mas plenamente geral e sim, praticamente tão rápida quanto C. \cite{Lobianco2019,Bezanson2017}
+Assim, de acordo com \cite{Bezanson2017}, em 2012 foi lançada Julia, uma linguagem compilada para código nativo eficiente, tipagem dinâmica, que permite expressar paradigmas procedural, funcional, orientação a objetos e metaprogramação.  Além de suporte nativo e de alto nível ao paralelismo, alta integração com as extensas bibliotecas já disponíveis para as linguagens que a inspiraram, suporte a um subconjunto do unicode para nome de variáveis e funções, permitindo letras gregas e subscritos. 
+Com código aberto e livre para uso privado, comercial, modificação e distribuição.
+Especialmente pensada na computação científica mas ainda assim de propósito geral e sim, praticamente tão rápida quanto C. \cite{Lobianco2019,Bezanson2017}
 
- Nesse trabalho temos uma breve introdução a linguagem Julia, sua história, principais aplicações, sintaxe e ecossistema. 
+ Nesse trabalho apresentamos uma breve introdução a linguagem Julia, sua história, principais aplicações, sintaxe e ecossistema. 
 
 
 % Entretanto devido as limitações de tempo foi necessário uma abordagem breve, e voltada a pessoas que já tenham certa familiaridade com programação, entretato podemos recomendar para os iniciantes o livro tal, no qual abordará pontos que não foram considerados aqui.
@@ -45,7 +51,7 @@ Assim foi lançada em 2012 uma linguagem gratuita, de código aberto, alta perfo
 Na Fig.\ref{criadores} vemos seus criadores da esquerda para a direita: Keno Fischer, Viral Shah, Stefan Karpinski, Alan Edelman, e Jeff Bezanson.
 \newline
 
-Assim como outras linguagens e construtos computacionais, muito de sua história tem pouco registro formal sendo a maior fonte seu site, blog e documentação oficiais, além de palestras em eventos técnicos e artigos jornalísticos, o que torna mais difícil uma recontrução histórica precisa, não obstante, ressaltaremos os principais aspectos à seguir: 
+Assim como outras linguagens e construtos computacionais, muito de sua história tem pouco registro formal sendo a maior fonte seu site, blog e documentação oficiais, além de palestras em eventos técnicos e artigos jornalísticos, o que torna mais difícil uma reconstrução histórica precisa, não obstante, ressaltaremos os principais aspectos à seguir: 
 %baseados em: (site julia) 
 \begin{itemize}
    \item O nome Julia não tem nenhum significado, foi apenas um nome sugerido por um amigo de Benzanson que os criadores acharam bonito. \footnote{https://docs.julialang.org/en/v1/manual/faq/}
@@ -67,7 +73,7 @@ Júlia é atualmente utilizada por mais de 10 000 empresas, e 1 500 universidade
 
 Seus criadores ganharam os prestigiados prémios \href{https://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}{MIT James H Wilkinson 2018} para Software Numérico e o \href{[https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman](https://www.computer.org/press-room/2019-news/2019-ieee-fernbach-award-edelman)}{IEEE Sidney Fernbach 2019} por "avanços extraordinários na computação de alta performance, algebra linear, computação científica e contribuições para a linguagem de programação Julia". 
 
-Considerando ainda sua flexibilidade, simplicidade e performance, não é surpresa que tem crescido exponencialmente na computação científica, na computação de alta performace e também como linguagem de propósito geral. A figura \ref{clientes} mostra alguns dos principais clientes da linguagem. \cite{Klok2021}
+Considerando ainda sua flexibilidade, simplicidade e performance, não é surpresa que tem crescido exponencialmente na computação científica, na computação de alta performance e também como linguagem de propósito geral \cite{Klok2021}. A figura \ref{clientes} mostra alguns dos principais clientes da linguagem.
 \begin{figure}[H]
    \begin{center}
        \caption{Clientes da linguagem Julia} \label{clientes}
@@ -79,13 +85,12 @@ Considerando ainda sua flexibilidade, simplicidade e performance, não é surpre
 
 \subsection{Computação científica}
 
-A computação científica consiste principalmente na análise e modelagem exploratória de determinado problema, o que necessita de um ferramental técnico específico e normalmente é feito por especialistas na área em questão. Nesse sentido, é fundamental que se tenha um ambiente adequado a prototipação, que suporte as demandas metodológicas e principalmente permita o máximo de expressividade do profissional de modo que ele não precise se especializar também em computação para desempenhar bem o seu trabalho. 
+A computação científica consiste principalmente na análise e modelagem exploratória de determinado problema, o que necessita de um ferramental técnico específico e normalmente é feito por especialistas na área em questão. Nesse sentido, é fundamental que se tenha um ambiente adequado a prototipação, que suporte as demandas metodológicas e principalmente permita o máximo de expressividade do profissional de modo que ele não precise se especializar também em computação para desempenhar bem o seu trabalho. \cite{Kaw2000,Wilson2014,Perez2007}
 
 Júlia foi feita sob medida com esse propósito, suprindo todas essas necessidades e ainda oferecendo uma notação matemática clara e intuitiva, com suporte nativo a construtos como matrizes, vetores, funções anônimas e de primeira ordem além das bibliotecas especializadas que implementam os métodos necessários de estatística, algebra linear, e equações diferenciais pra citar alguns exemplos. \cite{Klok2021}
 
 Dessa forma temos visto um importante crescimento da linguagem nas áreas de Data Science, machine learning\footnote{https://juliacomputing.com/case-studies/princeton/}, 
-economia \footnote{https://juliacomputing.com/case-studies/thomas-sargent/}, 
-pesquisa operacional, e todas as ciências naturais como biologia, e física. \cite{Perkel2019}
+economia \footnote{https://juliacomputing.com/case-studies/thomas-sargent/}, pesquisa operacional, e todas as ciências naturais como biologia, e física. \cite{Perkel2019,Udell2014}
 %([]TODO citar cada biblioteca)
 
 \subsection{Computação de alta performace}
@@ -93,7 +98,7 @@ Outra área na qual Julia se destaca é a computação de alta performace. Temos
 
 Podemos destacar na industria financeira a análise de séries temporais no fundo de investimentos BlackRock\footnote{https://juliacomputing.com/case-studies/blackrock/}, o cálculo de risco junto ao banco britânico Aviva\footnote{https://juliacomputing.com/case-studies/aviva/}, modelos econômicos no Federal Reserve Bank of New York\footnote{https://juliacomputing.com/case-studies/ny-fed/}, e em nosso próprio BNDS no manejo de quase um trilhão de reais com modelos de otimização estocástica multi-estágios\footnote{https://juliacomputing.com/case-studies/bndb/}, em todas essas implementações ouve um aumento em pelo menos 10x na velocidade de processamento, em boa parte dos casos reduzindo quase a metade o número de linhas de código, o que aumenta exponencialmente a legibilidade, diminui os erros e aumenta a produtividade dos desenvolvedores. Na Aviva chegou a reduzir 93\% do código e aumentar em 1 000x a velocidade. 
 
-Ela também foi utilizada no projeto Celeste onde atingiu a performace de 1.54 petaFLOPS, e entrou para o seleto panteão das linguagens que alcançaram essa magnitude: Fortran, C, C++ e Julia.\footnote{https://juliacomputing.com/media/2017/09/julia-joins-petaflop-club/}
+Ela também foi utilizada no projeto Celeste onde atingiu a performance de 1.54 petaFLOPS, e entrou para o seleto panteão das linguagens que alcançaram essa magnitude: Fortran, C, C++ e Julia.\footnote{https://juliacomputing.com/media/2017/09/julia-joins-petaflop-club/}
 
 Não atoa foi selecionada pela Aliança de modelagem climática como a única linguagem na sua próxima geração de modelos climáticos. Além de ser utilizada pela NASA e pelo INPE brasileiro no planejamento de missão e simulação de satélites. \footnote{https://juliacomputing.com/case-studies/BrazilNationalinstituteforspaceResearch/}
 
