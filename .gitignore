@@ -21,3 +21,12 @@
 *.mtc1
 *.out
 *.synctex.gz
+*.db
+*.bak
+*.sav
+*.brf
+*.fdb_latexmk
+*.fls
+*.idx
+*.log
+temp
